@@ -28,8 +28,6 @@ public class NaturalTree extends ChrismasTree {
         this.lifeTime = lifeTime;
     }
 
-   
-    
     // Getters and Setters
     public String getTreeType() {
         return treeType;
@@ -45,6 +43,12 @@ public class NaturalTree extends ChrismasTree {
 
     public void setLifeTime(int lifeTime) {
         this.lifeTime = lifeTime;
+    }
+
+    @Override
+    public String toString() {
+        super.toString();
+        return " NaturalTree{" + "treeType=" + treeType + ", lifeTime=" + lifeTime + '}';
     }
     
     
