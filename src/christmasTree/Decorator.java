@@ -9,12 +9,10 @@ package christmasTree;
  *
  * @author MediaMonster
  */
-public abstract class Decorator implements ChrismasTree{
+public abstract class Decorator extends ChrismasTree{
     
     protected ChrismasTree treeDecorator;
-    protected String description;
-    protected double price;
-    
+
     public Decorator (ChrismasTree treeDecorator)
     {
         this.treeDecorator = treeDecorator;

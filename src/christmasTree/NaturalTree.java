@@ -15,8 +15,7 @@ public class NaturalTree extends ChrismasTree {
     int lifeTime;
     
     //Constructs
-    
-     public NaturalTree() {
+    public NaturalTree() {
         setDescription("Natural Tree");
         setPrice(200.20);
     }

@@ -10,7 +10,9 @@ package christmasTree;
  * @author MediaMonster
  */
 public class Balls extends Decorator {
-    
+ 
+    String material
+    int radius
     public Balls(ChrismasTree treeDecorator) {
         super(treeDecorator);
     }
