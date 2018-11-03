@@ -11,17 +11,46 @@ package christmasTree;
  */
 public class NaturalTree extends ChrismasTree {
     
+    String treeType;
+    int lifeTime;
+    
+    //Constructs
+    
+     public NaturalTree() {
+        setDescription("Natural Tree");
+        setPrice(200.20);
+    }
+     
+    public NaturalTree(String description,  double price,String treeType, int lifeTime) {
+        setDescription(description);
+        setPrice(price);
+        this.treeType = treeType;
+        this.lifeTime = lifeTime;
+    }
+
+   
+    
+    // Getters and Setters
+    public String getTreeType() {
+        return treeType;
+    }
+
+    public void setTreeType(String treeType) {
+        this.treeType = treeType;
+    }
+
+    public int getLifeTime() {
+        return lifeTime;
+    }
+
+    public void setLifeTime(int lifeTime) {
+        this.lifeTime = lifeTime;
+    }
+    
+    
+    
     
  
-    @Override
-    public String getDescription() {
-        return  "Naturel tree";
-    }
-    
-    @Override
-    public double getPrice() {
-        return 200.50;
-    }
     
     
 }
