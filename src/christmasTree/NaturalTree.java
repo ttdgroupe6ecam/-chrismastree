@@ -9,10 +9,9 @@ package christmasTree;
  *
  * @author MediaMonster
  */
-public class NaturalTree implements ChrismasTree {
+public class NaturalTree extends ChrismasTree {
     
-    private  String description;
-    private  double prix;
+    
  
     @Override
     public String getDescription() {
