@@ -3,26 +3,26 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package decoratorsapin;
+package christmasTree;
 
 /**
  *
  * @author MediaMonster
  */
-public class Balls extends Decorator {
+public class NaturalTree implements ChrismasTree {
     
-    public Balls(ChrismasTree treeDecorator) {
-        super(treeDecorator);
-    }
-
+    private  String description;
+    private  double prix;
+ 
     @Override
     public String getDescription() {
-        return treeDecorator.getDescription()+ " with Balls "; 
+        return  "Naturel tree";
     }
-
+    
     @Override
     public double getPrice() {
-        return 50+treeDecorator.getPrice();
+        return 200.50;
     }
+    
     
 }
