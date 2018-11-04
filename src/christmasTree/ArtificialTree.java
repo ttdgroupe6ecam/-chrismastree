@@ -17,9 +17,10 @@ public class ArtificialTree extends ChrismasTree {
     public ArtificialTree() {
         setDescription("Artificial Tree");
         setPrice(100.99);
+        setColor("Green");
     }
     
-    public ArtificialTree( String description,  double price,  String plasticType, String color){
+    public ArtificialTree( String description,  double price,String color, String plasticType){
         setDescription(description);
         setPrice(price);
         setColor(color);
