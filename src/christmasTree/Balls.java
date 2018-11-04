@@ -17,7 +17,7 @@ public class Balls extends Decorator {
     //Constructs
     public Balls(ChrismasTree treeDecorator) {
         super(treeDecorator);
-        setColor("Red");
+        setColor(getColor()+" BallsClor:Red");
         setDescription(treeDecorator.getDescription()+" Balls");
         setPrice(treeDecorator.getPrice()+20.99);
         setMaterial("Plastic");
@@ -26,9 +26,10 @@ public class Balls extends Decorator {
 
     public Balls(String color,String description ,double price, String material, String size, ChrismasTree treeDecorator) {
         super(treeDecorator);
-       // setPrice((treeDecorator.price+price));
-        setDescription(description);
-       // setPrice(price);
+        
+        setColor(getColor()+" "+color);
+        setDescription(treeDecorator.getDescription()+" "+description);
+        setPrice(treeDecorator.getPrice()+price);
         this.material = material;
         this.size = size;
     }

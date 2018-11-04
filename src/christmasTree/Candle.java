@@ -17,11 +17,20 @@ public class Candle extends Decorator {
     //Construct
     public Candle(ChrismasTree treeDecorator) {
         super(treeDecorator);
-        setColor("white");
+        setColor(getColor()+"CandleColor: white");
         setDescription(treeDecorator.getDescription()+" Candle");
         setPrice(treeDecorator.getPrice()+10.99);
         setLifeTime(5);
         setParfum("Senteurs d'inspiration");
+    }
+
+    public Candle(String color,String description ,double price,int lifeTime, String parfum, ChrismasTree treeDecorator) {
+        super(treeDecorator);
+        setColor(getColor()+" CandleColor: "+color);
+        setDescription(treeDecorator.getDescription()+" "+description);
+        setPrice(treeDecorator.getPrice()+price);
+        this.lifeTime = lifeTime;
+        this.parfum = parfum;
     }
     
     //Getters and Setters
