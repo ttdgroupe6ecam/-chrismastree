@@ -18,17 +18,17 @@ public class Balls extends Decorator {
     public Balls(ChrismasTree treeDecorator) {
         super(treeDecorator);
         setColor("Red");
-        setDescription("Balls");
-        setPrice(20.99);
+        setDescription(treeDecorator.getDescription()+" Balls");
+        setPrice(treeDecorator.getPrice()+20.99);
         setMaterial("Plastic");
         setSize("Small");
     }
 
     public Balls(String color,String description ,double price, String material, String size, ChrismasTree treeDecorator) {
         super(treeDecorator);
-        setColor(color);
+       // setPrice((treeDecorator.price+price));
         setDescription(description);
-        setPrice(price);
+       // setPrice(price);
         this.material = material;
         this.size = size;
     }
@@ -49,6 +49,12 @@ public class Balls extends Decorator {
 
     public void setSize(String size) {
         this.size = size;
+    }
+
+    @Override
+    public String toString() {
+        
+        return  super.toString()+ "Balls{" + "material=" + material + ", size=" + size + '}';
     }
   
     

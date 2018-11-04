@@ -119,9 +119,11 @@ public class ClientMain {
      //test
      
      ChrismasTree decoration=new ArtificialTree();
-     Decorator d= new Balls(decoration);
-           
-     System.out.println(" "+d.getDescription());
+     ChrismasTree d= new Garland(new Balls(decoration));
+     
+     
+     System.out.println(" "+d.toString());      
+     
     }
     
     

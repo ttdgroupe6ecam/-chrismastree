@@ -16,7 +16,13 @@ public class Garland extends Decorator {
     //Construct
     public Garland(ChrismasTree treeDecorator) {
         super(treeDecorator);
+        setColor("Red");
+        setDescription(treeDecorator.getDescription()+" Garland");
+        setPrice(treeDecorator.getPrice()+12.99);
+        setLength(40);
     }
+    
+    
      
     //Getters and Setters
     public double getLength() {
@@ -29,7 +35,7 @@ public class Garland extends Decorator {
 
     @Override
     public String toString() {
-        return "Garland{" + "length=" + length + '}';
+        return super.toString()+" Garland{" + "length=" + length + '}';
     }
 
     
