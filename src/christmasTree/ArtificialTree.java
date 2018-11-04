@@ -17,7 +17,7 @@ public class ArtificialTree extends ChrismasTree {
     public ArtificialTree() {
         setDescription("Artificial Tree");
         setPrice(100.99);
-        setColor("Green");
+        setColor("TreeClor: Green");
         this.plasticType="plasticType";
     }
     

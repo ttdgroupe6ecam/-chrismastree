@@ -18,7 +18,7 @@ public class NaturalTree extends ChrismasTree {
     public NaturalTree() {
         setDescription("Natural Tree");
         setPrice(200.20);
-        setColor("Green");
+        setColor("TreeClor: Green");
     }
      
     public NaturalTree(String description,  double price,String color,String treeType, int lifeTime ) {
