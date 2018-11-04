@@ -12,7 +12,6 @@ package christmasTree;
 public class ArtificialTree extends ChrismasTree {
      
     private  String  plasticType;
-    //private  boolean hasRoot;
     
     //constructs
     public ArtificialTree() {
@@ -20,33 +19,24 @@ public class ArtificialTree extends ChrismasTree {
         setPrice(100.99);
     }
     
-    public ArtificialTree( String description,  double price,  String plasticType/*,  boolean hasRoot*/){
+    public ArtificialTree( String description,  double price,  String plasticType, String color){
         setDescription(description);
         setPrice(price);
-        this.plasticType=plasticType;
-       // this.hasRoot=hasRoot;
-        
+        setColor(color);
+        this.plasticType=plasticType;  
     }
-    
-    
-    //getters
+
+    //Getters and Setters
     public String getPlasticType() {
         return plasticType;
     }
 
-  /*  public boolean isHasRoot() {
-        return hasRoot;
-    }*/
- 
-    //setters
-
     public void setPlasticType(String plasticType) {
         this.plasticType = plasticType;
     }
-
-   /* public void setHasRoot(boolean hasRoot) {
-        this.hasRoot = hasRoot;
-    }*/
+    
+    
+ 
 
     @Override
     public String toString() {
