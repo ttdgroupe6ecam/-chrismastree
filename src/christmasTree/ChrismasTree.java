@@ -41,7 +41,7 @@ public abstract class ChrismasTree {
 
     @Override
     public String toString() {
-        return "ChrismasTree{" + "description=" + description + ", price=" + price + ", color=" + color + '}';
+        return "ChrismasTree{" + "description=" + description + ", price=" + price + ", Treecolor=" + color + '}';
     }
 
    
