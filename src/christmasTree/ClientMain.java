@@ -20,18 +20,13 @@ public class ClientMain {
     Scanner scan = new Scanner(System.in);
     
     public static void treeDecoration(ChrismasTree chrismasTree){
-            Scanner scan = new Scanner(System.in);
+        /*Scanner scan = new Scanner(System.in);
         Decorator tree=null;
         Decorator d=null;
-             /*   =new Balls(chrismasTree);
-        d=new Leds(chrismasTree);*/
-         
-         //***
             
-        //String choiceDecoration = null;
         
         
-        
+       /* 
         //Geek myGeek = new Geek("Geek");
         System.out.println("Decorator Options: ");
         System.out.println("a: Leds");
@@ -45,14 +40,14 @@ public class ClientMain {
             choiceDecoration = scan.nextLine();
             switch (choiceDecoration) {
             case "a":
-                 d=new Leds(chrismasTree);
+               /*  d=new Leds(chrismasTree);
                 // afficher la description
                 System.out.println(d.getDescription());
         
                  // afficher le prix
                 System.out.println(d.getPrice());
-                 break;
-            case "b":
+                 break;*/
+           /* case "b":
                 d=new Balls(chrismasTree);
                 // afficher la description
                 System.out.println(d.getDescription());
@@ -71,12 +66,12 @@ public class ClientMain {
          
          //****
          
-        // return d;
+        // return d;*/
     }
     
     public static void main(String[] args) {
         
-        Scanner scan = new Scanner(System.in);
+        /*Scanner scan = new Scanner(System.in);
         
         String choiceTree = null;
         String choiceDecoration = null;
@@ -106,20 +101,27 @@ public class ClientMain {
                 treeDecoration(tree);
                 break;
                 
-            case "c":
+           /* case "c":
                 tree = new WoodTree();
                 treeDecoration(tree);
-                break;
+                break;*/
                 
-            } // end of switch
-        } while (!choiceTree.equals("q")); // end of loop
+           // } // end of switch
+     /*   } while (!choiceTree.equals("q")); // end of loop
         //sapain Artificiel avec boule 
          ChrismasTree decoration=(
             new Balls(
             new ArtificialTree()
             )
-            );
+            );*/
          
+     
+     //test
+     
+     ChrismasTree decoration=new ArtificialTree();
+     Decorator d= new Balls(decoration);
+           
+     System.out.println(" "+d.getDescription());
     }
     
     
