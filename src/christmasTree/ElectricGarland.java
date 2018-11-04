@@ -40,12 +40,13 @@ public class ElectricGarland extends Garland {
     public void setHasBlink(boolean hasBlink) {
         this.hasBlink = hasBlink;
     }
-    
 
     @Override
     public String toString() {
-        return "SyntheticGarland{" + "paillette=" + hasBlink + '}';
+        return super.toString()+" ElectricGarland{" + "hasBlink=" + hasBlink + '}';
     }
+    
+
     
     
     
