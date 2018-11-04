@@ -35,9 +35,6 @@ public class ArtificialTree extends ChrismasTree {
         this.plasticType = plasticType;
     }
     
-    
- 
-
     @Override
     public String toString() {
         super.toString();

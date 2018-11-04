@@ -39,13 +39,13 @@ public abstract class ChrismasTree {
         this.color = color;
     }
 
-   
-    
     @Override
     public String toString() {
-        return "ChrismasTree{" + "description=" + description + ", price=" + price + '}';
+        return "ChrismasTree{" + "description=" + description + ", price=" + price + ", color=" + color + '}';
     }
+
    
+ 
     
     
 }
