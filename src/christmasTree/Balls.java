@@ -33,7 +33,6 @@ public class Balls extends Decorator {
         this.size = size;
     }
 
-    
     //Getters and setters
     public String getMaterial() {
         return material;
