@@ -16,6 +16,11 @@ public class ElectricGarland extends Garland {
     //Construct
     public ElectricGarland(ChrismasTree treeDecorator) {
         super(treeDecorator);
+        setColor(getColor()+" ElectricGarland:white");
+        setDescription(treeDecorator.getDescription()+" ElectricGarland");
+        setPrice(treeDecorator.getPrice()+10.99);
+        setHasBlink(true);
+        
     }
       
     //Getters and setters
