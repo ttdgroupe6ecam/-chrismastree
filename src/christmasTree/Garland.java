@@ -16,7 +16,7 @@ public class Garland extends Decorator {
     //Construct
     public Garland(ChrismasTree treeDecorator) {
         super(treeDecorator);
-        setColor("Red");
+        setColor(treeDecorator.getColor()==null?" ":treeDecorator.getColor()+" GarlandClor:blue");
         setDescription(treeDecorator.getDescription()+" Garland");
         setPrice(treeDecorator.getPrice()+12.99);
         setLength(100);
