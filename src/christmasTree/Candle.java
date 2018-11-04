@@ -11,12 +11,17 @@ package christmasTree;
  */
 public class Candle extends Decorator {
     
-    private int lifeTime;
+    private int lifeTime;//en heur
     private String parfum;
     
     //Construct
     public Candle(ChrismasTree treeDecorator) {
         super(treeDecorator);
+        setColor("white");
+        setDescription(treeDecorator.getDescription()+" Candle");
+        setPrice(treeDecorator.getPrice()+10.99);
+        setLifeTime(5);
+        setParfum("Senteurs d'inspiration");
     }
     
     //Getters and Setters
