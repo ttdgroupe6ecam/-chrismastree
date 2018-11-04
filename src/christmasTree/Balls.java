@@ -11,20 +11,35 @@ package christmasTree;
  */
 public class Balls extends Decorator {
  
-    String material
-    int radius
+    String material;
+    int radius;
+    
     public Balls(ChrismasTree treeDecorator) {
         super(treeDecorator);
     }
 
-    @Override
-    public String getDescription() {
-        return treeDecorator.getDescription()+ " with Balls "; 
+    public String getMaterial() {
+        return material;
     }
 
-    @Override
-    public double getPrice() {
-        return 50+treeDecorator.getPrice();
+    public void setMaterial(String material) {
+        this.material = material;
     }
+
+    public int getRadius() {
+        return radius;
+    }
+
+    public void setRadius(int radius) {
+        this.radius = radius;
+    }
+
+    public ChrismasTree getTreeDecorator() {
+        return treeDecorator;
+    }
+
+    public void setTreeDecorator(ChrismasTree treeDecorator) {
+        this.treeDecorator = treeDecorator;
+    }   
     
 }

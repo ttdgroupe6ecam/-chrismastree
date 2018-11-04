@@ -12,25 +12,34 @@ package christmasTree;
 public abstract class ChrismasTree {
     private String description;
     private double price;
-
-    //getters
-    protected String getDescription() {
+    private String color;
+    
+    //Getters and Setters
+    public String getDescription() {
         return description;
     }
 
-    protected double getPrice() {
-        return price;
-    }
-    
-    //setters
-    protected void setDescription(String description) {
+    public void setDescription(String description) {
         this.description = description;
     }
 
-    protected void setPrice(double price) {
+    public double getPrice() {
+        return price;
+    }
+
+    public void setPrice(double price) {
         this.price = price;
     }
 
+    public String getColor() {
+        return color;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
+    }
+
+   
     
     @Override
     public String toString() {
