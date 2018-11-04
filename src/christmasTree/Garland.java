@@ -24,7 +24,7 @@ public class Garland extends Decorator {
 
     public Garland(String color,String description ,double price,double length, ChrismasTree treeDecorator) {
         super(treeDecorator);
-        setColor(getColor()+" ElectricGarlandColor: "+color);
+        setColor(getColor()+"GarlandColor: "+color);
         setDescription(treeDecorator.getDescription()+" "+description);
         setPrice(treeDecorator.getPrice()+price);
         this.length = length;
