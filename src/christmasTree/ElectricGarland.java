@@ -22,6 +22,14 @@ public class ElectricGarland extends Garland {
         setHasBlink(true);
         
     }
+
+    public ElectricGarland(String color,String description ,double price,boolean hasBlink, ChrismasTree treeDecorator) {
+        super(treeDecorator);
+        setColor(getColor()+" ElectricGarlandColor: "+color);
+        setDescription(treeDecorator.getDescription()+" "+description);
+        setPrice(treeDecorator.getPrice()+price);
+        this.hasBlink = hasBlink;
+    }
       
     //Getters and setters
 
