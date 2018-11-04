@@ -11,7 +11,7 @@ package christmasTree;
  */
 public class Garland extends Decorator {
     
-    private double length;
+    private double length;//en cm
     
     //Construct
     public Garland(ChrismasTree treeDecorator) {
@@ -19,7 +19,15 @@ public class Garland extends Decorator {
         setColor("Red");
         setDescription(treeDecorator.getDescription()+" Garland");
         setPrice(treeDecorator.getPrice()+12.99);
-        setLength(40);
+        setLength(100);
+    }
+
+    public Garland(String color,String description ,double price,double length, ChrismasTree treeDecorator) {
+        super(treeDecorator);
+        setColor(getColor()+" ElectricGarlandColor: "+color);
+        setDescription(treeDecorator.getDescription()+" "+description);
+        setPrice(treeDecorator.getPrice()+price);
+        this.length = length;
     }
     
     
