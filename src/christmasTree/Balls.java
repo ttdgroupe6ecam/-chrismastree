@@ -14,10 +14,12 @@ public class Balls extends Decorator {
     String material;
     int radius;
     
+    //Constructs
     public Balls(ChrismasTree treeDecorator) {
         super(treeDecorator);
     }
 
+    //Getters and setters
     public String getMaterial() {
         return material;
     }
@@ -33,13 +35,6 @@ public class Balls extends Decorator {
     public void setRadius(int radius) {
         this.radius = radius;
     }
-
-    public ChrismasTree getTreeDecorator() {
-        return treeDecorator;
-    }
-
-    public void setTreeDecorator(ChrismasTree treeDecorator) {
-        this.treeDecorator = treeDecorator;
-    }   
+  
     
 }
