@@ -11,11 +11,23 @@ package christmasTree;
  */
 public abstract class Decorator extends ChrismasTree{
     
-    protected ChrismasTree treeDecorator;
-
+    private ChrismasTree treeDecorator;
+    
+    //Construct
     public Decorator (ChrismasTree treeDecorator)
     {
         this.treeDecorator = treeDecorator;
     } 
+    
+    //Getters and setters
+    public ChrismasTree getTreeDecorator() {
+        return treeDecorator;
+    }
+
+    public void setTreeDecorator(ChrismasTree treeDecorator) {
+        this.treeDecorator = treeDecorator;
+    }
+    
+    
     
 }
