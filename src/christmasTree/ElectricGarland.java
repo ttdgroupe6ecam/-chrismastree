@@ -18,7 +18,7 @@ public class ElectricGarland extends Garland {
         super(treeDecorator);
         setColor(treeDecorator.getColor()==null?" ":treeDecorator.getColor()+" ElectricGarland:white");
         setDescription(treeDecorator.getDescription()+" ElectricGarland");
-        setPrice(treeDecorator.getPrice()+10.99);
+        setPrice(treeDecorator.getPrice()+36.99);
         setHasBlink(true);
         
     }
