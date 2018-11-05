@@ -30,11 +30,15 @@ public class ArtificialTree extends ChrismasTree {
         this.plasticType=plasticType;  
     }
     
-    //Attention à faire 
+    //Attention à vérifier !!!!!!!!!!!!!!!!!!!!!!!!!!!!
     public ArrayList decoratorPossible(){
-        ArrayList a = null;
-        return a;
+       ArrayList<String> list = new ArrayList<String>();
+       list.add("Balls");
+       list.add("ElectricGarland");
+       list.add("SyntheticGarland");
+        return list;
     }
+    //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
     //Getters and Setters
     public String getPlasticType() {
         return plasticType;
