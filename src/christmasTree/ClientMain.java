@@ -24,15 +24,16 @@ public class ClientMain {
         Decorator tree=null;
         Decorator d=null;
 
-        //Geek myGeek = new Geek("Geek");
+        //Decorator Options
         System.out.println("Decorator Options: ");
-        System.out.println("b: Balls");
+        System.out.println("a: Balls");
         System.out.println("b: Garland");
         System.out.println("c: Candle");
         System.out.println("q: Quit");
         
-        //choice = scan.nextLine();
-         String choiceDecoration=null;
+        
+        String choiceDecoration=null;
+         
         do {
             System.out.println("Choose a decoration please: ");
             choiceDecoration = scan.nextLine();
@@ -44,11 +45,31 @@ public class ClientMain {
         
                  break;
             case "b":
-                d=new Garland(chrismasTree);
-                // dispaly
-                System.out.println(d.toString());       
-                break;
-                
+                System.out.println("Garland Options: ");
+                System.out.println("a: ElectricGarland");
+                System.out.println("b: SyntheticGarland");
+                System.out.println("q: Quit");
+                do{
+                        System.out.println("Choose a Garland decorations options : ");
+                        String GarlandOption = scan.nextLine();
+                        
+                        switch (GarlandOption) {
+                        case "a":
+                             d=new ElectricGarland(chrismasTree);
+                            // display
+                            System.out.println(d.toString());
+
+                             break;
+                        case "b":
+                            d=new SyntheticGarland(chrismasTree);
+                            // dispaly
+                            System.out.println(d.toString());       
+                            break;
+
+
+                        } // end of switch
+                    } while (!choiceDecoration.equals("q")); // end of loop
+
             case "c":
                 d=new Candle(chrismasTree);
                 // dispaly
@@ -72,7 +93,7 @@ public class ClientMain {
         
         ChrismasTree tree=null;
         
-        //Geek myGeek = new Geek("Geek");
+        //Command Options
         System.out.println("Command Options: ");
         System.out.println("a: Natural tree");
         System.out.println("b: Artificial tree");
