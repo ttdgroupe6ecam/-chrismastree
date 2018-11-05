@@ -19,7 +19,7 @@ public class Candle extends Decorator {
         super(treeDecorator);
         setColor(treeDecorator.getColor()==null?" ":treeDecorator.getColor()+"CandleColor: white");
         setDescription(treeDecorator.getDescription()+" Candle");
-        setPrice(treeDecorator.getPrice()+10.99);
+        setPrice(treeDecorator.getPrice()+16.99);
         setLifeTime(5);
         setParfum("Senteurs d'inspiration");
     }
