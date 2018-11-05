@@ -20,17 +20,15 @@ public class ClientMain {
     Scanner scan = new Scanner(System.in);
     
     public static void treeDecoration(ChrismasTree chrismasTree){
-        /*Scanner scan = new Scanner(System.in);
+        Scanner scan = new Scanner(System.in);
         Decorator tree=null;
         Decorator d=null;
-            
-        
-        
-       /* 
+
         //Geek myGeek = new Geek("Geek");
         System.out.println("Decorator Options: ");
-        System.out.println("a: Leds");
         System.out.println("b: Balls");
+        System.out.println("b: Garland");
+        System.out.println("c: Candle");
         System.out.println("q: Quit");
         
         //choice = scan.nextLine();
@@ -40,27 +38,23 @@ public class ClientMain {
             choiceDecoration = scan.nextLine();
             switch (choiceDecoration) {
             case "a":
-               /*  d=new Leds(chrismasTree);
-                // afficher la description
-                System.out.println(d.getDescription());
+                 d=new Balls(chrismasTree);
+                // display
+                System.out.println(d.toString());
         
-                 // afficher le prix
-                System.out.println(d.getPrice());
-                 break;*/
-           /* case "b":
-                d=new Balls(chrismasTree);
-                // afficher la description
-                System.out.println(d.getDescription());
-        
-                 // afficher le prix
-                System.out.println(d.getPrice());
-        
-                 // afficher le prix
-                System.out.println(chrismasTree.getPrice());
+                 break;
+            case "b":
+                d=new Garland(chrismasTree);
+                // dispaly
+                System.out.println(d.toString());       
                 break;
-            
-            
                 
+            case "c":
+                d=new Candle(chrismasTree);
+                // dispaly
+                System.out.println(d.toString());       
+                break;
+
             } // end of switch
         } while (!choiceDecoration.equals("q")); // end of loop
          
@@ -111,12 +105,12 @@ public class ClientMain {
          
      
      //test
-     
+    /* 
      ChrismasTree decoration=new ArtificialTree();
      ChrismasTree d= new Garland(new Balls(decoration));
      
      
-     System.out.println(" "+d.toString());      
+     System.out.println(" "+d.toString());  */    
      
     }
     
