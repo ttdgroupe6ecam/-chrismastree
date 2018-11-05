@@ -32,7 +32,7 @@ public class ArtificialTree extends ChrismasTree {
     
     //Attention à faire 
     public ArrayList decoratorPossible(){
-        ArrayList a;
+        ArrayList a = null;
         return a;
     }
     //Getters and Setters
