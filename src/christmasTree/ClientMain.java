@@ -79,9 +79,7 @@ public class ClientMain {
             } // end of switch
         } while (!choiceDecoration.equals("q")); // end of loop
          
-         //****
-         
-        // return d;*/
+        
     }
     
     public static void main(String[] args) {
@@ -116,13 +114,7 @@ public class ClientMain {
                 break;
                 
             } // end of switch
-        } while (!choiceTree.equals("q")); // end of loop
-       /* //sapain Artificiel avec boule 
-         ChrismasTree decoration=(
-            new Balls(
-            new ArtificialTree()
-            )
-            );*/
+        } while (!choiceTree.equals("q")); // end of loop  
          
      
      //test
