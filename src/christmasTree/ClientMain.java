@@ -71,7 +71,7 @@ public class ClientMain {
     
     public static void main(String[] args) {
         
-        /*Scanner scan = new Scanner(System.in);
+        Scanner scan = new Scanner(System.in);
         
         String choiceTree = null;
         String choiceDecoration = null;
@@ -82,7 +82,6 @@ public class ClientMain {
         System.out.println("Command Options: ");
         System.out.println("a: Natural tree");
         System.out.println("b: Artificial tree");
-        System.out.println("c: Wood tree");
         System.out.println("q: Quit");
         
         
@@ -101,14 +100,9 @@ public class ClientMain {
                 treeDecoration(tree);
                 break;
                 
-           /* case "c":
-                tree = new WoodTree();
-                treeDecoration(tree);
-                break;*/
-                
-           // } // end of switch
-     /*   } while (!choiceTree.equals("q")); // end of loop
-        //sapain Artificiel avec boule 
+            } // end of switch
+        } while (!choiceTree.equals("q")); // end of loop
+       /* //sapain Artificiel avec boule 
          ChrismasTree decoration=(
             new Balls(
             new ArtificialTree()

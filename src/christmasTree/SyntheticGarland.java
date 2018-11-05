@@ -24,7 +24,7 @@ public class SyntheticGarland extends Garland {
 
     public SyntheticGarland(String paillette, String color, String description, double price, double length, ChrismasTree treeDecorator) {
         super(treeDecorator);
-        setColor(getColor()+" SyntheticGarland: "+color);
+        setColor(treeDecorator.getColor()==null?" ":treeDecorator.getColor()+" "+color);
         setDescription(treeDecorator.getDescription()+" "+description);
         setPrice(treeDecorator.getPrice()+price);
         this.paillette = paillette;
