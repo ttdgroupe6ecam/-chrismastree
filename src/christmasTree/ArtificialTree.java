@@ -5,6 +5,8 @@
  */
 package christmasTree;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author MediaMonster
@@ -27,7 +29,12 @@ public class ArtificialTree extends ChrismasTree {
         setColor(color);
         this.plasticType=plasticType;  
     }
-
+    
+    //Attention à faire 
+    public ArrayList decoratorPossible(){
+        ArrayList a;
+        return a;
+    }
     //Getters and Setters
     public String getPlasticType() {
         return plasticType;
