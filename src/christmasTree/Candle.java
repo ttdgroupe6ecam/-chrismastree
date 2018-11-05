@@ -17,7 +17,7 @@ public class Candle extends Decorator {
     //Construct
     public Candle(ChrismasTree treeDecorator) {
         super(treeDecorator);
-        setColor(getColor()+"CandleColor: white");
+        setColor(treeDecorator.getColor()==null?" ":treeDecorator.getColor()+"CandleColor: white");
         setDescription(treeDecorator.getDescription()+" Candle");
         setPrice(treeDecorator.getPrice()+10.99);
         setLifeTime(5);
