@@ -17,6 +17,7 @@ public class ClientMain {
      * @param args the command line arguments
      */
     
+    //Attention il manque comment ajouetr plusier decoration et la gestion de decoratorPossible
     Scanner scan = new Scanner(System.in);
     
     public static void treeDecoration(ChrismasTree chrismasTree){
