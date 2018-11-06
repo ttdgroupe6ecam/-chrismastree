@@ -5,6 +5,7 @@
  */
 package christmasTree;
 import java.io.BufferedWriter;
+import java.io.PrintWriter;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.FileWriter;
@@ -18,10 +19,10 @@ import java.nio.file.Paths;
  */
 public class Writing {
     private String path;
-    private boolean append_to_file = true;
     
     public void Writing() throws IOException {
     FileWriter write = new FileWriter(path, true);
     BufferedWriter bufferWrite = new BufferedWriter(write);
+    PrintWriter printFile = new PrintWriter(bufferWrite);
     }
 }
