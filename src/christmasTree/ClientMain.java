@@ -19,10 +19,11 @@ public class ClientMain {
     
     //Attention il manque comment ajouetr plusier decoration et la gestion de decoratorPossible
     Scanner scan = new Scanner(System.in);
-    static Decorator d= null;
+    
     public static void treeDecoration(ChrismasTree chrismasTree){
         Scanner scan = new Scanner(System.in);
-        
+        Decorator decoration= null;
+        Decorator manyDecoration= null;
         String GarlandOption;
         String choiceDecoration;
         
@@ -39,9 +40,16 @@ public class ClientMain {
             
             switch (choiceDecoration) {
                 case "a":
-                    d=new Balls(chrismasTree);
+                    if (manyDecoration==null){
+                        decoration=new Balls (chrismasTree);
+                        manyDecoration=decoration;
+                    }
+                    else{
+                       decoration=new Balls(manyDecoration);  
+                    }
+                       
                     // display
-                    System.out.println(d.toString());
+                    System.out.println(decoration.toString());
                     break;
 
                 case "b":
@@ -56,24 +64,51 @@ public class ClientMain {
 
                             switch (GarlandOption) {
                                 case "a":
-                                     d=new ElectricGarland(chrismasTree);
+                                     //d=new ElectricGarland(chrismasTree);
+                                     
+                                    if (manyDecoration==null){
+                                        decoration=new ElectricGarland (chrismasTree);
+                                        manyDecoration=decoration;
+                                    }
+                                    else{
+                                        decoration=new ElectricGarland(manyDecoration);  
+                                    }
+                                     
                                     // display
-                                    System.out.println(d.toString());
+                                    System.out.println(decoration.toString());
                                     break;
 
                                 case "b":
-                                    d=new SyntheticGarland(chrismasTree);
+                                    //d=new SyntheticGarland(chrismasTree);
+                                    
+                                    if (manyDecoration==null){
+                                        decoration=new SyntheticGarland (chrismasTree);
+                                        manyDecoration=decoration;
+                                    }
+                                    else{
+                                        decoration=new SyntheticGarland(manyDecoration);  
+                                    }
+                                    
                                     // dispaly
-                                    System.out.println(d.toString());       
+                                    System.out.println(decoration.toString());       
                                     break;
 
                             } // end of switch
                         } while (!GarlandOption.equals("q")); // end of loop
 
                 case "c":
-                    d=new Candle(chrismasTree);
+                    //d=new Candle(chrismasTree);
+                    if (manyDecoration==null){
+                        decoration=new Candle (chrismasTree);
+                        manyDecoration=decoration;
+                    }
+                    else{
+                        decoration=new Candle(manyDecoration);  
+                    }
+                    
+                    
                     // dispaly
-                    System.out.println(d.toString());       
+                    System.out.println(decoration.toString());       
                     break;
 
             } // end of switch
@@ -86,9 +121,9 @@ public class ClientMain {
         
         Scanner scan = new Scanner(System.in);
         
-        String choiceTree = null;
+        String choiceTree;
         
-        ChrismasTree tree=null;
+        ChrismasTree tree;
         
         //Command Options
         System.out.println("Command Options: ");
@@ -116,7 +151,7 @@ public class ClientMain {
         } while (!choiceTree.equals("q")); // end of loop  
          
      
-     //test
+     //manyDecoration
     /* 
      ChrismasTree decoration=new ArtificialTree();
      ChrismasTree d= new Garland(new Balls(decoration));

@@ -17,7 +17,7 @@ public class Balls extends Decorator {
     //Constructs
     public Balls(ChrismasTree treeDecorator) {
         super(treeDecorator);
-        setColor(treeDecorator.getColor()==null?" ":treeDecorator.getColor()+" BallsClor:Red");
+        setColor(treeDecorator.getColor()==null?" ":treeDecorator.getColor()+" BallsClor:Red ");
         setDescription(treeDecorator.getDescription()+" Balls");
         setPrice(treeDecorator.getPrice()+20.99);
         setMaterial("Plastic");
