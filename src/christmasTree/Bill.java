@@ -43,4 +43,7 @@ public class Bill {
         pf.println(newString);
     }
     
+    public void addClient (){
+        this.toBePrinted.
+    }
 }
