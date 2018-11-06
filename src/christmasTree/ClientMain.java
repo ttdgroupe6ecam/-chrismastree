@@ -24,6 +24,7 @@ public class ClientMain {
         Scanner scan = new Scanner(System.in);
         Decorator tree=null;
         Decorator d=null;
+        String GarlandOption;
 
         //Decorator Options
         System.out.println("Decorator Options: ");
@@ -52,7 +53,7 @@ public class ClientMain {
                 System.out.println("q: Quit");
                 do{
                         System.out.println("Choose a Garland decorations options : ");
-                        String GarlandOption = scan.nextLine();
+                        GarlandOption = scan.nextLine();
                         
                         switch (GarlandOption) {
                         case "a":
@@ -69,7 +70,7 @@ public class ClientMain {
 
 
                         } // end of switch
-                    } while (!choiceDecoration.equals("q")); // end of loop
+                    } while (!GarlandOption.equals("q")); // end of loop
 
             case "c":
                 d=new Candle(chrismasTree);
