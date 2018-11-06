@@ -22,10 +22,9 @@ public class ClientMain {
     static Decorator d= null;
     public static void treeDecoration(ChrismasTree chrismasTree){
         Scanner scan = new Scanner(System.in);
-        Decorator tree= null;
         
         String GarlandOption;
-        String choiceDecoration= null;
+        String choiceDecoration;
         
         //Decorator Options
         System.out.println("Decorator Options: ");
@@ -40,7 +39,7 @@ public class ClientMain {
             
             switch (choiceDecoration) {
                 case "a":
-                     d=new Balls(chrismasTree);
+                    d=new Balls(chrismasTree);
                     // display
                     System.out.println(d.toString());
                     break;
@@ -88,7 +87,6 @@ public class ClientMain {
         Scanner scan = new Scanner(System.in);
         
         String choiceTree = null;
-        String choiceDecoration = null;
         
         ChrismasTree tree=null;
         
