@@ -20,9 +20,8 @@ public class Writing {
     private String path;
     private boolean append_to_file = true;
     
-    public void WriteFile (String file_path,boolean append) {
-        path = file_path;
-        append_to_file = append;
-                }
-    
+    public void Writing() throws IOException {
+    FileWriter write = new FileWriter(path, true);
+    BufferedWriter bufferWrite = new BufferedWriter(write);
+    }
 }
