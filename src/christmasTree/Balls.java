@@ -28,6 +28,7 @@ public class Balls extends Decorator {
         super(treeDecorator);
         setColor(treeDecorator.getColor()==null?" ":treeDecorator.getColor()+" "+color);
         setDescription(treeDecorator.getDescription()+" "+description);
+        
         setPrice(treeDecorator.getPrice()+price);
         this.material = material;
         this.size = size;
