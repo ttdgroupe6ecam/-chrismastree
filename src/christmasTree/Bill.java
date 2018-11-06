@@ -18,19 +18,23 @@ public class Bill {
     private FileWriter wr = null;
     private BufferedWriter bf = null;
     private PrintWriter pf = null;
+    private ChrismasTree toBePrinted;
     
-    public void Bill (String path)throws IOException {
+    public void Bill (ChrismasTree toBePrinted,String path)throws IOException {
         
         FileWriter wr = new FileWriter(path,true);
-        BufferedWriter bf =new BufferedWriter(wr);
+        BufferedWriter bf = new BufferedWriter(wr);
         PrintWriter pf = new PrintWriter(bf);
+        this.toBePrinted = toBePrinted;
     }
     
-    public void close( )throws IOException{
+    public void close()throws IOException{
         
         this.pf.close();
         this.bf.close();
         this.pf.close();
     }
+    
+    public void addLine(String)
     
 }
