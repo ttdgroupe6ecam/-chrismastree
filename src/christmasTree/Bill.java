@@ -12,42 +12,77 @@ import java.io.IOException;
 /**
  *
  * @author venon arthur
+ * 
+ * This class's purpose is to save a command of a christmas tree in
+ * the format of a billing where client's info, the tree, it's elements and 
+ * their prices and the total price is present
  */
 public class Bill {
 
     private FileWriter wr = null;
     private BufferedWriter bf = null;
     private PrintWriter pf = null;
-    private ChrismasTree toBePrinted;
-    
-    public void Bill (ChrismasTree toBePrinted,String path)throws IOException {
+    private Decorator toBePrinted;
+    /**
+     * 
+     * @param toBePrinted the class whiwch contains all info needed to make
+     * the file
+     * @param path the path to the file's location
+     * @throws IOException this is in case the file cannot be created
+     * 
+     * This method is the constructor which instantiates the file, buffer and 
+     * print writer to write in a file located in the specified path
+     */
+    public void Bill (Decorator toBePrinted,String path)throws IOException {
         
         FileWriter wr = new FileWriter(path,true);
         BufferedWriter bf = new BufferedWriter(wr);
         PrintWriter pf = new PrintWriter(bf);
         this.toBePrinted = toBePrinted;
     }
-    
-    public void close()throws IOException{
+    /**
+     * 
+     * @throws IOException this is used in case the buffer and writer are
+     * already closed
+     * 
+     * this method closes the writer, buffer and printer so ressources used
+     * are released
+     */
+    public void close()throws IOException {
         
         this.pf.close();
         this.bf.close();
         this.wr.close();
     }
+    /**
+     * 
+     * @param newString the string to be added in the file
+     * 
+     * this method adds the string in the parameters directly inside the file
+     */
     
     public void addString(String newString){
         pf.print(newString);
     }
-    
+    /**
+     * 
+     * @param newString this string is to be added in the file
+     * 
+     * this methods adds ths stirng in the parameters and then goes to the 
+     * next lien
+     */
     public void addStringLine(String newString){
         pf.println(newString);
     }
-    
+    /**
+     * 
+     */
     public void addClient (){
         this.toBePrinted.
     }
                 
     public void addTree () {
-        
+        pf.println(this.toBePrinted.)
     }
+    public void addDecorator ()
 }
