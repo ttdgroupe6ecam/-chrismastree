@@ -14,12 +14,16 @@ import java.io.IOException;
  * @author venon arthur
  */
 public class Bill {
+
+    private FileWriter wr = null;
+    private BufferedWriter bf = null;
+    private PrintWriter pf = null;
     
     public void Bill (String path)throws IOException {
         
-        FileWriter write = new FileWriter(path,true);
-        BufferedWriter buffer =new BufferedWriter(write);
-        PrintWriter printer = new PrintWriter(buffer);
+        FileWriter wr = new FileWriter(path,true);
+        BufferedWriter bf =new BufferedWriter(wr);
+        PrintWriter pf = new PrintWriter(bf);
     }
     
     public void close(FileWriter write,BufferedWriter buffer,
@@ -29,4 +33,5 @@ public class Bill {
         buffer.close();
         write.close();
     }
+    
 }
