@@ -15,9 +15,10 @@ import java.io.IOException;
 public class Bill {
     
     public void Bill (String path) {
+        try {
         FileWriter write = new FileWriter(path,true);
-        PrintWriter line = new PrintWriter( write );
-        }
+        PrintWriter line = new PrintWriter(write);
+        }catch (Exception e){}
     }
     
 }
