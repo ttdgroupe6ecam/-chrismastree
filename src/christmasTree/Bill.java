@@ -6,6 +6,7 @@
 package christmasTree;
 import java.util.ArrayList;
 import java.io.FileWriter;
+import java.io.BufferedWriter;
 import java.io.PrintWriter;
 import java.io.IOException;
 /**
@@ -17,8 +18,11 @@ public class Bill {
     public void Bill (String path)throws IOException {
         
         FileWriter write = new FileWriter(path,true);
-        PrintWriter line = new PrintWriter(write);
-        
+        BufferedWriter buffer =new BufferedWriter(write);
+        PrintWriter printer = new PrintWriter(buffer);
     }
     
+    public void addLne(String line ){
+        
+    }
 }
