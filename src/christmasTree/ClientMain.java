@@ -19,64 +19,63 @@ public class ClientMain {
     
     //Attention il manque comment ajouetr plusier decoration et la gestion de decoratorPossible
     Scanner scan = new Scanner(System.in);
-    
+    static Decorator d= null;
     public static void treeDecoration(ChrismasTree chrismasTree){
         Scanner scan = new Scanner(System.in);
-        Decorator tree=null;
-        Decorator d=null;
+        Decorator tree= null;
+        
         String GarlandOption;
-
+        String choiceDecoration= null;
+        
         //Decorator Options
         System.out.println("Decorator Options: ");
         System.out.println("a: Balls");
         System.out.println("b: Garland");
         System.out.println("c: Candle");
         System.out.println("q: Quit");
-        
-        
-        String choiceDecoration=null;
-         
+ 
         do {
             System.out.println("Choose a decoration please: ");
             choiceDecoration = scan.nextLine();
+            
             switch (choiceDecoration) {
-            case "a":
-                 d=new Balls(chrismasTree);
-                // display
-                System.out.println(d.toString());
-        
-                 break;
-            case "b":
-                System.out.println("Garland Options: ");
-                System.out.println("a: ElectricGarland");
-                System.out.println("b: SyntheticGarland");
-                System.out.println("q: Quit");
-                do{
-                        System.out.println("Choose a Garland decorations options : ");
-                        GarlandOption = scan.nextLine();
-                        
-                        switch (GarlandOption) {
-                        case "a":
-                             d=new ElectricGarland(chrismasTree);
-                            // display
-                            System.out.println(d.toString());
+                case "a":
+                     d=new Balls(chrismasTree);
+                    // display
+                    System.out.println(d.toString());
+                    break;
 
-                             break;
-                        case "b":
-                            d=new SyntheticGarland(chrismasTree);
-                            // dispaly
-                            System.out.println(d.toString());       
-                            break;
+                case "b":
+                    System.out.println("Garland Options: ");
+                    System.out.println("a: ElectricGarland");
+                    System.out.println("b: SyntheticGarland");
+                    System.out.println("q: Quit");
 
+                    do{
+                            System.out.println("Choose a Garland decorations options : ");
+                            GarlandOption = scan.nextLine();
 
-                        } // end of switch
-                    } while (!GarlandOption.equals("q")); // end of loop
+                            switch (GarlandOption) {
+                                case "a":
+                                     d=new ElectricGarland(chrismasTree);
+                                    // display
+                                    System.out.println(d.toString());
+                                    break;
 
-            case "c":
-                d=new Candle(chrismasTree);
-                // dispaly
-                System.out.println(d.toString());       
-                break;
+                                case "b":
+                                    d=new SyntheticGarland(chrismasTree);
+                                    // dispaly
+                                    System.out.println(d.toString());       
+                                    break;
+
+                            } // end of switch
+                        } while (!GarlandOption.equals("q")); // end of loop
+
+                case "c":
+                    d=new Candle(chrismasTree);
+                    // dispaly
+                    System.out.println(d.toString());       
+                    break;
 
             } // end of switch
         } while (!choiceDecoration.equals("q")); // end of loop
