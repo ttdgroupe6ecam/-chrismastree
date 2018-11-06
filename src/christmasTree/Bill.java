@@ -26,12 +26,11 @@ public class Bill {
         PrintWriter pf = new PrintWriter(bf);
     }
     
-    public void close(FileWriter write,BufferedWriter buffer,
-            PrintWriter printer )throws IOException{
+    public void close( )throws IOException{
         
-        printer.close();
-        buffer.close();
-        write.close();
+        this.pf.close();
+        this.bf.close();
+        this.pf.close();
     }
     
 }
