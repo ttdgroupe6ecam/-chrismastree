@@ -32,7 +32,7 @@ public class Bill {
         
         this.pf.close();
         this.bf.close();
-        this.pf.close();
+        this.wr.close();
     }
     
     public void addString(String newString){
@@ -45,5 +45,9 @@ public class Bill {
     
     public void addClient (){
         this.toBePrinted.
+    }
+                
+    public void addTree () {
+        
     }
 }
