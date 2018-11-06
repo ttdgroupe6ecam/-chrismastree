@@ -22,7 +22,11 @@ public class Bill {
         PrintWriter printer = new PrintWriter(buffer);
     }
     
-    public void addLne(String line ){
+    public void close(FileWriter write,BufferedWriter buffer,
+            PrintWriter printer )throws IOException{
         
+        printer.close();
+        buffer.close();
+        write.close();
     }
 }
