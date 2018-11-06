@@ -35,6 +35,12 @@ public class Bill {
         this.pf.close();
     }
     
-    public void addLine(String)
+    public void addString(String newString){
+        pf.print(newString);
+    }
+    
+    public void addStringLine(String newString){
+        pf.println(newString);
+    }
     
 }
