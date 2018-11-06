@@ -14,11 +14,11 @@ import java.io.IOException;
  */
 public class Bill {
     
-    public void Bill (String path) {
-        try {
+    public void Bill (String path)throws IOException {
+        
         FileWriter write = new FileWriter(path,true);
         PrintWriter line = new PrintWriter(write);
-        }catch (Exception e){}
+        
     }
     
 }
