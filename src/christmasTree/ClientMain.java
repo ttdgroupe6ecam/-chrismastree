@@ -5,6 +5,8 @@
  */
 package christmasTree;
 
+import java.lang.reflect.Constructor;
+import java.lang.reflect.InvocationTargetException;
 import java.util.Scanner;
 
 /**
@@ -19,6 +21,7 @@ public class ClientMain {
     
     //Attention il manque comment ajouetr plusier decoration et la gestion de decoratorPossible
     Scanner scan = new Scanner(System.in);
+    static String choiceTree;
     
     public static void treeDecoration(ChrismasTree chrismasTree){
         Scanner scan = new Scanner(System.in);
@@ -31,7 +34,7 @@ public class ClientMain {
         System.out.println("Decorator Options: ");
         System.out.println("a: Balls");
         System.out.println("b: Garland");
-        System.out.println("c: Candle");
+        if (choiceTree.equals("a"))System.out.println("c: Candle");
         System.out.println("q: Quit");
  
         do {
@@ -117,11 +120,11 @@ public class ClientMain {
         
     }
     
-    public static void main(String[] args) {
+    public static void main(String[] args) throws ClassNotFoundException, InstantiationException, IllegalAccessException, NoSuchMethodException, IllegalArgumentException, InvocationTargetException {
         
         Scanner scan = new Scanner(System.in);
         
-        String choiceTree;
+        
         
         ChrismasTree tree;
         
@@ -151,13 +154,21 @@ public class ClientMain {
         } while (!choiceTree.equals("q")); // end of loop  
          
      
-     //manyDecoration
-    /* 
-     ChrismasTree decoration=new ArtificialTree();
-     ChrismasTree d= new Garland(new Balls(decoration));
+     /*//manyDecoration
+     String tab[]={"Balls","Garland","decoration"};
+     //for(int i=0;i<tab.length-1;i++)
+      String x="Balls";
+      //ChrismasTree n=(ChrismasTree)x;
+    // Balls t=(Balls) Class.forName("Balls").newInstance(); 
+
+        Class clazz = Class.forName("christmasTree.Balls");
+        Constructor c=clazz.getConstructor(null);
+        Object t = c.newInstance();
+     //ChrismasTree decoration=new ArtificialTree();
+     //ChrismasTree d= new Balls(new Balls(new Balls(new Garland(new Balls(decoration)))));
+     */
      
-     
-     System.out.println(" "+d.toString());  */    
+     //System.out.println(" "+t.getDescription());    
      
     }
     
