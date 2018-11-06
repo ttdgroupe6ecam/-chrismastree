@@ -12,10 +12,11 @@ import java.util.ArrayList;
  */
 public class FileWriter {
     private String path;
-    private boolean append = true;
+    private boolean append_to_file = true;
     
-    public void WriteFile (String file_path) {
+    public void WriteFile (String file_path,boolean append) {
         path = file_path;
+        append_to_file = append;
                 }
     
 }
