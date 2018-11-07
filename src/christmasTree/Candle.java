@@ -17,20 +17,24 @@ public class Candle extends Decorator {
     //Construct
     public Candle(ChrismasTree treeDecorator) {
         super(treeDecorator);
-        setColor(treeDecorator.getColor()==null?" ":treeDecorator.getColor()+"CandleColor: white");
-        setDescription(treeDecorator.getDescription()+" Candle");
+        setColor(treeDecorator.getColor()==null?"":treeDecorator.getColor()+
+                " CandleColor: "+"White");
+        setDescription(treeDecorator.getDescription()+" CandleDecorator: "
+                +"Candle");
         setPrice(treeDecorator.getPrice()+16.99);
         setLifeTime(5);
-        setParfum("Senteurs d'inspiration");
+        setParfum(getParfum()==null?""+" CandleParfum: "+"Senteurs d'inspiration":getParfum()+" CandleParfum: "+"Senteurs d'inspiration");
     }
 
     public Candle(String color,String description ,double price,int lifeTime, String parfum, ChrismasTree treeDecorator) {
         super(treeDecorator);
-        setColor(treeDecorator.getColor()==null?" ":treeDecorator.getColor()+" "+color);
-        setDescription(treeDecorator.getDescription()+" "+description);
+        setColor(treeDecorator.getColor()==null?"":treeDecorator.getColor()+
+                " CandleColor: "+color);
+        setDescription(treeDecorator.getDescription()+" CandleDecorator: "
+                +description);
         setPrice(treeDecorator.getPrice()+price);
         this.lifeTime = lifeTime;
-        this.parfum = parfum;
+        this.parfum = getParfum()==null?""+" CandleParfum: "+"Senteurs d'inspiration":getParfum()+" CandleParfum: "+parfum;
     }
     
     //Getters and Setters
@@ -50,5 +54,12 @@ public class Candle extends Decorator {
     public void setParfum(String parfum) {
         this.parfum = parfum;
     }
+
+    @Override
+    public String toString() {
+        return super.toString()+"Candle{" + "lifeTime=" + lifeTime + ", parfum=" + parfum + '}';
+    }
     
-}
+    
+    
+}   
