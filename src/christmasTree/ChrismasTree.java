@@ -32,7 +32,7 @@ public abstract class ChrismasTree {
     }
 
     public String getColor() {
-        return " colorTree: "+color;
+        return color;
     }
 
     public void setColor(String color) {

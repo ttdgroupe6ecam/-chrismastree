@@ -17,25 +17,26 @@ public class Balls extends Decorator {
     //Constructs
     public Balls(ChrismasTree treeDecorator) {
         super(treeDecorator);
-        setColor(treeDecorator.getColor()==null?" ":treeDecorator.getColor()+" "
-                +"BallsColor: "+"Red");
-        setDescription(treeDecorator.getDescription()+"BallsDecorator: "
+        setColor(treeDecorator.getColor()==null?"":treeDecorator.getColor()+
+                " BallsColor: "+"Red");
+        setDescription(treeDecorator.getDescription()+" BallsDecorator: "
                 +"Balls");
         setPrice(treeDecorator.getPrice()+20.99);
-        setMaterial(getMaterial()==null?"":getMaterial()+"BallsMaterial "+"Plastic");
-        setSize(getSize()==null?"":getSize()+"BallsSize "+"Small");
+        setMaterial(getMaterial()==null?""+" BallsMaterial: "+"Plastic":getMaterial()+" BallsMaterial: "+"Plastic");
+        setSize(getSize()==null?""+" BallsMaterial: "+"Plastic":getSize()+" BallsSize: "+"Small");
     }
 
     public Balls(String color,String description ,double price, String material,
             String size, ChrismasTree treeDecorator) {
         super(treeDecorator);
-        setColor(treeDecorator.getColor()==null?" ":treeDecorator.getColor()+" "
-                +"BallsColor: "+color);
-        setDescription(treeDecorator.getDescription()+" "+description);
+        setColor(treeDecorator.getColor()==null?"":treeDecorator.getColor()+
+                " BallsColor: "+color);
+        setDescription(treeDecorator.getDescription()+" BallsDecorator: "
+                +description);
         
         setPrice(treeDecorator.getPrice()+price);
-        this.material = material;
-        this.size = size;
+        this.material = getMaterial()==null?""+" BallsMaterial: "+material:getMaterial()+" BallsMaterial: "+material;
+        this.size = getSize()==null?""+" BallsMaterial: "+material:getSize()+" BallsSize: "+size;
     }
 
     //Getters and setters
