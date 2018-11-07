@@ -16,17 +16,22 @@ public class ElectricGarland extends Garland {
     //Construct
     public ElectricGarland(ChrismasTree treeDecorator) {
         super(treeDecorator);
-        setColor(treeDecorator.getColor()==null?" ":treeDecorator.getColor()+" ElectricGarland:white");
-        setDescription(treeDecorator.getDescription()+" ElectricGarland");
+        setColor(treeDecorator.getColor()==null?"":treeDecorator.getColor()+
+                " ElectricGarlandColor: "+"White");
+        setDescription(treeDecorator.getDescription()+" ElectricGarlandDecorator: "
+                +"ElectricGarland");
         setPrice(treeDecorator.getPrice()+36.99);
+        setLength(15);
         setHasBlink(true);
         
     }
 
     public ElectricGarland(String color,String description ,double price,boolean hasBlink,double length, ChrismasTree treeDecorator) {
         super(treeDecorator);
-        setColor(treeDecorator.getColor()==null?" ":treeDecorator.getColor()+" "+color);
-        setDescription(treeDecorator.getDescription()+" "+description);
+        setColor(treeDecorator.getColor()==null?"":treeDecorator.getColor()+
+                " ElectricGarlandColor: "+color);
+        setDescription(treeDecorator.getDescription()+" ElectricGarlandDecorator: "
+                +description);
         setPrice(treeDecorator.getPrice()+price);
         setLength(length);
         this.hasBlink = hasBlink;
