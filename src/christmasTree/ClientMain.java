@@ -97,7 +97,7 @@ public class ClientMain {
         System.out.println("Command Options: ");
         System.out.println("a: Natural tree");
         System.out.println("b: Artificial tree");
-        System.out.println("q: Quit");
+        System.out.println("f: finish");
         
         
         do {
@@ -116,7 +116,7 @@ public class ClientMain {
                 break;
                 
             } // end of switch
-        } while (!choiceTree.equals("q")); // end of loop  
+        } while (!choiceTree.equals("f")); // end of loop  
          
      
      //test
@@ -125,7 +125,52 @@ public class ClientMain {
      ChrismasTree d= new Garland(new Balls(decoration));
      
      
-     System.out.println(" "+d.toString());  */    
+     System.out.println(" "+d.toString());  */ 
+    
+    
+             if (choiceTree.equals("f")){
+                 
+                 try{
+                     
+                     tree.getPrice();
+                     
+             Customer customer = new Customer();
+             
+             
+             DeliveryAddress deliveryaddress = new DeliveryAddress();
+             
+             Scanner Scan = new Scanner(System.in); 
+             
+             System.out.println("Fill in your name please: ");
+             
+             customer.name = Scan.next();
+             
+             System.out.println("Address: ");
+             
+             //Adding delivery address
+             
+             String DeliveryAddress = Scan.next();
+             
+             deliveryaddress.setDeliveryAddress(DeliveryAddress);
+             
+             
+            //Order order = new Order(DeliveryAddress);
+             
+             customer.Id += 1;
+             
+             
+             //Invoice
+             System.out.println("Invoice below\n");
+             System.out.println("Name : " + customer.name + "\n");
+             System.out.println("Client id : " + String.valueOf(customer.Id) + "\n");
+             System.out.println("Addresse : " + deliveryaddress.getDeliveryAddress() + "\n");
+                         
+                         } catch(NullPointerException e){
+                 
+                 System.out.println("Please make choices before finishing");
+                 }
+                 
+         }
      
     }
     
