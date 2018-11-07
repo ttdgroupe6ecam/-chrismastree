@@ -77,12 +77,12 @@ public class Bill {
     /**
      * 
      */
-    public void addClient (){
+  /*  public void addClient (){
         this.toBePrinted.
     }
                 
     public void addTree () {
         pf.println(this.toBePrinted.)
     }
-    public void addDecorator ()
+    public void addDecorator ()*/
 }

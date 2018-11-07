@@ -5,7 +5,6 @@
  */
 package christmasTree;
 
-import java.lang.reflect.InvocationTargetException;
 import java.util.Scanner;
 
 /**
@@ -22,7 +21,9 @@ public class ClientMain {
     Scanner scan = new Scanner(System.in);
     static String choiceTree;
     
-    public static void treeDecoration(ChrismasTree chrismasTree){
+    //create  Standard Decorationa
+    
+    public static void treeDecorationStandard(ChrismasTree chrismasTree){
         Scanner scan = new Scanner(System.in);
         Decorator decoration= null;
         Decorator manyDecoration= null;
@@ -119,7 +120,8 @@ public class ClientMain {
         
     }
     
-     public static void treeDecorationPersonalized(ChrismasTree chrismasTree){
+    //create  Standard Decoration
+    public static void treeDecorationPersonalized(ChrismasTree chrismasTree){
         Scanner scan = new Scanner(System.in);
         Decorator decoration= null;
         Decorator manyDecoration= null;
@@ -170,12 +172,13 @@ public class ClientMain {
                     break;
 
                 case "b"://Garland
-                    System.out.println("Garland Options: ");
-                    System.out.println("a: Electric Garland");
-                    System.out.println("b: Synthetic Garland");
-                    System.out.println("q: Finish");
+
 
                     do{
+                            System.out.println("Garland Options: ");
+                            System.out.println("a: Electric Garland");
+                            System.out.println("b: Synthetic Garland");
+                            System.out.println("q: Finish");
                             System.out.println("Choose a Garland decorations options : ");
                             GarlandOption = scan.next();
                             
@@ -246,7 +249,7 @@ public class ClientMain {
         
     }
     
-    public static void main(String[] args) throws ClassNotFoundException, InstantiationException, IllegalAccessException, NoSuchMethodException, IllegalArgumentException, InvocationTargetException {
+    public static void main(String[] args) {
         
         Scanner scan = new Scanner(System.in);
         
@@ -281,12 +284,12 @@ public class ClientMain {
                     switch (choiceTree) {
                     case "a":
                         tree = new NaturalTree();
-                        treeDecoration(tree);
+                        treeDecorationStandard(tree);
                         break;
 
                     case "b":
                         tree = new ArtificialTree();
-                        treeDecoration(tree);
+                        treeDecorationStandard(tree);
                         break;
 
                     } // end of switch
@@ -313,13 +316,13 @@ public class ClientMain {
       String x="Balls";
       //ChrismasTree n=(ChrismasTree)x;
     // Balls t=(Balls) Class.forName("Balls").newInstance(); 
-
+/*
         Class clazz = Class.forName("christmasTree.Balls");
         Constructor c=clazz.getConstructor(null);
         Object t = c.newInstance();
      //ChrismasTree decoration=new ArtificialTree();
-     //ChrismasTree d= new Balls(new Balls(new Balls(new Garland(new Balls(decoration)))));
-     */
+     ChrismasTree d= new Balls(new Balls(new Balls(new Garland(new Balls(decoration)))));
+    */
      
      //System.out.println(" "+t.getDescription());    
      
