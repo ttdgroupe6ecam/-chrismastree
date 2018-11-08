@@ -51,7 +51,7 @@ public class NaturalTree extends ChrismasTree {
     @Override
     public String toString() {
         super.toString();
-        return " NaturalTree{" + "treeType=" + treeType + ", lifeTime=" + lifeTime + '}';
+        return " NaturalTree{"  + treeType + ", lifeTime=" + lifeTime + '}';
     }
     
     
