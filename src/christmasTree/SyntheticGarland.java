@@ -27,6 +27,7 @@ public class SyntheticGarland extends Garland {
         setColor(treeDecorator.getColor()==null?" ":treeDecorator.getColor()+" "+color);
         setDescription(treeDecorator.getDescription()+" "+description);
         setPrice(treeDecorator.getPrice()+price);
+        setLength(length);
         this.paillette = paillette;
     }
       
