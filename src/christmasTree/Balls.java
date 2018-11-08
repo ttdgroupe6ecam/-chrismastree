@@ -23,7 +23,7 @@ public class Balls extends Decorator {
                 +"Balls");
         setPrice(treeDecorator.getPrice()+20.99);
         setMaterial(getMaterial()==null?""+" BallsMaterial: "+"Plastic":getMaterial()+" BallsMaterial: "+"Plastic");
-        setSize(getSize()==null?""+" BallsMaterial: "+"Plastic":getSize()+" BallsSize: "+"Small");
+        setSize(getSize()==null?""+" BallsSize: "+"Small":getSize()+" BallsSize: "+"Small");
     }
 
     public Balls(String color,String description ,double price, String material,
@@ -36,7 +36,7 @@ public class Balls extends Decorator {
         
         setPrice(treeDecorator.getPrice()+price);
         this.material = getMaterial()==null?""+" BallsMaterial: "+material:getMaterial()+" BallsMaterial: "+material;
-        this.size = getSize()==null?""+" BallsMaterial: "+material:getSize()+" BallsSize: "+size;
+        this.size = getSize()==null?""+" BallsSize: "+size:getSize()+" BallsSize: "+size;
     }
 
     //Getters and setters
@@ -59,7 +59,7 @@ public class Balls extends Decorator {
     @Override
     public String toString() {
         
-        return  super.toString()+ "Balls{" + "material=" + material + ", size=" + size + '}';
+        return  super.toString()+ "Balls{" + material + "," + size + '}';
     }
   
     

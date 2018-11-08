@@ -16,16 +16,18 @@ public class NaturalTree extends ChrismasTree {
     
     //Constructs
     public NaturalTree() {
-        setDescription("Natural Tree");
+        setDescription(" TreeDescription: "+"Natural Tree");
         setPrice(200.20);
-        setColor("Green");
+        setColor(" TreeColor: "+"Green");
+        setTreeType(" TreeType: "+"Omorika");
+        setLifeTime(50);
     }
      
     public NaturalTree(String description,  double price,String color,String treeType, int lifeTime ) {
-        setDescription(description);
+        setDescription(" TreeDescription: "+description);
         setPrice(price);
-        setColor(color);
-        this.treeType = treeType;
+        setColor(" TreeColor: "+color);
+        this.treeType = " TreeType: "+treeType;
         this.lifeTime = lifeTime;
     }
 
