@@ -17,17 +17,17 @@ public class ArtificialTree extends ChrismasTree {
     
     //constructs
     public ArtificialTree() {
-        setDescription("Artificial Tree");
+        setDescription("TreeDescription: "+"Artificial Tree");
         setPrice(100.99);
-        setColor("Green");
-        this.plasticType="plasticType";
+        setColor(" TreeColor "+"Green");
+        this.plasticType="plasticType: "+"plasticTypeA";
     }
     
     public ArtificialTree( String description,  double price,String color, String plasticType){
-        setDescription(description);
+        setDescription("TreeDescription"+description);
         setPrice(price);
-        setColor(color);
-        this.plasticType=plasticType;  
+        setColor("TreeColor"+color);
+        this.plasticType="plasticType: "+plasticType;  
     }
     
     //Attention à vérifier !!!!!!!!!!!!!!!!!!!!!!!!!!!!
