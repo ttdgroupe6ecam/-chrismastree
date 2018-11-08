@@ -51,7 +51,7 @@ public class SyntheticGarland extends Garland {
 
     @Override
     public String toString() {
-        return super.toString()+" SyntheticGarland{" + "paillette=" + paillette + '}';
+        return super.toString()+" SyntheticGarland{"+ paillette + '}';
     }
     
     

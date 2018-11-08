@@ -57,7 +57,7 @@ public class Candle extends Decorator {
 
     @Override
     public String toString() {
-        return super.toString()+"Candle{" + "lifeTime=" + lifeTime + ", parfum=" + parfum + '}';
+        return super.toString()+"Candle{" + "lifeTime=" + lifeTime + "," + parfum + '}';
     }
     
     
