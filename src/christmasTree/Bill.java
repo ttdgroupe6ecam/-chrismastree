@@ -23,6 +23,7 @@ public class Bill {
     private BufferedWriter bf = null;
     private PrintWriter pf = null;
     private Decorator toBePrinted;
+    private Order order;
     /**
      * 
      * @param toBePrinted the class whiwch contains all info needed to make
@@ -33,12 +34,13 @@ public class Bill {
      * This method is the constructor which instantiates the file, buffer and 
      * print writer to write in a file located in the specified path
      */
-    public void Bill (Decorator toBePrinted,String path)throws IOException {
+    public void Bill (Decorator toBePrinted,Order order,String path)throws IOException {
         
         FileWriter wr = new FileWriter(path,true);
         BufferedWriter bf = new BufferedWriter(wr);
         PrintWriter pf = new PrintWriter(bf);
         this.toBePrinted = toBePrinted;
+        this.order = order;
     }
     /**
      * 
