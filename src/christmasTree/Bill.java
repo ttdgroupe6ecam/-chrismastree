@@ -95,9 +95,17 @@ public class Bill {
  
     public String[] parserDescription () {
         String tampon=this.toBePrinted.getDescription();
-        tampon = stringReplacer(tampon," TreeDescritpion: ");
+        tampon = stringReplacer(tampon,"TreeDescritpion: ");
         tampon = stringReplacer(tampon, "BallsDecorator: ");
         tampon = stringReplacer(tampon,"CandleDecorator: ");     
+        String[] elementsList = tampon.split(" ");
+        return elementsList;
+    }
+    public String[] colorDescription () {
+        String tampon=this.toBePrinted.getColor();
+        tampon = stringReplacer(tampon,"TreeColor: ");
+        tampon = stringReplacer(tampon, "BallsColor: ");
+        tampon = stringReplacer(tampon,"CandleColor: ");     
         String[] elementsList = tampon.split(" ");
         return elementsList;
     }
