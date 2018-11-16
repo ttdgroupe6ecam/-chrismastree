@@ -21,7 +21,7 @@ public class Bill {
     private FileWriter wr = null;
     private BufferedWriter bf = null;
     private PrintWriter pf = null;
-    private Decorator toBePrinted;
+    private ChrismasTree toBePrinted;
     private Order order;
     //private String[] elements;
     /**
@@ -36,7 +36,7 @@ public class Bill {
      * This method is the constructor which instantiates the file, buffer and 
      * print writer to write in a file located in the specified path
      */
-    public Bill (Decorator toBePrinted,Order order,String path)throws 
+    public Bill (ChrismasTree toBePrinted,Order order,String path)throws 
             IOException {
         
         FileWriter wr = new FileWriter(path,true);
