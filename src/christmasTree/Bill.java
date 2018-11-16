@@ -94,10 +94,10 @@ public class Bill {
     }
  
     public String[] parserDescription () {
-        String tampon=null;
-        tampon = this.toBePrinted.getDescription().replace
-        (" TreeDscritpion: ", "");
-              
+        String tampon=this.toBePrinted.getDescription();
+        tampon = stringReplacer(tampon," TreeDescritpion: ");
+        tampon = stringReplacer(tampon, "BallsDecorator: ");
+        tampon = stringReplacer(tampon,"CandleDecorator: ");     
         String[] elementsList = tampon.split(" ");
         return elementsList;
     }
