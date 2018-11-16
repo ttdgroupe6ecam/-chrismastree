@@ -36,7 +36,7 @@ public class Bill {
      * This method is the constructor which instantiates the file, buffer and 
      * print writer to write in a file located in the specified path
      */
-    public void Bill (Decorator toBePrinted,Order order,String path)throws 
+    public Bill (Decorator toBePrinted,Order order,String path)throws 
             IOException {
         
         FileWriter wr = new FileWriter(path,true);
