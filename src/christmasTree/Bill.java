@@ -4,7 +4,6 @@
  * and open the template in the editor.
  */
 package christmasTree;
-import java.util.ArrayList;
 import java.io.FileWriter;
 import java.io.BufferedWriter;
 import java.io.PrintWriter;
@@ -29,6 +28,8 @@ public class Bill {
      * 
      * @param toBePrinted the class whiwch contains all info needed to make
      * the file
+     * @param order the class which contains the info about the client and
+     * the order
      * @param path the path to the file's location
      * @throws IOException this is in case the file cannot be created
      * 
@@ -77,7 +78,9 @@ public class Bill {
      */
     public void addStringLine(String newString){
         pf.println(newString);
-    }
+    }/**
+     * this methods adds the client's info
+     */
     public void addClient (){
         addStringLine("surname : "+order.getSurname()+" name : "
                 +order.getName());
@@ -85,28 +88,50 @@ public class Bill {
         addStringLine("date : "+order.getDate());
         addStringLine("");
     }
-                
+    /**
+     * 
+     * @param treeType the type of the tree commanded
+     * @param treeColor the color of the tree commanded
+     * 
+     * this method adds the tree's info in the file
+     */            
     public void addTree (String treeType,String treeColor) {
         addStringLine("1x "+treeType+" "+treeColor);
         
-    }
+    }/**
+     * 
+     * @param description the array of the types of decoration
+     * @param color the array of the color of decoration
+     * 
+     * this method adds the decorations in the file
+     */
     public void addDecorator (String[] description,String [] color){
         int i=1;
         while (i<description.length) {
             addStringLine("1x "+description[i]+" "+color[i]);
     }
     }
-    
+    /**
+     * this method adds the price in the file
+     */
     public void addPrice() {
         addStringLine( "      ¨Price : "+String.valueOf
         (this.toBePrinted.getPrice()));
     }
+    /**
+     * this methods adds the title in the file
+     */
        public void addTitle() {
         addStringLine("A new command");
         addStringLine("");
         addStringLine("");
     }
-       
+    /**
+     * 
+     * @return elementsList the array of descitption on tree dans decoration
+     * 
+     * this method parse the descritpion of the description
+     */   
     public String[] parserDescription () {
         String tampon=this.toBePrinted.getDescription();
         tampon = stringReplacer(tampon,"TreeDescritpion: ");
@@ -115,6 +140,12 @@ public class Bill {
         String[] elementsList = tampon.split(" ");
         return elementsList;
     }
+    /**
+     * 
+     * @return elementsList the array of the colors of tree and decorations
+     * 
+     * this methods parses the color string
+     */
     public String[] parserColor () {
         String tampon=this.toBePrinted.getColor();
         tampon = stringReplacer(tampon,"TreeColor: ");
@@ -123,9 +154,22 @@ public class Bill {
         String[] elementsList = tampon.split(" ");
         return elementsList;
     }
+    /**
+     * 
+     * @param toBeCut the string to have replacment
+     * @param change the string to be suppressed
+     * @return the new string 
+     * 
+     * this methods supress parts of a string
+     */
     public String stringReplacer (String toBeCut, String change) {
         return toBeCut.replace(change,"");
     }
+    /**
+     * 
+     * @throws IOException 
+     * this method adds all the elements in the file
+     */
     public void print() throws IOException {
         addTitle();
         addClient();
