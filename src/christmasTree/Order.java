@@ -40,6 +40,9 @@ public class Order {
     public void setSurname (String surname) {
         this.surname=surname;
     }
+    public String getSurname () {
+        return this.surname;
+    }
     public java.util.Date getDate () {
         return this.date;
     }
