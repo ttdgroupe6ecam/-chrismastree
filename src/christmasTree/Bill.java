@@ -77,8 +77,10 @@ public class Bill {
     public void addStringLine(String newString){
         pf.println(newString);
     }
-   public void addClient (){
-        //TODO
+    public void addClient (){
+        addStringLine("surname : "+order.getSurname()+" name : "
+                +order.getName());
+        addStringLine("address : "+order.getDeliveryAddress());
     }
                 
     public double addTree (elements[0]) {
