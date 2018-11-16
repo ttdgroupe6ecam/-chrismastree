@@ -265,7 +265,7 @@ public class ClientMain {
     public static void main(String[] args) {
         
         Scanner scan = new Scanner(System.in);
-        
+        Order order =makeOrder();
         
         
         ChrismasTree tree;
