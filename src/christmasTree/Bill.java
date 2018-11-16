@@ -96,9 +96,15 @@ public class Bill {
     }
     
     public void addPrice() {
-        addStringLine( "      ¨Price : "+String.valueOf(this.toBePrinted.getPrice()));
+        addStringLine( "      ¨Price : "+String.valueOf
+        (this.toBePrinted.getPrice()));
     }
- 
+       public void addTitle() {
+        addStringLine("A new command");
+        addStringLine("");
+        addStringLine("");
+    }
+       
     public String[] parserDescription () {
         String tampon=this.toBePrinted.getDescription();
         tampon = stringReplacer(tampon,"TreeDescritpion: ");
@@ -118,6 +124,8 @@ public class Bill {
     public String stringReplacer (String toBeCut, String change) {
         return toBeCut.replace(change,"");
     }
-    public void add
+    public void print() {
+        this.
+    }
     
 }
