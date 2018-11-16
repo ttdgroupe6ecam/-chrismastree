@@ -84,9 +84,8 @@ public class Bill {
         addStringLine("address : "+order.getDeliveryAddress());
     }
                 
-    public void addTree (String[] elements) {
-        addStringLine("1x "+elements[0]+" "+
-                this.toBePrinted.getColor()+" "+this.toBePrinted.getPrice());
+    public void addTree (String treeType,String treeColor) {
+        addStringLine("1x "+treeType+" "+treeColor);
         
     }
     public void addDecorator (){
@@ -112,5 +111,6 @@ public class Bill {
     public String stringReplacer (String toBeCut, String change) {
         return toBeCut.replace(change,"");
     }
+    public void add
     
 }
