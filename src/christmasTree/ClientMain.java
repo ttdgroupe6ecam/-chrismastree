@@ -5,7 +5,9 @@
  */
 package christmasTree;
 
+import java.io.IOException;
 import java.util.Scanner;
+import java.nio.file.Paths;
 
 /**
  *
@@ -262,13 +264,13 @@ public class ClientMain {
         
     }
     
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         
         Scanner scan = new Scanner(System.in);
         Order order =makeOrder();
         
         
-        ChrismasTree tree;
+        ChrismasTree tree=null;
         
         do {
             //Menu of Command Options
@@ -293,7 +295,7 @@ public class ClientMain {
             
             switch (commandType) {
                 
-                case "1":
+                case "1": {
                     switch (choiceTree) {
                     case "a":
                         tree = new NaturalTree();
@@ -306,7 +308,9 @@ public class ClientMain {
                         break;
 
                     } // end of switch
-                case "2":
+                    break;
+                    }
+                case "2":{
                     switch (choiceTree) {
                     case "a":
                         tree = new NaturalTree();
@@ -319,9 +323,13 @@ public class ClientMain {
                         break;
 
                     } // end of switch
+                    break;
+                    }
             }
         } while (!choiceTree.equals("q")); // end of loop  
-         
+     Bill bill =new Bill(tree,order,
+             Paths.get(".").toAbsolutePath().normalize().toString()); 
+     bill.print();
      
      /*//manyDecoration
      String tab[]={"Balls","Garland","decoration"};
