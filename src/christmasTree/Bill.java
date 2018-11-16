@@ -24,6 +24,7 @@ public class Bill {
     private PrintWriter pf = null;
     private Decorator toBePrinted;
     private Order order;
+    //private String[] elements;
     /**
      * 
      * @param toBePrinted the class whiwch contains all info needed to make
@@ -83,18 +84,25 @@ public class Bill {
         addStringLine("address : "+order.getDeliveryAddress());
     }
                 
-    public double addTree (elements[0]) {
-        this.addStringLine("1x "+elements[0]+" "+
+    public void addTree (String[] elements) {
+        addStringLine("1x "+elements[0]+" "+
                 this.toBePrinted.getColor()+" "+this.toBePrinted.getPrice());
-        return this.toBePrinted.getPrice();//float ??
+        
     }
     public void addDecorator (){
         
     }
  
-    public String[] parser () {
-        String tampon = this.toBePrinted.getDescription().replace("descritpion=", "");
+    public String[] parserDescription () {
+        String tampon=null;
+        tampon = this.toBePrinted.getDescription().replace
+        (" TreeDscritpion: ", "");
+              
         String[] elementsList = tampon.split(" ");
         return elementsList;
     }
+    public String stringReplacer (String toBeCut, String change) {
+        return toBeCut.replace(change,"");
+    }
+    
 }
