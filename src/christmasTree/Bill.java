@@ -34,7 +34,8 @@ public class Bill {
      * This method is the constructor which instantiates the file, buffer and 
      * print writer to write in a file located in the specified path
      */
-    public void Bill (Decorator toBePrinted,Order order,String path)throws IOException {
+    public void Bill (Decorator toBePrinted,Order order,String path)throws 
+            IOException {
         
         FileWriter wr = new FileWriter(path,true);
         BufferedWriter bf = new BufferedWriter(wr);
@@ -76,15 +77,22 @@ public class Bill {
     public void addStringLine(String newString){
         pf.println(newString);
     }
-    /**
-     * 
-     */
-  /*  public void addClient (){
-        this.toBePrinted.
+   public void addClient (){
+        //TODO
     }
                 
-    public void addTree () {
-        pf.println(this.toBePrinted.)
+    public double addTree (elements[0]) {
+        this.addStringLine("1x "+elements[0]+" "+
+                this.toBePrinted.getColor()+" "+this.toBePrinted.getPrice());
+        return this.toBePrinted.getPrice();//float ??
     }
-    public void addDecorator ()*/
+    public void addDecorator (){
+        
+    }
+ 
+    public String[] parser () {
+        String tampon = this.toBePrinted.getDescription().replace("descritpion=", "");
+        String[] elementsList = tampon.split(" ");
+        return elementsList;
+    }
 }
