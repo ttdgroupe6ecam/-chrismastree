@@ -82,6 +82,8 @@ public class Bill {
         addStringLine("surname : "+order.getSurname()+" name : "
                 +order.getName());
         addStringLine("address : "+order.getDeliveryAddress());
+        addStringLine("date : "+order.getDate());
+        addStringLine("");
     }
                 
     public void addTree (String treeType,String treeColor) {
@@ -89,7 +91,7 @@ public class Bill {
         
     }
     public void addDecorator (String[] description,String [] color){
-        int i=0;
+        int i=1;
         while (i<description.length) {
             addStringLine("1x "+description[i]+" "+color[i]);
     }
@@ -124,8 +126,17 @@ public class Bill {
     public String stringReplacer (String toBeCut, String change) {
         return toBeCut.replace(change,"");
     }
-    public void print() {
-        this.
+    public void print() throws IOException {
+        addTitle();
+        addClient();
+        String[] description = parserDescription();
+        String[] color = parserColor();
+        addTree(description[0],color[0]);
+        addDecorator(description,color);
+        addPrice();
+        close();
+        
+        
     }
     
 }
