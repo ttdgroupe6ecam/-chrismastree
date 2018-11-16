@@ -88,8 +88,15 @@ public class Bill {
         addStringLine("1x "+treeType+" "+treeColor);
         
     }
-    public void addDecorator (){
-        
+    public void addDecorator (String[] description,String [] color){
+        int i=0;
+        while (i<description.length) {
+            addStringLine("1x "+description[i]+" "+color[i]);
+    }
+    }
+    
+    public void addPrice() {
+        addStringLine( "      ¨Price : "+String.valueOf(this.toBePrinted.getPrice()));
     }
  
     public String[] parserDescription () {
@@ -100,7 +107,7 @@ public class Bill {
         String[] elementsList = tampon.split(" ");
         return elementsList;
     }
-    public String[] colorDescription () {
+    public String[] parserColor () {
         String tampon=this.toBePrinted.getColor();
         tampon = stringReplacer(tampon,"TreeColor: ");
         tampon = stringReplacer(tampon, "BallsColor: ");
