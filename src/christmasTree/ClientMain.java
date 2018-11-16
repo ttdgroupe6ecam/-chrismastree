@@ -22,7 +22,20 @@ public class ClientMain {
     static String choiceTree;
     
     //create  Standard Decorationa
-    
+    public static Order makeOrder() {
+       
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Client's name :");
+        String name = scan.nextLine();
+        System.out.println("Client's surname :");
+        String surname = scan.nextLine();
+        System.out.println("Client's adress :");
+        String deliveryAdress= scan.nextLine();
+        Order order =new Order(deliveryAdress,name,surname);
+        return order;
+ 
+        
+    }
     public static void treeDecorationStandard(ChrismasTree chrismasTree){
         Scanner scan = new Scanner(System.in);
         Decorator decoration= null;
