@@ -5,53 +5,46 @@
  */
 package christmasTree;
 
-/**
- *
- * @author MediaMonster
- */
+/** @author MediaMonster */
 public class Garland extends Decorator {
-    
-    private double length;//en cm
-    
-    
-    //Construct
-    public Garland(ChrismasTree treeDecorator) {
-        super(treeDecorator);
-        setColor(treeDecorator.getColor()==null?"":treeDecorator.getColor()+
-                " GarlandColor: "+"blue");
-        setDescription(treeDecorator.getDescription()+" GarlandDecorator: "
-                +"Garland");
-        setPrice(treeDecorator.getPrice()+12.99);
-        setLength(100);
-    }
 
-    public Garland(String color,String description ,double price,double length, ChrismasTree treeDecorator) {
-        super(treeDecorator);
-        setColor(treeDecorator.getColor()==null?"":treeDecorator.getColor()+
-                " GarlandColor: "+color);
-        setDescription(treeDecorator.getDescription()+" GarlandDecorator: "
-                +description);
-        setPrice(treeDecorator.getPrice()+price);
-        this.length = length;
-    }
-    
-    
-     
-    //Getters and Setters
-    public double getLength() {
-        return length;
-    }
+  private double length; // en cm
 
-    public void setLength(double length) {
-        this.length = length;
-    }
+  // Construct
+  public Garland(ChrismasTree treeDecorator) {
+    super(treeDecorator);
+    setColor(
+        treeDecorator.getColor() == null
+            ? ""
+            : treeDecorator.getColor() + " GarlandColor: " + "blue");
+    setDescription(treeDecorator.getDescription() + " GarlandDecorator: " + "Garland");
+    setPrice(treeDecorator.getPrice() + 12.99);
+    setLength(100);
+  }
 
-    @Override
-    public String toString() {
-        return super.toString()+" Garland{" + "length=" + length + '}';
-    }
+  public Garland(
+      String color, String description, double price, double length, ChrismasTree treeDecorator) {
+    super(treeDecorator);
+    setColor(
+        treeDecorator.getColor() == null
+            ? ""
+            : treeDecorator.getColor() + " GarlandColor: " + color);
+    setDescription(treeDecorator.getDescription() + " GarlandDecorator: " + description);
+    setPrice(treeDecorator.getPrice() + price);
+    this.length = length;
+  }
 
-    
-     
-    
+  // Getters and Setters
+  public double getLength() {
+    return length;
+  }
+
+  public void setLength(double length) {
+    this.length = length;
+  }
+
+  @Override
+  public String toString() {
+    return super.toString() + " Garland{" + "length=" + length + '}';
+  }
 }

@@ -5,61 +5,69 @@
  */
 package christmasTree;
 
-/**
- *
- * @author MediaMonster
- */
+/** @author MediaMonster */
 public class Candle extends Decorator {
-    
-    private int lifeTime;//en heur
-    private String parfum;
-    
-    //Construct
-    public Candle(ChrismasTree treeDecorator) {
-        super(treeDecorator);
-        setColor(treeDecorator.getColor()==null?"":treeDecorator.getColor()+
-                " CandleColor: "+"White");
-        setDescription(treeDecorator.getDescription()+" CandleDecorator: "
-                +"Candle");
-        setPrice(treeDecorator.getPrice()+16.99);
-        setLifeTime(5);
-        setParfum(getParfum()==null?""+" CandleParfum: "+"Senteurs d'inspiration":getParfum()+" CandleParfum: "+"Senteurs d'inspiration");
-    }
 
-    public Candle(String color,String description ,double price,int lifeTime, String parfum, ChrismasTree treeDecorator) {
-        super(treeDecorator);
-        setColor(treeDecorator.getColor()==null?"":treeDecorator.getColor()+
-                " CandleColor: "+color);
-        setDescription(treeDecorator.getDescription()+" CandleDecorator: "
-                +description);
-        setPrice(treeDecorator.getPrice()+price);
-        this.lifeTime = lifeTime;
-        this.parfum = getParfum()==null?""+" CandleParfum: "+"Senteurs d'inspiration":getParfum()+" CandleParfum: "+parfum;
-    }
-    
-    //Getters and Setters
+  private int lifeTime; // en heur
+  private String parfum;
 
-    public int getLifeTime() {
-        return lifeTime;
-    }
+  // Construct
+  public Candle(ChrismasTree treeDecorator) {
+    super(treeDecorator);
+    setColor(
+        treeDecorator.getColor() == null
+            ? ""
+            : treeDecorator.getColor() + " CandleColor: " + "White");
+    setDescription(treeDecorator.getDescription() + " CandleDecorator: " + "Candle");
+    setPrice(treeDecorator.getPrice() + 16.99);
+    setLifeTime(5);
+    setParfum(
+        getParfum() == null
+            ? "" + " CandleParfum: " + "Senteurs d'inspiration"
+            : getParfum() + " CandleParfum: " + "Senteurs d'inspiration");
+  }
 
-    public void setLifeTime(int lifeTime) {
-        this.lifeTime = lifeTime;
-    }
+  public Candle(
+      String color,
+      String description,
+      double price,
+      int lifeTime,
+      String parfum,
+      ChrismasTree treeDecorator) {
+    super(treeDecorator);
+    setColor(
+        treeDecorator.getColor() == null
+            ? ""
+            : treeDecorator.getColor() + " CandleColor: " + color);
+    setDescription(treeDecorator.getDescription() + " CandleDecorator: " + description);
+    setPrice(treeDecorator.getPrice() + price);
+    this.lifeTime = lifeTime;
+    this.parfum =
+        getParfum() == null
+            ? "" + " CandleParfum: " + "Senteurs d'inspiration"
+            : getParfum() + " CandleParfum: " + parfum;
+  }
 
-    public String getParfum() {
-        return parfum;
-    }
+  // Getters and Setters
 
-    public void setParfum(String parfum) {
-        this.parfum = parfum;
-    }
+  public int getLifeTime() {
+    return lifeTime;
+  }
 
-    @Override
-    public String toString() {
-        return super.toString()+"Candle{" + "lifeTime=" + lifeTime + "," + parfum + '}';
-    }
-    
-    
-    
-}   
+  public void setLifeTime(int lifeTime) {
+    this.lifeTime = lifeTime;
+  }
+
+  public String getParfum() {
+    return parfum;
+  }
+
+  public void setParfum(String parfum) {
+    this.parfum = parfum;
+  }
+
+  @Override
+  public String toString() {
+    return super.toString() + "Candle{" + "lifeTime=" + lifeTime + "," + parfum + '}';
+  }
+}

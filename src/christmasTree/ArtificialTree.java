@@ -7,54 +7,47 @@ package christmasTree;
 
 import java.util.ArrayList;
 
-/**
- *
- * @author MediaMonster
- */
+/** @author MediaMonster */
 public class ArtificialTree extends ChrismasTree {
-     
-    private  String  plasticType;
-    
-    //constructs
-    public ArtificialTree() {
-        setDescription("TreeDescription: "+"Artificial Tree");
-        setPrice(100.99);
-        setColor(" TreeColor "+"Green");
-        this.plasticType="plasticType: "+"plasticTypeA";
-    }
-    
-    public ArtificialTree( String description,  double price,String color, String plasticType){
-        setDescription("TreeDescription"+description);
-        setPrice(price);
-        setColor("TreeColor"+color);
-        this.plasticType="plasticType: "+plasticType;  
-    }
-    
-    //Attention à vérifier !!!!!!!!!!!!!!!!!!!!!!!!!!!!
-    public ArrayList decoratorPossible(){
-       ArrayList<String> list = new ArrayList<String>();
-       list.add("Balls");
-       list.add("ElectricGarland");
-       list.add("SyntheticGarland");
-        return list;
-    }
-    //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-    //Getters and Setters
-    public String getPlasticType() {
-        return plasticType;
-    }
 
-    public void setPlasticType(String plasticType) {
-        this.plasticType = plasticType;
-    }
-    
-    @Override
-    public String toString() {
-        super.toString();
-        return " ArtificialTree{"  + plasticType + '}';
-    }
-    
-   
-    
-    
+  private String plasticType;
+
+  // constructs
+  public ArtificialTree() {
+    setDescription("TreeDescription: " + "Artificial Tree");
+    setPrice(100.99);
+    setColor(" TreeColor " + "Green");
+    this.plasticType = "plasticType: " + "plasticTypeA";
+  }
+
+  public ArtificialTree(String description, double price, String color, String plasticType) {
+    setDescription("TreeDescription" + description);
+    setPrice(price);
+    setColor("TreeColor" + color);
+    this.plasticType = "plasticType: " + plasticType;
+  }
+
+  // Attention à vérifier !!!!!!!!!!!!!!!!!!!!!!!!!!!!
+  public ArrayList decoratorPossible() {
+    ArrayList<String> list = new ArrayList<String>();
+    list.add("Balls");
+    list.add("ElectricGarland");
+    list.add("SyntheticGarland");
+    return list;
+  }
+  // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+  // Getters and Setters
+  public String getPlasticType() {
+    return plasticType;
+  }
+
+  public void setPlasticType(String plasticType) {
+    this.plasticType = plasticType;
+  }
+
+  @Override
+  public String toString() {
+    super.toString();
+    return " ArtificialTree{" + plasticType + '}';
+  }
 }

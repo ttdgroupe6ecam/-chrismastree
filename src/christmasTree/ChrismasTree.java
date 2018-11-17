@@ -5,47 +5,39 @@
  */
 package christmasTree;
 
-/**
- *
- * @author MediaMonster
- */
+/** @author MediaMonster */
 public abstract class ChrismasTree {
-    private String description;
-    private double price;
-    private String color;
-    
-    //Getters and Setters
-    public String getDescription() {
-        return description;
-    }
+  private String description;
+  private double price;
+  private String color;
 
-    public void setDescription(String description) {
-        this.description = description;
-    }
+  // Getters and Setters
+  public String getDescription() {
+    return description;
+  }
 
-    public double getPrice() {
-        return price;
-    }
+  public void setDescription(String description) {
+    this.description = description;
+  }
 
-    public void setPrice(double price) {
-        this.price = price;
-    }
+  public double getPrice() {
+    return price;
+  }
 
-    public String getColor() {
-        return color;
-    }
+  public void setPrice(double price) {
+    this.price = price;
+  }
 
-    public void setColor(String color) {
-        this.color = color;
-    }
+  public String getColor() {
+    return color;
+  }
 
-    @Override
-    public String toString() {
-        return "ChrismasTree{"  + description + ", price=" + price + "," + color + '}';
-    }
+  public void setColor(String color) {
+    this.color = color;
+  }
 
-   
- 
-    
-    
+  @Override
+  public String toString() {
+    return "ChrismasTree{" + description + ", price=" + price + "," + color + '}';
+  }
 }
