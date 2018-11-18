@@ -152,7 +152,7 @@ public class Bill {
   }
   /** @throws IOException
    *
-   * this method adds all the elements in the file.
+     * this method adds all the elements in the file.
    *
    */
   public void print() throws IOException {

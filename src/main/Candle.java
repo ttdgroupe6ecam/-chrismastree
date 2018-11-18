@@ -8,7 +8,7 @@ package christmasTree;
 
 /** @author MediaMonster
  *
- * This class specializes the decorator with functionnalities from the candle.
+   *   This class specializes the decorator with functionnalities from the candle.
  * */
 public class Candle extends Decorator {
 
@@ -19,7 +19,7 @@ public class Candle extends Decorator {
    *
    * @param treeDecorator the christmasTree to be augmented
    *
-   * This is the standard constructor of candle.
+     *   This is the standard constructor of candle.
    */
   public Candle(ChrismasTree treeDecorator) {
     super(treeDecorator);
@@ -45,7 +45,7 @@ public class Candle extends Decorator {
    * @param parfum choice of parfum
    * @param treeDecorator the christmasTree to be augmented
    *
-   * this is the personnalised constructor of the candle.
+     * this is the personnalised constructor of the candle.
    */
   public Candle(
       String color,

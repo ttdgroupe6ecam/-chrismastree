@@ -49,7 +49,7 @@ public class ArtificialTree extends ChrismasTree {
 
   /**
    *
-   * @return the list of all possible decorator for this type of tree
+   * @return the list of all possible decorator for this type of tree.
    * */
   public ArrayList decoratorPossible() {
     ArrayList<String> list = new ArrayList<String>();
