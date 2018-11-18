@@ -6,8 +6,10 @@
 
 package christmasTree;
 
-/** @author mohamad
+/**
  * the class which stores client and order info.
+ * @author mohamad
+ *
  */
 public class Order {
 

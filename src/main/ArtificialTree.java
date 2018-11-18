@@ -48,7 +48,7 @@ public class ArtificialTree extends ChrismasTree {
   }
 
   /**
-   * the list of possible decorations
+   * the list of possible decorations.
    * @return the list of all possible decorator for this type of tree.
    * */
   public ArrayList decoratorPossible() {

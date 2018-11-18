@@ -6,8 +6,10 @@
 
 package christmasTree;
 
-/** @author MediaMonster
+/**
  * the class specializing the tree into a natural one.
+ * @author MediaMonster
+ *
  */
 public class NaturalTree extends ChrismasTree {
 

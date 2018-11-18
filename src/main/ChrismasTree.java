@@ -6,10 +6,9 @@
 
 package christmasTree;
 
-/** @author MediaMonster
- *
-   * this is the class of the tree,
-   * which is to be augmented with decoration.
+/**
+ * this is the class of the tree which is to be augmented with decoration.
+ * @author  MediaMonster
  */
 public abstract class ChrismasTree {
   private String description;

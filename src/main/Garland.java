@@ -6,8 +6,10 @@
 
 package christmasTree;
 
-/** @author MediaMonster
+/**
  * the class to specialize decorator into garland.
+ * @author MediaMonster
+ *
  */
 public class Garland extends Decorator {
 

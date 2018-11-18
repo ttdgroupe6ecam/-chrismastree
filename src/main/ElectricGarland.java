@@ -6,8 +6,10 @@
 
 package christmasTree;
 
-/** @author MediaMonster
+/**
  * a class used to extend garland.
+ * @author MediaMonster
+ *
  */
 public class ElectricGarland extends Garland {
 

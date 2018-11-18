@@ -128,9 +128,10 @@ public class Bill {
     return elementsList;
   }
   /**
+   * this methods parses the color string.
    * @return elementsList the array of the colors of tree and decorations
    *
-   *     this methods parses the color string.
+   *
    */
   public String[] parserColor() {
     String tampon = this.toBePrinted.getColor();
@@ -141,18 +142,19 @@ public class Bill {
     return elementsList;
   }
   /**
+   * this methods supress parts of a string.
    * @param toBeCut the string to have replacment
    * @param change the string to be suppressed
    * @return the new string
    *
-   *     this methods supress parts of a string.
    */
   public String stringReplacer(String toBeCut, String change) {
     return toBeCut.replace(change, "");
   }
-  /** @throws IOException
+  /**
+   * this method adds all the elements in the file.
+   * @throws IOException if file can't be created or open
    *
-     * this method adds all the elements in the file.
    *
    */
   public void print() throws IOException {

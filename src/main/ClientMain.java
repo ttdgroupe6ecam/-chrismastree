@@ -11,8 +11,10 @@ import java.nio.file.Paths;
 import java.util.Scanner;
 
 
-/** @author MediaMonster
- *   this is the main class.
+/**
+ * this is the main class.
+ * @author MediaMonster
+ *
  */
 public class ClientMain {
 
@@ -23,10 +25,10 @@ public class ClientMain {
   static String choiceTree;
 
   /**
-   *
+   * the order returned contains the client's info; the delivery adress and when it was done.
    * @return the order class
    *
-   * the order returned contains the client's info; the delivery adress and when it was done.
+   *
    */
   public static Order makeOrder() {
 
@@ -42,10 +44,10 @@ public class ClientMain {
   }
 
   /**
-   *
+   * this class is used to choose which decoration to be added on the tree.
    * @param chrismasTree the christmastree to be augmented
    *
-   * this class is used to choose which decoration to be added on the tree.
+   *
    */
   public static void treeDecorationStandard(ChrismasTree chrismasTree) {
     Scanner scan = new Scanner(System.in);
