@@ -97,7 +97,7 @@ public class Bill {
     int variable = 1;
     while (variable < description.length) {
       addStringLine(java.lang.String.format("1x %s %s", description[variable], color[variable]));
-      aVariable++;
+      variable++;
     }
   }
   /** this method adds the price in the file.
