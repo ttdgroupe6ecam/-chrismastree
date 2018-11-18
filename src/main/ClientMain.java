@@ -22,12 +22,12 @@ public class ClientMain {
 
   static String choiceTree;
 
-    /**
-     *
-     * @return the order class
-     *
-     * the order returned contains the client's info; the delivery adress and when it was done.
-     */
+  /**
+   *
+   * @return the order class
+   *
+   * the order returned contains the client's info; the delivery adress and when it was done.
+   */
   public static Order makeOrder() {
 
     Scanner scan = new Scanner(System.in);
@@ -41,12 +41,12 @@ public class ClientMain {
     return order;
   }
 
-    /**
-     *
-     * @param chrismasTree the christmastree to be augmented
-     *
-     * this class is used to choose which decoration to be added on the tree.
-     */
+  /**
+   *
+   * @param chrismasTree the christmastree to be augmented
+   *
+   * this class is used to choose which decoration to be added on the tree.
+   */
   public static void treeDecorationStandard(ChrismasTree chrismasTree) {
     Scanner scan = new Scanner(System.in);
     Decorator decoration;
@@ -58,14 +58,16 @@ public class ClientMain {
     System.out.println("Decorator Options: ");
     System.out.println("a: Balls");
     System.out.println("b: Garland");
-    if (choiceTree.equals("a")) {System.out.println("c: Candle");}
+    if (choiceTree.equals("a")) {
+        System.out.println("c: Candle");
+    }
     System.out.println("q: Quit");
     String choiceDecoration;
     do {
       System.out.println("Choose a decoration please: ");
-         choiceDecoration = scan.next();
+      choiceDecoration = scan.next();
 
-        switch (choiceDecoration) {
+      switch (choiceDecoration) {
         case "a":
           {
             if (manyDecoration == null) {
@@ -77,8 +79,8 @@ public class ClientMain {
 
             // display
             System.out.println(decoration.toString());
-          }
-          break;
+         }
+        break;
 
         case "b":
           {
@@ -89,7 +91,7 @@ public class ClientMain {
             String garlandOption;
             do {
               System.out.println("Choose a Garland decorations options : ");
-               garlandOption = scan.next();
+              garlandOption = scan.next();
 
               switch (garlandOption) {
                 case "a": {
@@ -157,7 +159,7 @@ public class ClientMain {
 
     /**
      * this class allows for choosing a personalized decoration.
-     * @param chrismasTree
+     * @param chrismasTree the ree to be personalized
      */
   public static void treeDecorationPersonalized(ChrismasTree chrismasTree) {
     Scanner scan = new Scanner(System.in);
@@ -292,7 +294,7 @@ public class ClientMain {
     /**
      * the class main to be used by the retailer.
      * @param args to be entered by the user
-     * @throws
+     * @throws IOException
      */
     public static void main(String[] args) throws IOException {
 
