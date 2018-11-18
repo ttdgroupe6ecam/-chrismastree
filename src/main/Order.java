@@ -17,7 +17,7 @@ public class Order {
   private java.util.Date date = null;
 
   /**
-   * ths constructor of the order class
+   * ths constructor of the order class.
    * @param deliveryAddress the adress od delivery
    * @param name name of the client
    * @param surname surname of the client

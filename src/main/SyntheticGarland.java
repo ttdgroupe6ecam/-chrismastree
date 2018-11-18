@@ -6,8 +6,10 @@
 
 package christmasTree;
 
-/** @author MediaMonster
+/**
  * the class which extends garland into a synthetic one.
+ * @author MediaMonster
+ *
  */
 public class SyntheticGarland extends Garland {
 
@@ -33,7 +35,7 @@ public class SyntheticGarland extends Garland {
   }
 
   /**
-   * the personnalized constructor
+   * the personnalized constructor.
    * @param paillette choice of paillette
    * @param color choice of color
    * @param description to be changed
