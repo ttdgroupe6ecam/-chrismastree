@@ -49,7 +49,7 @@ public class ClientMain {
      */
   public static void treeDecorationStandard(ChrismasTree chrismasTree) {
     Scanner scan = new Scanner(System.in);
-    Decorator decoration = null;
+    Decorator decoration;
     Decorator manyDecoration = null;
 
 
@@ -161,7 +161,7 @@ public class ClientMain {
      */
   public static void treeDecorationPersonalized(ChrismasTree chrismasTree) {
     Scanner scan = new Scanner(System.in);
-    Decorator decoration = null;
+    Decorator decoration ;
     Decorator manyDecoration = null;
 
 
@@ -190,7 +190,7 @@ public class ClientMain {
       String color = scan.next();
 
       switch (choiceDecoration) {
-        case "a": / Balls/ {
+        case "a": /* Balls*/ {
           System.out.println("material: ");
           String material = scan.next();
 
@@ -209,7 +209,7 @@ public class ClientMain {
           }
           break;
 
-        case "b": / Garland/ {
+        case "b": /* Garland*/ {
           do {
             System.out.println("Garland Options: ");
             System.out.println("a: Electric Garland");
@@ -291,7 +291,7 @@ public class ClientMain {
     /**
      * the class main to be used by the retailer.
      * @param args to be entered by the user
-     * @throws IOException error handling
+     * @throws  error handling
      */
     public static void main(String[] args) throws IOException {
 
