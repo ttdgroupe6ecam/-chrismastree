@@ -60,10 +60,10 @@ public class ClientMain {
     System.out.println("b: Garland");
     if (choiceTree.equals("a")) {System.out.println("c: Candle");}
     System.out.println("q: Quit");
-
+    String choiceDecoration;
     do {
       System.out.println("Choose a decoration please: ");
-        String choiceDecoration = scan.next();
+         choiceDecoration = scan.next();
 
         switch (choiceDecoration) {
         case "a":
@@ -86,10 +86,10 @@ public class ClientMain {
             System.out.println("a: Electric Garland");
             System.out.println("b: Synthetic Garland");
             System.out.println("q: Finish");
-
+            String garlandOption;
             do {
               System.out.println("Choose a Garland decorations options : ");
-              String garlandOption = scan.next();
+               garlandOption = scan.next();
 
               switch (garlandOption) {
                 case "a": {
@@ -163,7 +163,7 @@ public class ClientMain {
     Scanner scan = new Scanner(System.in);
     Decorator decoration ;
     Decorator manyDecoration = null;
-
+    String choiceDecoration;
 
 
     do {
@@ -177,7 +177,7 @@ public class ClientMain {
       }
       System.out.println("q: Quit");
       System.out.println("Choose a decoration please: ");
-       String choiceDecoration = scan.next();
+       choiceDecoration = scan.next();
 
       // Decorator data(description)
       System.out.println("description: ");
@@ -210,13 +210,14 @@ public class ClientMain {
           break;
 
         case "b": /* Garland*/ {
+            String garlandOption;
           do {
             System.out.println("Garland Options: ");
             System.out.println("a: Electric Garland");
             System.out.println("b: Synthetic Garland");
             System.out.println("q: Finish");
             System.out.println("Choose a Garland decorations options : ");
-            String garlandOption = scan.next();
+             garlandOption = scan.next();
 
             System.out.println("length : ");
             double garlandLength = scan.nextInt();
@@ -259,7 +260,7 @@ public class ClientMain {
                 System.out.println(decoration.toString());
                 break;
             } // end of switch
-          } while (!GarlandOption.equals("q")); // end of loop
+          } while (!garlandOption.equals("q")); // end of loop
             }
             break;
 
@@ -291,7 +292,7 @@ public class ClientMain {
     /**
      * the class main to be used by the retailer.
      * @param args to be entered by the user
-     * @throws  error handling
+     * @throws
      */
     public static void main(String[] args) throws IOException {
 
