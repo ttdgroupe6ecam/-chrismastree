@@ -123,7 +123,7 @@ public class ClientMain {
                   decoration = new SyntheticGarland(manyDecoration);
                 }
 
-                    // dispaly
+                // dispaly
                 System.out.println(decoration.toString());
               }
                 break;
