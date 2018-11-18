@@ -7,7 +7,7 @@
 package christmasTree;
 
 /** @author mohamad
- * the class which stores client and order info
+ * the class which stores client and order info.
  */
 public class Order {
 
@@ -16,12 +16,12 @@ public class Order {
   private String surname;
   private java.util.Date date = null;
 
-    /**
-     * ths constructor of the order class
-     * @param deliveryAddress the adress od delivery
-     * @param name name of the client
-     * @param surname surname of the client
-     */
+  /**
+   * ths constructor of the order class
+   * @param deliveryAddress the adress od delivery
+   * @param name name of the client
+   * @param surname surname of the client
+   */
   public Order(String deliveryAddress, String name, String surname) {
 
     this.date = new java.util.Date();

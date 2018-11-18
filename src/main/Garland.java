@@ -13,10 +13,10 @@ public class Garland extends Decorator {
 
   private double length; // en cm
 
-    /**
-     * the standard contructor.
-     * @param treeDecorator the tree to be decorated
-     */
+  /**
+   * the standard contructor.
+   * @param treeDecorator the tree to be decorated
+   */
   public Garland(ChrismasTree treeDecorator) {
     super(treeDecorator);
     setColor(
@@ -28,14 +28,14 @@ public class Garland extends Decorator {
     setLength(100);
   }
 
-    /**
-     * the personnalized decorator.
-     * @param color choice of color
-     * @param description to be changed
-     * @param price choice of price
-     * @param length choice of length
-     * @param treeDecorator the tree to be decorated
-     */
+  /**
+   * the personnalized decorator.
+   * @param color choice of color
+   * @param description to be changed
+   * @param price choice of price
+   * @param length choice of length
+   * @param treeDecorator the tree to be decorated
+   */
   public Garland(
       String color, String description, double price, double length, ChrismasTree treeDecorator) {
     super(treeDecorator);

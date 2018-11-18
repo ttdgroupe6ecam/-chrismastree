@@ -7,16 +7,16 @@
 package christmasTree;
 
 /** @author MediaMonster
- * a class used to extend garland
+ * a class used to extend garland.
  */
 public class ElectricGarland extends Garland {
 
   private boolean hasBlink;
 
-    /**
-     * the  stadrard constructor of this class.
-     * @param treeDecorator the tree to be decorated
-     */
+  /**
+   * the  stadrard constructor of this class.
+   * @param treeDecorator the tree to be decorated
+   */
   public ElectricGarland(ChrismasTree treeDecorator) {
     super(treeDecorator);
     setColor(
@@ -30,15 +30,15 @@ public class ElectricGarland extends Garland {
     setHasBlink(true);
   }
 
-    /**
-     *  the personalized contructor of this class.
-     * @param color choice of color
-     * @param description decription to be changed
-     * @param price choice of price
-     * @param hasBlink choice of blink mode
-     * @param length choice of length
-     * @param treeDecorator tree to be decorated
-     */
+  /**
+   *  the personalized contructor of this class.
+   * @param color choice of color
+   * @param description decription to be changed
+   * @param price choice of price
+   * @param hasBlink choice of blink mode
+   * @param length choice of length
+   * @param treeDecorator tree to be decorated
+   */
   public ElectricGarland(
       String color,
       String description,

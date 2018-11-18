@@ -7,17 +7,17 @@
 package christmasTree;
 
 /** @author MediaMonster
- * the class used to augment christmasTree
+ * the class used to augment christmasTree.
  */
 public abstract class Decorator extends ChrismasTree {
 
   private ChrismasTree treeDecorator;
 
-    /**
-     *
-     * @param treeDecorator the tree to be decorated
-     * the constructor of the decorator.
-     */
+  /**
+   *
+   * @param treeDecorator the tree to be decorated
+   * the constructor of the decorator.
+   */
   public Decorator(ChrismasTree treeDecorator) {
     this.treeDecorator = treeDecorator;
   }
