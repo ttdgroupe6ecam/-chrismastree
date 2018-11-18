@@ -36,9 +36,9 @@ public class Bill {
    */
   public Bill(ChrismasTree toBePrinted, Order order, String path) throws IOException {
 
-     this.wr = new FileWriter(path, true);
-     this.bf = new BufferedWriter(wr);
-     this.pf = new PrintWriter(bf);
+    this.wr = new FileWriter(path, true);
+    this.bf = new BufferedWriter(wr);
+    this.pf = new PrintWriter(bf);
     this.toBePrinted = toBePrinted;
     this.order = order;
   }
