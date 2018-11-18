@@ -96,7 +96,7 @@ public class Bill {
   public void addDecorator(String[] description, String[] color) {
     int variable = 1;
     while (variable < description.length) {
-      addStringLine(java.lang.String.format("1x %s %s", description[variable], color[variable]));
+      addStringLine(String.format("1x %s %s", description[variable], color[variable]));
       variable++;
     }
   }

@@ -127,9 +127,7 @@ public class ClientMain {
                 System.out.println(decoration.toString());
               }
                 break;
-              default: {
-
-              }
+              default:
                 break;
             } // end of switch
           } while (!garlandOption.equals("q")); // end of loop
