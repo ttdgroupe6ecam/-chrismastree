@@ -19,9 +19,9 @@ import java.io.PrintWriter;
  */
 public class Bill {
 
-  private FileWriter wr = null;
-  private BufferedWriter bf = null;
-  private PrintWriter pf = null;
+  private FileWriter wr;
+  private BufferedWriter bf;
+  private PrintWriter pf =;
   private ChrismasTree toBePrinted;
   private Order order;
   // private String[] elements;
@@ -36,9 +36,9 @@ public class Bill {
    */
   public Bill(ChrismasTree toBePrinted, Order order, String path) throws IOException {
 
-    FileWriter wr = new FileWriter(path, true);
-    BufferedWriter bf = new BufferedWriter(wr);
-    PrintWriter pf = new PrintWriter(bf);
+     this.wr = new FileWriter(path, true);
+     this.bf = new BufferedWriter(wr);
+     this.pf = new PrintWriter(bf);
     this.toBePrinted = toBePrinted;
     this.order = order;
   }
