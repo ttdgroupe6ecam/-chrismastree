@@ -21,7 +21,7 @@ public class Bill {
 
   private FileWriter wr;
   private BufferedWriter bf;
-  private PrintWriter pf =;
+  private PrintWriter pf ;
   private ChrismasTree toBePrinted;
   private Order order;
   // private String[] elements;
