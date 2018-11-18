@@ -150,7 +150,7 @@ public class ClientMain {
           break;
 
         default:
-            break;
+          break;
       } // end of switch
     } while (!choiceDecoration.equals("q")); // end of loop
   }
@@ -286,7 +286,7 @@ public class ClientMain {
         }
           break;
         default :
-        break;
+          break;
       } // end of switch
     } while (!choiceDecoration.equals("q")); // end of loop
   }
