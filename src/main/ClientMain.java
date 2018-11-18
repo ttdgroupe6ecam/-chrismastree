@@ -149,9 +149,7 @@ public class ClientMain {
         }
           break;
 
-        default: { // to add something
-
-        }
+        default:
             break;
       } // end of switch
     } while (!choiceDecoration.equals("q")); // end of loop
@@ -261,8 +259,7 @@ public class ClientMain {
                 // dispaly
                 System.out.println(decoration.toString());
                 break;
-              default: {
-              }
+              default:
                 break;
 
             } // end of switch
@@ -288,8 +285,7 @@ public class ClientMain {
           System.out.println(decoration.toString());
         }
           break;
-        default : {
-        }
+        default :
         break;
       } // end of switch
     } while (!choiceDecoration.equals("q")); // end of loop
@@ -342,8 +338,7 @@ public class ClientMain {
               treeDecorationStandard(tree);
             }
               break;
-            default: {
-            }
+            default:
               break;
           }
         }
@@ -363,14 +358,12 @@ public class ClientMain {
               treeDecorationPersonalized(tree);
             }
               break;
-            default: {
-            }
+            default:
               break;
           }
         }
           break;
-        default: {
-        }
+        default:
           break;
       }
 
