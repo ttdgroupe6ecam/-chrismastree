@@ -15,12 +15,12 @@ public class Candle extends Decorator {
   private int lifeTime; // en heur
   private String parfum;
 
-    /**
-     *
-     * @param treeDecorator the christmasTree to be augmented
-     *
-     * This is the standard constructor of candle.
-     */
+  /**
+   *
+   * @param treeDecorator the christmasTree to be augmented
+   *
+   * This is the standard constructor of candle.
+   */
   public Candle(ChrismasTree treeDecorator) {
     super(treeDecorator);
     setColor(
@@ -36,17 +36,17 @@ public class Candle extends Decorator {
             : getParfum() + " CandleParfum: " + "Senteurs d'inspiration");
   }
 
-    /**
-     *
-     * @param color choice of color
-     * @param description to be augmented
-     * @param price choice of price
-     * @param lifeTime choice of lifetime
-     * @param parfum choice of parfum
-     * @param treeDecorator the christmasTree to be augmented
-     *
-     * this is the personnalised constructor of the candle.
-     */
+  /**
+   *
+   * @param color choice of color
+   * @param description to be augmented
+   * @param price choice of price
+   * @param lifeTime choice of lifetime
+   * @param parfum choice of parfum
+   * @param treeDecorator the christmasTree to be augmented
+   *
+   * this is the personnalised constructor of the candle.
+   */
   public Candle(
       String color,
       String description,

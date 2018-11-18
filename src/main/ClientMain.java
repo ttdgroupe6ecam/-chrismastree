@@ -12,7 +12,7 @@ import java.util.Scanner;
 
 
 /** @author MediaMonster
- * this is the main class.
+ *   this is the main class.
  */
 public class ClientMain {
 

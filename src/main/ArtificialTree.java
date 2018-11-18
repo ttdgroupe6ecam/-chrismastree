@@ -18,10 +18,10 @@ public class ArtificialTree extends ChrismasTree {
 
   private String plasticType;
 
-    /**
-     * Constructor of the ArtificialTree class with standard (preprogrammed) value.
-     *
-     */
+  /**
+   * Constructor of the ArtificialTree class with standard (preprogrammed) value.
+   *
+   * */
   public ArtificialTree() {
     setDescription("TreeDescription: " + "Artificial Tree");
     setPrice(100.99);
@@ -29,16 +29,17 @@ public class ArtificialTree extends ChrismasTree {
     this.plasticType = "plasticType: " + "plasticTypeA";
   }
 
-    /**
-     *This is the constructor of the class where you can input your own parameter to make the christmas tree.
-     *
-     * @param description the tree type
-     * @param price the price of the tree
-     * @param color the color of the tree
-     * @param plasticType the typr of plastic of the tree
-     *
-     *
-     */
+  /**
+   *This is the constructor of the class where you can input your own parameter,
+   *  to make the christmas tree.
+   *
+   * @param description the tree type
+   * @param price the price of the tree
+   * @param color the color of the tree
+   * @param plasticType the typr of plastic of the tree
+   *
+   *
+   * */
   public ArtificialTree(String description, double price, String color, String plasticType) {
     setDescription("TreeDescription" + description);
     setPrice(price);
@@ -46,10 +47,10 @@ public class ArtificialTree extends ChrismasTree {
     this.plasticType = "plasticType: " + plasticType;
   }
 
-    /**
-     *
-     * @return the list of all possible decorator for this type of tree
-     */
+  /**
+   *
+   * @return the list of all possible decorator for this type of tree
+   * */
   public ArrayList decoratorPossible() {
     ArrayList<String> list = new ArrayList<String>();
     list.add("Balls");
