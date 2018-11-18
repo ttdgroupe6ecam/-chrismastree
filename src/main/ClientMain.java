@@ -77,7 +77,7 @@ public class ClientMain {
             decoration = new Balls(manyDecoration);
           }
 
-            // display
+          // display
           System.out.println(decoration.toString());
         }
           break;
@@ -96,7 +96,7 @@ public class ClientMain {
             switch (garlandOption) {
               case "a": {
 
-                    // d=new ElectricGarland(chrismasTree);
+                // d=new ElectricGarland(chrismasTree);
 
                 if (manyDecoration == null) {
                   decoration = new ElectricGarland(chrismasTree);
@@ -105,14 +105,14 @@ public class ClientMain {
                   decoration = new ElectricGarland(manyDecoration);
                 }
 
-                    // display
+                // display
                 System.out.println(decoration.toString());
               }
                 break;
 
               case "b":
               {
-                    // d=new SyntheticGarland(chrismasTree);
+                // d=new SyntheticGarland(chrismasTree);
 
                 if (manyDecoration == null) {
                   decoration = new SyntheticGarland(chrismasTree);
@@ -122,21 +122,21 @@ public class ClientMain {
                 }
 
                     // dispaly
-                    System.out.println(decoration.toString());
-                }
-                  break;
-                default: {
+                System.out.println(decoration.toString());
+              }
+                break;
+              default: {
 
-                }
-                  break;
-              } // end of switch
+              }
+                break;
+            } // end of switch
           } while (!garlandOption.equals("q")); // end of loop
         }
           break;
 
         case "c":
         {
-            // d=new Candle(chrismasTree);
+          // d=new Candle(chrismasTree);
           if (manyDecoration == null) {
             decoration = new Candle(chrismasTree);
             manyDecoration = decoration;
@@ -144,7 +144,7 @@ public class ClientMain {
             decoration = new Candle(manyDecoration);
           }
 
-            // dispaly
+          // dispaly
           System.out.println(decoration.toString());
         }
           break;
@@ -157,10 +157,10 @@ public class ClientMain {
     } while (!choiceDecoration.equals("q")); // end of loop
   }
 
-    /**
-     * this class allows for choosing a personalized decoration.
-     * @param chrismasTree the ree to be personalized
-     */
+  /**
+   * this class allows for choosing a personalized decoration.
+   * @param chrismasTree the ree to be personalized
+   */
   public static void treeDecorationPersonalized(ChrismasTree chrismasTree) {
     Scanner scan = new Scanner(System.in);
     Decorator decoration ;
@@ -262,7 +262,7 @@ public class ClientMain {
                 System.out.println(decoration.toString());
                 break;
               default: {
-                    }
+              }
                 break;
 
             } // end of switch
@@ -289,17 +289,17 @@ public class ClientMain {
         }
           break;
         default : {
-          }
+        }
         break;
       } // end of switch
     } while (!choiceDecoration.equals("q")); // end of loop
   }
 
-    /**
-     * the class main to be used by the retailer.
-     * @param args to be entered by the user
-     * @throws IOException if a file can't be created
-     */
+  /**
+   * the class main to be used by the retailer.
+   * @param args to be entered by the user
+   * @throws IOException if a file can't be created
+   */
   public static void main(String[] args) throws IOException {
 
     Scanner scan = new Scanner(System.in);
