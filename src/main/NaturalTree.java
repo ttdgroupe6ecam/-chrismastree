@@ -3,15 +3,20 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+
 package christmasTree;
 
-/** @author MediaMonster */
+/** @author MediaMonster
+ * the class specializing the tree into a natural one.
+ */
 public class NaturalTree extends ChrismasTree {
 
   String treeType;
   int lifeTime;
 
-  // Constructs
+    /**
+     * the standard constructor.
+     */
   public NaturalTree() {
     setDescription(" TreeDescription: " + "Natural Tree");
     setPrice(200.20);
@@ -20,6 +25,14 @@ public class NaturalTree extends ChrismasTree {
     setLifeTime(50);
   }
 
+    /**
+     * the personnalized constructor.
+     * @param description to be changed
+     * @param price choice of price
+     * @param color choice of color
+     * @param treeType type chosen
+     * @param lifeTime choice of lifetime
+     */
   public NaturalTree(
       String description, double price, String color, String treeType, int lifeTime) {
     setDescription(" TreeDescription: " + description);

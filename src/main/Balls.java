@@ -3,15 +3,27 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+
 package christmasTree;
 
-/** @author MediaMonster */
+/**
+ * This class extendes the Decorator to add the specificity of a ball.
+ *
+ * @author MediaMonster
+ *
+ *
+ * */
 public class Balls extends Decorator {
 
   String material;
   String size; // in cm
 
-  // Constructs
+    /**
+     * This class adds balls in a christmasTree.
+     *
+     * @param treeDecorator the christmasTree to be augmented with the decorator
+     *
+     */
   public Balls(ChrismasTree treeDecorator) {
     super(treeDecorator);
     setColor(
@@ -26,6 +38,18 @@ public class Balls extends Decorator {
         getSize() == null ? "" + " BallsSize: " + "Small" : getSize() + " BallsSize: " + "Small");
   }
 
+    /**
+     *this class decorated a christmas with a personnalized ball.
+     *
+     * @param color the color of the ball
+     * @param description to be augmented with values from this method
+     * @param price the selected price of the ball
+     * @param material the selected material of the ball
+     * @param size the selected size of the ball
+     * @param treeDecorator the tree to be decorated with the ball
+     *
+     *
+     */
   public Balls(
       String color,
       String description,

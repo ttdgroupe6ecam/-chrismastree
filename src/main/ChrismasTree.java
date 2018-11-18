@@ -3,9 +3,14 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+
 package christmasTree;
 
-/** @author MediaMonster */
+/** @author MediaMonster
+ *
+ * this is the class of the tree,
+ * which is to be augmented with decoration.
+ */
 public abstract class ChrismasTree {
   private String description;
   private double price;

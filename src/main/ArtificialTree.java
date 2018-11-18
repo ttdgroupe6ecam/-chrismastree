@@ -3,16 +3,25 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+
 package christmasTree;
 
 import java.util.ArrayList;
 
-/** @author MediaMonster */
+/**
+ * This class extends te christmas tree one to specialize it.
+ *
+ * @author Yassine
+ *
+ */
 public class ArtificialTree extends ChrismasTree {
 
   private String plasticType;
 
-  // constructs
+    /**
+     * Constructor of the ArtificialTree class with standard (preprogrammed) value.
+     *
+     */
   public ArtificialTree() {
     setDescription("TreeDescription: " + "Artificial Tree");
     setPrice(100.99);
@@ -20,6 +29,16 @@ public class ArtificialTree extends ChrismasTree {
     this.plasticType = "plasticType: " + "plasticTypeA";
   }
 
+    /**
+     *This is the constructor of the class where you can input your own parameter to make the christmas tree.
+     *
+     * @param description the tree type
+     * @param price the price of the tree
+     * @param color the color of the tree
+     * @param plasticType the typr of plastic of the tree
+     *
+     *
+     */
   public ArtificialTree(String description, double price, String color, String plasticType) {
     setDescription("TreeDescription" + description);
     setPrice(price);
@@ -27,7 +46,10 @@ public class ArtificialTree extends ChrismasTree {
     this.plasticType = "plasticType: " + plasticType;
   }
 
-  // Attention à vérifier !!!!!!!!!!!!!!!!!!!!!!!!!!!!
+    /**
+     *
+     * @return the list of all possible decorator for this type of tree
+     */
   public ArrayList decoratorPossible() {
     ArrayList<String> list = new ArrayList<String>();
     list.add("Balls");
@@ -35,8 +57,7 @@ public class ArtificialTree extends ChrismasTree {
     list.add("SyntheticGarland");
     return list;
   }
-  // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-  // Getters and Setters
+
   public String getPlasticType() {
     return plasticType;
   }

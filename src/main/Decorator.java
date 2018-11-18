@@ -3,14 +3,21 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+
 package christmasTree;
 
-/** @author MediaMonster */
+/** @author MediaMonster
+ * the class used to augment christmasTree
+ */
 public abstract class Decorator extends ChrismasTree {
 
   private ChrismasTree treeDecorator;
 
-  // Construct
+    /**
+     *
+     * @param treeDecorator the tree to be decorated
+     * the constructor of the decorator.
+     */
   public Decorator(ChrismasTree treeDecorator) {
     this.treeDecorator = treeDecorator;
   }

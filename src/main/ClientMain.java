@@ -3,23 +3,31 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+
 package christmasTree;
 
 import java.io.IOException;
-import java.util.Scanner;
 import java.nio.file.Paths;
+import java.util.Scanner;
 
-/** @author MediaMonster */
+
+/** @author MediaMonster
+ * this is the main class.
+ */
 public class ClientMain {
 
-  /** @param args the command line arguments */
 
   // Attention il manque comment ajouetr plusier decoration et la gestion de decoratorPossible
   Scanner scan = new Scanner(System.in);
 
   static String choiceTree;
 
-  // create  Standard Decorationa
+    /**
+     *
+     * @return the order class
+     *
+     * the order returned contains the client's info; the delivery adress and when it was done.
+     */
   public static Order makeOrder() {
 
     Scanner scan = new Scanner(System.in);
@@ -33,101 +41,130 @@ public class ClientMain {
     return order;
   }
 
+    /**
+     *
+     * @param chrismasTree the christmastree to be augmented
+     *
+     * this class is used to choose which decoration to be added on the tree.
+     */
   public static void treeDecorationStandard(ChrismasTree chrismasTree) {
     Scanner scan = new Scanner(System.in);
     Decorator decoration = null;
     Decorator manyDecoration = null;
-    String GarlandOption;
-    String choiceDecoration;
+
+
 
     // Decorator Options
     System.out.println("Decorator Options: ");
     System.out.println("a: Balls");
     System.out.println("b: Garland");
-    if (choiceTree.equals("a")) System.out.println("c: Candle");
+    if (choiceTree.equals("a")) {System.out.println("c: Candle");}
     System.out.println("q: Quit");
 
     do {
       System.out.println("Choose a decoration please: ");
-      choiceDecoration = scan.next();
+        String choiceDecoration = scan.next();
 
-      switch (choiceDecoration) {
+        switch (choiceDecoration) {
         case "a":
-          if (manyDecoration == null) {
-            decoration = new Balls(chrismasTree);
-            manyDecoration = decoration;
-          } else {
-            decoration = new Balls(manyDecoration);
-          }
+          {
+            if (manyDecoration == null) {
+              decoration = new Balls(chrismasTree);
+              manyDecoration = decoration;
+            } else {
+              decoration = new Balls(manyDecoration);
+            }
 
-          // display
-          System.out.println(decoration.toString());
+            // display
+            System.out.println(decoration.toString());
+          }
           break;
 
         case "b":
-          System.out.println("Garland Options: ");
-          System.out.println("a: Electric Garland");
-          System.out.println("b: Synthetic Garland");
-          System.out.println("q: Finish");
+          {
+            System.out.println("Garland Options: ");
+            System.out.println("a: Electric Garland");
+            System.out.println("b: Synthetic Garland");
+            System.out.println("q: Finish");
 
-          do {
-            System.out.println("Choose a Garland decorations options : ");
-            GarlandOption = scan.next();
+            do {
+              System.out.println("Choose a Garland decorations options : ");
+              String garlandOption = scan.next();
 
-            switch (GarlandOption) {
-              case "a":
-                // d=new ElectricGarland(chrismasTree);
+              switch (garlandOption) {
+                case "a": {
 
-                if (manyDecoration == null) {
-                  decoration = new ElectricGarland(chrismasTree);
-                  manyDecoration = decoration;
-                } else {
-                  decoration = new ElectricGarland(manyDecoration);
-                }
+                    // d=new ElectricGarland(chrismasTree);
 
-                // display
-                System.out.println(decoration.toString());
-                break;
+                    if (manyDecoration == null) {
+                      decoration = new ElectricGarland(chrismasTree);
+                      manyDecoration = decoration;
+                    } else {
+                      decoration = new ElectricGarland(manyDecoration);
+                    }
 
-              case "b":
-                // d=new SyntheticGarland(chrismasTree);
+                    // display
+                    System.out.println(decoration.toString());
+                  }
+                  break;
 
-                if (manyDecoration == null) {
-                  decoration = new SyntheticGarland(chrismasTree);
-                  manyDecoration = decoration;
-                } else {
-                  decoration = new SyntheticGarland(manyDecoration);
-                }
+                case "b":
+                  {
+                    // d=new SyntheticGarland(chrismasTree);
 
-                // dispaly
-                System.out.println(decoration.toString());
-                break;
-            } // end of switch
-          } while (!GarlandOption.equals("q")); // end of loop
+                    if (manyDecoration == null) {
+                      decoration = new SyntheticGarland(chrismasTree);
+                      manyDecoration = decoration;
+                    } else {
+                      decoration = new SyntheticGarland(manyDecoration);
+                    }
+
+                    // dispaly
+                    System.out.println(decoration.toString());
+                  }
+                  break;
+                  default: {
+
+                  }
+                  break;
+              } // end of switch
+            } while (!garlandOption.equals("q")); // end of loop
+          }
+          break;
 
         case "c":
-          // d=new Candle(chrismasTree);
-          if (manyDecoration == null) {
-            decoration = new Candle(chrismasTree);
-            manyDecoration = decoration;
-          } else {
-            decoration = new Candle(manyDecoration);
-          }
+          {
+            // d=new Candle(chrismasTree);
+            if (manyDecoration == null) {
+              decoration = new Candle(chrismasTree);
+              manyDecoration = decoration;
+            } else {
+              decoration = new Candle(manyDecoration);
+            }
 
-          // dispaly
-          System.out.println(decoration.toString());
+            // dispaly
+            System.out.println(decoration.toString());
+          }
           break;
+
+            default: { // to add something
+
+            }
+            break;
       } // end of switch
     } while (!choiceDecoration.equals("q")); // end of loop
   }
 
-  // create  Standard Decoration
+    /**
+     * this class allows for choosing a personalized decoration.
+     * @param chrismasTree
+     */
   public static void treeDecorationPersonalized(ChrismasTree chrismasTree) {
     Scanner scan = new Scanner(System.in);
     Decorator decoration = null;
     Decorator manyDecoration = null;
-    String GarlandOption;
-    String choiceDecoration;
+
+
 
     do {
 
@@ -135,10 +172,12 @@ public class ClientMain {
       System.out.println("Decorator Options: ");
       System.out.println("a: Balls");
       System.out.println("b: Garland");
-      if (choiceTree.equals("a")) System.out.println("c: Candle");
+      if (choiceTree.equals("a")) {
+          System.out.println("c: Candle");
+      }
       System.out.println("q: Quit");
       System.out.println("Choose a decoration please: ");
-      choiceDecoration = scan.next();
+       String choiceDecoration = scan.next();
 
       // Decorator data(description)
       System.out.println("description: ");
@@ -151,7 +190,7 @@ public class ClientMain {
       String color = scan.next();
 
       switch (choiceDecoration) {
-        case "a": // Balls
+        case "a": / Balls/ {
           System.out.println("material: ");
           String material = scan.next();
 
@@ -167,33 +206,34 @@ public class ClientMain {
 
           // display
           System.out.println(decoration.toString());
+          }
           break;
 
-        case "b": // Garland
+        case "b": / Garland/ {
           do {
             System.out.println("Garland Options: ");
             System.out.println("a: Electric Garland");
             System.out.println("b: Synthetic Garland");
             System.out.println("q: Finish");
             System.out.println("Choose a Garland decorations options : ");
-            GarlandOption = scan.next();
+            String garlandOption = scan.next();
 
             System.out.println("length : ");
-            double GarlandLength = scan.nextInt();
+            double garlandLength = scan.nextInt();
 
-            switch (GarlandOption) {
+            switch (garlandOption) {
               case "a": // Electric Garland
                 System.out.println("hasBlink true or false : ");
                 boolean hasBlink = scan.nextBoolean();
                 if (manyDecoration == null) {
                   decoration =
                       new ElectricGarland(
-                          color, description, price, hasBlink, GarlandLength, chrismasTree);
+                          color, description, price, hasBlink, garlandLength, chrismasTree);
                   manyDecoration = decoration;
                 } else {
                   decoration =
                       new ElectricGarland(
-                          color, description, price, hasBlink, GarlandLength, chrismasTree);
+                          color, description, price, hasBlink, garlandLength, chrismasTree);
                 }
 
                 // display
@@ -207,12 +247,12 @@ public class ClientMain {
                 if (manyDecoration == null) {
                   decoration =
                       new SyntheticGarland(
-                          paillette, color, description, price, GarlandLength, chrismasTree);
+                          paillette, color, description, price, garlandLength, chrismasTree);
                   manyDecoration = decoration;
                 } else {
                   decoration =
                       new SyntheticGarland(
-                          paillette, color, description, price, GarlandLength, chrismasTree);
+                          paillette, color, description, price, garlandLength, chrismasTree);
                 }
 
                 // dispaly
@@ -220,8 +260,10 @@ public class ClientMain {
                 break;
             } // end of switch
           } while (!GarlandOption.equals("q")); // end of loop
+            }
+            break;
 
-        case "c":
+        case "c": {
           System.out.println("LifeTime : ");
           int lifeTime = scan.nextInt();
 
@@ -237,12 +279,21 @@ public class ClientMain {
 
           // dispaly
           System.out.println(decoration.toString());
+          }
+          break;
+      default : {
+          }
           break;
       } // end of switch
     } while (!choiceDecoration.equals("q")); // end of loop
   }
 
-  public static void main(String[] args) throws IOException {
+    /**
+     * the class main to be used by the retailer.
+     * @param args to be entered by the user
+     * @throws IOException error handling
+     */
+    public static void main(String[] args) throws IOException {
 
     Scanner scan = new Scanner(System.in);
     Order order = makeOrder();
@@ -271,37 +322,51 @@ public class ClientMain {
       String commandType = scan.next();
 
       switch (commandType) {
-        case "1":
-          {
-            switch (choiceTree) {
-              case "a":
-                tree = new NaturalTree();
-                treeDecorationStandard(tree);
-                break;
+        case "1": {
+          switch (choiceTree) {
+            case "a": {
+              tree = new NaturalTree();
+              treeDecorationStandard(tree);
+              }
+              break;
 
-              case "b":
-                tree = new ArtificialTree();
-                treeDecorationStandard(tree);
-                break;
-            } // end of switch
+            case "b": {
+              tree = new ArtificialTree();
+              treeDecorationStandard(tree);
+              }
+              break;
+              default: {
+              }
+              break;
+              }
+            }
             break;
-          }
+
         case "2":
           {
             switch (choiceTree) {
-              case "a":
+              case "a": {
                 tree = new NaturalTree();
                 treeDecorationPersonalized(tree);
+                }
                 break;
 
-              case "b":
+              case "b": {
                 tree = new ArtificialTree();
                 treeDecorationPersonalized(tree);
+                }
                 break;
-            } // end of switch
+              default: {
+                 }
+                 break;
+              }
+            }
+            break;
+          default: {
+            }
             break;
           }
-      }
+
     } while (!choiceTree.equals("q")); // end of loop
     Bill bill = new Bill(tree, order, Paths.get(".").toAbsolutePath().normalize().toString());
     bill.print();

@@ -3,14 +3,20 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+
 package christmasTree;
 
-/** @author MediaMonster */
+/** @author MediaMonster
+ * the class which extends garland into a synthetic one.
+ */
 public class SyntheticGarland extends Garland {
 
   private String paillette;
 
-  // Construct
+    /**
+     * the standard constructor.
+     * @param treeDecorator the tree to be decorated
+     */
   public SyntheticGarland(ChrismasTree treeDecorator) {
     super(treeDecorator);
     setColor(
@@ -26,6 +32,15 @@ public class SyntheticGarland extends Garland {
             : getPaillette() + " SyntheticGarlandPaillette:: " + "Square");
   }
 
+    /**
+     * the personnalized constructor
+     * @param paillette choice of paillette
+     * @param color choice of color
+     * @param description to be changed
+     * @param price choice of price
+     * @param length choice of length
+     * @param treeDecorator the tree o be decorated
+     */
   public SyntheticGarland(
       String paillette,
       String color,

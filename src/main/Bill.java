@@ -3,16 +3,18 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+
 package christmasTree;
 
-import java.io.FileWriter;
 import java.io.BufferedWriter;
+import java.io.FileWriter;
 import java.io.PrintWriter;
 import java.io.IOException;
 /**
+ * This class's purpose is to save a command of a christmas tree in the format of a billing where,
+ * client's info, the tree, it's elements and their prices and the total price is present.
+ *
  * @author venon arthur
- *     <p>This class's purpose is to save a command of a christmas tree in the format of a billing
- *     where client's info, the tree, it's elements and their prices and the total price is present
  */
 public class Bill {
 
@@ -27,8 +29,9 @@ public class Bill {
    * @param order the class which contains the info about the client and the order
    * @param path the path to the file's location
    * @throws IOException this is in case the file cannot be created
-   *     <p>This method is the constructor which instantiates the file, buffer and print writer to
-   *     write in a file located in the specified path
+   *
+   *     <p>This method is the constructor which instantiates the file, buffer and print writer to,
+   *     write in a file located in the specified path.
    */
   public Bill(ChrismasTree toBePrinted, Order order, String path) throws IOException {
 
@@ -40,7 +43,8 @@ public class Bill {
   }
   /**
    * @throws IOException this is used in case the buffer and writer are already closed
-   *     <p>this method closes the writer, buffer and printer so ressources used are released
+   *
+   *     <p>this method closes the writer, buffer and printer so ressources used are released.
    */
   public void close() throws IOException {
 
@@ -50,19 +54,23 @@ public class Bill {
   }
   /**
    * @param newString the string to be added in the file
-   *     <p>this method adds the string in the parameters directly inside the file
+   *
+   *     <p>this method adds the string in the parameters directly inside the file.
    */
   public void addString(String newString) {
     pf.print(newString);
   }
   /**
    * @param newString this string is to be added in the file
-   *     <p>this methods adds ths stirng in the parameters and then goes to the next lien
+   *
+   *     <p>this methods adds ths stirng in the parameters and then goes to the next lien.
    */
   public void addStringLine(String newString) {
     pf.println(newString);
   }
-  /** this methods adds the client's info */
+  /** this methods adds the client's info.
+   *
+   */
 
   public void addClient() {
     addStringLine("surname : " + order.getSurname() + " name : " + order.getName());
@@ -73,7 +81,8 @@ public class Bill {
   /**
    * @param treeType the type of the tree commanded
    * @param treeColor the color of the tree commanded
-   *     <p>this method adds the tree's info in the file
+   *
+   *     <p>this method adds the tree's info in the file.
    */
   public void addTree(String treeType, String treeColor) {
     addStringLine("1x " + treeType + " " + treeColor);
@@ -81,20 +90,26 @@ public class Bill {
   /**
    * @param description the array of the types of decoration
    * @param color the array of the color of decoration
-   *     <p>this method adds the decorations in the file
+   *
+   *     <p>this method adds the decorations in the file.
    */
 
   public void addDecorator(String[] description, String[] color) {
-    int i = 1;
-    while (i < description.length) {
-      addStringLine("1x " + description[i] + " " + color[i]);
+    int aVariable = 1;
+    while (aVariable < description.length) {
+      addStringLine(java.lang.String.format("1x %s %s", description[aVariable], color[aVariable]));
+      aVariable++;
     }
   }
-  /** this method adds the price in the file */
+  /** this method adds the price in the file.
+   *
+   */
   public void addPrice() {
     addStringLine("      ¨Price : " + String.valueOf(this.toBePrinted.getPrice()));
   }
-  /** this methods adds the title in the file */
+  /** this methods adds the title in the file.
+   *
+   */
   public void addTitle() {
     addStringLine("A new command");
     addStringLine("");
@@ -102,7 +117,8 @@ public class Bill {
   }
   /**
    * @return elementsList the array of descitption on tree dans decoration
-   *     <p>this method parse the descritpion of the description
+   *
+   *     <p>this method parse the descritpion of the description.
    */
   public String[] parserDescription() {
     String tampon = this.toBePrinted.getDescription();
@@ -114,7 +130,8 @@ public class Bill {
   }
   /**
    * @return elementsList the array of the colors of tree and decorations
-   *     <p>this methods parses the color string
+   *
+   *     <p>this methods parses the color string.
    */
   public String[] parserColor() {
     String tampon = this.toBePrinted.getColor();
@@ -128,12 +145,17 @@ public class Bill {
    * @param toBeCut the string to have replacment
    * @param change the string to be suppressed
    * @return the new string
-   *     <p>this methods supress parts of a string
+   *
+   *     <p>this methods supress parts of a string.
    */
   public String stringReplacer(String toBeCut, String change) {
     return toBeCut.replace(change, "");
   }
-  /** @throws IOException this method adds all the elements in the file */
+  /** @throws IOException
+   *
+   * this method adds all the elements in the file.
+   *
+   */
   public void print() throws IOException {
     addTitle();
     addClient();
