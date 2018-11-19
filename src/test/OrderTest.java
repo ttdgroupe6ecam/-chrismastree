@@ -1,7 +1,7 @@
 import org.junit.Test;
 import static org.junit.Assert.*;
 import org.junit.BeforeClass;
-import Order;
+import main.Order;
 
 public class OrderTest {
 
