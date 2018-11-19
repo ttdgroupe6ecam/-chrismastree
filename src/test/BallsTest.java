@@ -7,15 +7,13 @@ import christmastree.Decorator;
 
 public class BallsTest {
 
-    private static NaturalTree tree;
-    private static Balls bal1;
+    private static NaturalTree tree = new NaturalTree();
+    private static Balls bal1 = new Balls(tree);
 
 
     @BeforeClass
     public static void setupBeforeClass() {
 
-        tree = new NaturalTree();
-        ball = new Balls(tree);
     }
 
     @Test
