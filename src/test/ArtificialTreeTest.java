@@ -12,20 +12,20 @@ public class ArtificialTreeTest {
     public static void setupBeforeClass() {
 
 
-        tree2 = new ArtificialTree("artificiel",23.8,"jaune","bisphenol A");
+        tree2 = new ArtificialTree("artificiel",23.8,"jaune","bisphenolA");
     }
 
     @Test
     public void constructStandard() {
         tree1 =new ArtificialTree();
-        assertEquals(tree1.getPlasticType(),"plasticType: bisphenol A");
+        assertEquals(tree1.getPlasticType(),"plasticType: bisphenolA");
     }
 
 
 
     @Test
     public void getToString() {
-        assertEquals(tree2.toString()," ArtificialTree{plasticType: bisphenol A}");
+        assertEquals(tree2.toString()," ArtificialTree{plasticType: bisphenolA}");
     }
 
 }
