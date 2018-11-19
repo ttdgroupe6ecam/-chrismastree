@@ -5,7 +5,7 @@ import christmastree.*;
 
 public class BallsTest {
 
-    private static NaturalTree tree = new NaturalTree();
+    private static ChrismasTree tree = new ChrismasTree();
     private static Decorator bal1 = new Balls(tree);
 
 
