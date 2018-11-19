@@ -5,31 +5,25 @@ import christmastree.ChrismasTree;
 
 public class ChristmasteeTest {
 
-    private static ChrismasTree tree;
+    private static ChrismasTree tree = null;
 
-  @BeforeClass
-  public static void setupBeforeClass() {
 
-      tree.setDescritpion("test");
-      tree.setPrice(15.3);
-      tree.setColor("rouge");
-  }
 
         @Test
         public void testDescription() {
-
+            tree.setDescription("test");
             assertEquals(tree.getDescritpion(),"test");
         }
 
         @Test
         public void testName() {
-
+            tree.setPrice(15.3);
             assertEquals(tree.getPrice(),15.3);
         }
 
         @Test
         public void testSurname() {
-
+            tree.setColor("rouge");
             assertEquals(tree.getColor(),"rouge");
         }
 
