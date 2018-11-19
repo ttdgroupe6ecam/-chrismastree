@@ -7,7 +7,11 @@ import christmastree.*;
 
 public class PerformanceTest {
 
-    private static Order order;
+    private  Order order;
+    private NaturalTree tree = new NaturalTree();
+    private Decorator deco;
+    private Bill bill;
+
 
     @Rule
     public Timeout globalTimeout = Timeout.seconds(1);
@@ -16,11 +20,13 @@ public class PerformanceTest {
     public static void setupBeforeClass() {
 
         order =new Order("31 rue de Keersmaeker","Arthur","Venon");
+        deco = new Candle(New Balls(tree));
+
     }
 
     @Test
     public void testBilling() throws Exception {
-
+        bill =new Bill(deco,order,"/var/lib/jenkins/workspace/ttd6new");
     }
 
 

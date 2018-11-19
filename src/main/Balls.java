@@ -17,10 +17,7 @@ public class Balls extends Decorator {
 
   String material;
   String size; // in cm
-  public Balls() {
-    this.material="test";
-    this.size="test";
-  }
+
   /**
    * This class adds balls in a christmasTree.
    *
