@@ -20,7 +20,7 @@ public class PerformanceTest {
     public static void setupBeforeClass() {
 
         order =new Order("31 rue de Keersmaeker","Arthur","Venon");
-        deco = new Candle(New Balls(tree));
+        deco = new Candle(new Balls(tree));
 
     }
 
