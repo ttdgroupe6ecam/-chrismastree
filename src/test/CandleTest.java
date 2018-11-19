@@ -14,7 +14,7 @@ public class CandleTest {
 
 
            deco = new Candle(tree);
-           String test = deco.toString();
+           String test = deco.getParfum();
     }
 
 
