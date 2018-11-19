@@ -19,6 +19,7 @@
 <build>
          <finalName>ttd6</finalName>
   <sourceDirectory>src/main</sourceDirectory>
+         <testSourceDirectory>src/test</testSourceDirectory>
     <plugins>
         <plugin>
         <groupId>org.apache.maven.plugins</groupId>
