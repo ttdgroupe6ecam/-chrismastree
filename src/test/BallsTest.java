@@ -13,7 +13,7 @@ public class BallsTest {
     @BeforeClass
     public static void setupBeforeClass() {
 
-
+        tree = new NaturalTree();
         ball = new Balls(tree);
     }
 
