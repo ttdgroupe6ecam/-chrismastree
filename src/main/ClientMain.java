@@ -370,7 +370,7 @@ public class ClientMain {
           break;
       }
 
-    } while (!choiceTree.equals("q") AND flag=0); // end of loop
+    } while (!choiceTree.equals("q")  && flag==0); // end of loop
     Bill bill = new Bill(tree, order, Paths.get(".").toAbsolutePath().normalize().toString());
     bill.print();
 

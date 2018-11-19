@@ -18,8 +18,8 @@ public class CandleTest {
 
 
     @Test
-    public void getColor() {
-          assertEquals(tree.getColor()," TreeColor: Green CandleColor: White");
+    public void toString() {
+          assertEquals(deco.toString()," TreeColor: Green CandleColor: White");
     }
 
 }
