@@ -301,7 +301,7 @@ public class ClientMain {
 
     Scanner scan = new Scanner(System.in);
     Order order = makeOrder();
-    int flag =0;
+    int flag = 0;
     ChrismasTree tree = null;
 
     do {
@@ -327,7 +327,7 @@ public class ClientMain {
 
       switch (commandType) {
         case "1": {
-          flag =1;
+          flag = 1;
           switch (choiceTree) {
             case "a": {
               tree = new NaturalTree();
@@ -348,7 +348,7 @@ public class ClientMain {
 
         case "2":
         {
-          flag =1;
+          flag = 1;
           switch (choiceTree) {
             case "a": {
               tree = new NaturalTree();
@@ -370,7 +370,7 @@ public class ClientMain {
           break;
       }
 
-    } while (!choiceTree.equals("q")  && flag==0); // end of loop
+    } while (!choiceTree.equals("q")  && flag == 0); // end of loop
     Bill bill = new Bill(tree, order, Paths.get(".").toAbsolutePath().normalize().toString());
     bill.print();
 
