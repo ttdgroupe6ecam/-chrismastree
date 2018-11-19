@@ -26,7 +26,7 @@ public class CandleTest {
 
     @Test
     public void getParfum() {
-          assertEquals(tree.getParfum()," CandleParfum: Senteurs d'inspiration");
+          assertEquals(tree.toString()," CandleParfum: Senteurs d'inspiration");
     }
 
 }
