@@ -1,7 +1,7 @@
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.Timeout;
-import org.junit.Assert.*;
+import static org.junit.Assert.*;
 import org.junit.BeforeClass;
 import christmastree.*;
 
