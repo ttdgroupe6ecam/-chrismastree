@@ -26,7 +26,7 @@ public class PerformanceTest {
 
     @Test
     public void testBilling() throws Exception {
-        bill =new Bill(deco,order,"/var/lib/jenkins/workspace/ttd6new");
+        bill =new Bill(deco,order,"output");
     }
 
 
