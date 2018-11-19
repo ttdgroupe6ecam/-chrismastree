@@ -7,10 +7,10 @@ import christmastree.*;
 
 public class PerformanceTest {
 
-    private  Order order;
-    private NaturalTree tree = new NaturalTree();
-    private Decorator deco;
-    private Bill bill;
+    private static Order order;
+    private static NaturalTree tree = new NaturalTree();
+    private  static Decorator deco;
+    private static Bill bill;
 
 
     @Rule
