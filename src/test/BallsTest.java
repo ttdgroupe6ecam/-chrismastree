@@ -7,14 +7,13 @@ import christmastree.Balls;
 public class BallsTest {
 
     private static ChrismasTree tree;
-    private static Balls bal1;
+    private static Balls bal1=new Balls(tree);
 
 
     @BeforeClass
     public static void setupBeforeClass() {
 
 
-        ball = new Balls(tree);
     }
 
     @Test
