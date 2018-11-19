@@ -3,8 +3,8 @@ import org.junit.Test;
 import org.junit.rules.Timeout;
 
 public class PerformanceTest {
-    public static String log;
-    private final CountDownLatch latch = new CountDownLatch(1);
+
+    private static Order order;
 
     @Rule
     public Timeout globalTimeout = Timeout.seconds(1);
@@ -12,6 +12,7 @@ public class PerformanceTest {
     @BeforeClass
     public static void setupBeforeClass() {
 
+        order =new Order("31 rue de Keersmaeker","Arthur","Venon");
     }
 
     @Test

@@ -15,6 +15,9 @@ public abstract class ChrismasTree {
   private double price;
   private String color;
 
+  public ChrismasTree() {
+
+  }
   // Getters and Setters
   public String getDescription() {
     return description;
