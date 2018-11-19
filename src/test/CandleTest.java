@@ -19,7 +19,7 @@ public class CandleTest {
 
 
     @Test
-    public void toString() {
+    public void testParfum() {
           assertEquals(test," TreeColor: Green CandleColor: White");
     }
 
