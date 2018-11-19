@@ -12,7 +12,7 @@ public class ChristmasteeTest {
         @Test
         public void testDescription() {
            tree.setDescription("test");
-          assertEquals(tree.getDescritpion(),"test");
+          assertEquals(tree.getDescription(),"test");
        }
 
        @Test
