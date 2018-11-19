@@ -1,5 +1,5 @@
 import org.junit.Test;
-import static org.junit.Assert.*;
+import  org.junit.Assert.*;
 import org.junit.BeforeClass;
 import christmastree.*;
 
@@ -14,17 +14,17 @@ public class BallsTest {
 
     }
 
-    @Test
-    public void getSize() {
+   // @Test
+    //public void getSize() {
 
-        assertEquals(ball.getSize()," BallsSize: Small");
-    }
+      //  assertEquals(ball.getSize()," BallsSize: Small");
+   // }
 
 
 
-    @Test
-    public void getMaterial() {
-        assertEquals(ball.getMaterial()," BallsMaterial: Plastic");
-    }
+    //@Test
+    //public void getMaterial() {
+      //  assertEquals(ball.getMaterial()," BallsMaterial: Plastic");
+    //}
 
 }
