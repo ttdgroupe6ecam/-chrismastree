@@ -23,12 +23,12 @@ public class NaturalTreeTest {
 
     @Test
     public void getDescriptionPersonnalise() {
-        assertEquals(tree2.getTreeType(),"pin");
+        assertEquals(tree2.getTreeType()," TreeType: pin");
     }
 
     @Test
     public void getToString() {
-        assertEquals(tree2.toString()," NaturalTree{ TreeType: pin, lifetime=6 }");
+        assertEquals(tree2.toString()," NaturalTree{ TreeType: pin, lifeTime=6}");
     }
 
 }
