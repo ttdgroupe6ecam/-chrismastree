@@ -1,7 +1,7 @@
 import org.junit.Test;
 import static org.junit.Assert.*;
 import org.junit.BeforeClass;
-import main.Order;
+import christmasTree.Order;
 
 public class OrderTest {
 
