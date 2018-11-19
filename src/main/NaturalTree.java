@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 
-package christmasTree;
+package christmastree;
 
 /**
  * the class specializing the tree into a natural one.

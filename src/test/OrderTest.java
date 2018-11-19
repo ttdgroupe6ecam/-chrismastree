@@ -1,7 +1,7 @@
 import org.junit.Test;
 import static org.junit.Assert.*;
 import org.junit.BeforeClass;
-import christmasTree.Order;
+import christmastree.Order;
 
 public class OrderTest {
 
@@ -15,7 +15,7 @@ public class OrderTest {
 
     @Test
     public void getDeliveryAddress() {
-        assertEquals(order.getDeliverryAddress(),"31 rue de Keersmaeker");
+        assertEquals(order.getDeliveryAddress(),"31 rue de Keersmaeker");
     }
 
     @Test
