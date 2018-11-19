@@ -6,7 +6,7 @@ import christmastree.NaturalTree;
 public class NaturalTreeTest {
 
     private static NaturalTree tree1;
-    private stattic NaturalTree tree2;
+    private static NaturalTree tree2;
 
     @BeforeClass
     public static void setupBeforeClass() {
