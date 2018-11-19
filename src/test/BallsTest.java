@@ -3,7 +3,7 @@ import static org.junit.Assert.*;
 import org.junit.BeforeClass;
 import christmastree.Balls;
 
-public class BallsTreeTest {
+public class BallsTest {
 
     private static CrhismasTree tree;
     private static Balls bal1;
