@@ -14,7 +14,7 @@ public class PerformanceTest {
 
 
     @Rule
-    public Timeout globalTimeout = new Timeout(0.02);
+    public Timeout globalTimeout = new Timeout(20,TimeUnit.MILLISECONDS);
 
     @BeforeClass
     public static void setupBeforeClass() {

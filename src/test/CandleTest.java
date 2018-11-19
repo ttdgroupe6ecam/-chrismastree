@@ -5,28 +5,29 @@ import christmastree.*;
 
 public class CandleTest {
 
-    private static NaturalTree tree ;
-    private static Decorator deco ;
-
+    private static NaturalTree tree = new NaturalTree() ;
+    private static Decorator deco1 ;
+    private static Decorator deco2 ;
 
     @BeforeClass
     public static void setupBeforeClass() {
 
-           tree = new NaturalTree();
-           deco = new Candle(tree);
+
+
     }
 
     @Test
     public void getLifeTime() {
-
-         assertEquals(deco.getLifeTime(),5);
+        deco1 = new Candle(new Balls(tree));
+         assertEquals(deco1.getLifeTime(),5);
     }
 
 
 
     @Test
     public void getParfum() {
-          assertEquals(deco.getParfum()," CandleParfum: Senteurs d'inspiration");
+        deco2 = new Candle(new Balls(tree));
+          assertEquals(deco2.getParfum()," CandleParfum: Senteurs d'inspiration");
     }
 
 }

@@ -3,7 +3,7 @@ import static org.junit.Assert.*;
 import org.junit.BeforeClass;
 import christmastree.*;
 
-public class TreeDecorationTest {
+public class TreeDecorationStandardTest {
 
     private static ClientMain test ;
 
