@@ -14,12 +14,13 @@ public class CandleTest {
 
 
            deco = new Candle(tree);
+           String test = deco.toString();
     }
 
 
     @Test
     public void toString() {
-          assertEquals(deco.toString()," TreeColor: Green CandleColor: White");
+          assertEquals(test," TreeColor: Green CandleColor: White");
     }
 
 }
