@@ -5,14 +5,14 @@ import christmastree.*;
 
 public class BallsTest {
 
-    private static NaturalTree tree ;
+    //private static NaturalTree tree ;
     private static Balls bal1 ;
 
 
     @BeforeClass
     public static void setupBeforeClass() {
 
-        tree = new NaturalTree();
+        //tree = new NaturalTree();
         ball = new Balls();
     }
 
