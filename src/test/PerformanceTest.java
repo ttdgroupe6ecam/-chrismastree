@@ -13,8 +13,7 @@ public class PerformanceTest {
     private static Bill bill;
 
 
-    @Rule
-    public Timeout globalTimeout = new Timeout(20,TimeUnit.MILLISECONDS);
+
 
     @BeforeClass
     public static void setupBeforeClass() {
@@ -24,7 +23,7 @@ public class PerformanceTest {
 
     }
 
-    @Test
+    @Test(timeout=20)
     public void testBilling() throws Exception {
         bill =new Bill(deco,order,"output");
     }
