@@ -6,7 +6,7 @@ import christmastree.Balls;
 
 public class BallsTest {
 
-    private static CrhismasTree tree;
+    private static ChrismasTree tree;
     private static Balls bal1;
 
 
