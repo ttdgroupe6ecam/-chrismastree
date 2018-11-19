@@ -5,8 +5,8 @@ import christmastree.*;
 
 public class BallsTest {
 
-    private static ChrismasTree tree = new ChrismasTree();
-    private static Decorator bal1 = new Balls(tree);
+    private static NaturalTree tree = new NaturalTree();
+    private static Ball bal1 = new Balls(tree);
 
 
     @BeforeClass
@@ -14,17 +14,17 @@ public class BallsTest {
 
     }
 
-   // @Test
-    //public void getSize() {
+    @Test
+   public void getSize() {
 
-      //  assertEquals(ball.getSize()," BallsSize: Small");
-   // }
+     assertEquals(ball.getSize()," BallsSize: Small");
+   }
 
 
 
-    //@Test
-    //public void getMaterial() {
-      //  assertEquals(ball.getMaterial()," BallsMaterial: Plastic");
-    //}
+   @Test
+   public void getMaterial() {
+     assertEquals(ball.getMaterial()," BallsMaterial: Plastic");
+   }
 
 }

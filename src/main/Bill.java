@@ -124,6 +124,9 @@ public class Bill {
     tampon = stringReplacer(tampon, "TreeDescritpion: ");
     tampon = stringReplacer(tampon, "BallsDecorator: ");
     tampon = stringReplacer(tampon, "CandleDecorator: ");
+    tampon = stringReplacer(tampon, "GarlandDecorator: ");
+    tampon = stringReplacer(tampon, "ElectricGarlandDecorator: ");
+    tampon = stringReplacer(tampon, "SyntheticGarlandDecorator: ");
     String[] elementsList = tampon.split(" ");
     return elementsList;
   }
@@ -138,6 +141,9 @@ public class Bill {
     tampon = stringReplacer(tampon, "TreeColor: ");
     tampon = stringReplacer(tampon, "BallsColor: ");
     tampon = stringReplacer(tampon, "CandleColor: ");
+    tampon = stringReplacer(tampon, "GarlandColor: ");
+    tampon = stringReplacer(tampon, "ElectricGarlandColor: ");
+    tampon = stringReplacer(tampon, "SyntheticGarlandColor: ");
     String[] elementsList = tampon.split(" ");
     return elementsList;
   }
