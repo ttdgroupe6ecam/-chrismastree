@@ -16,17 +16,10 @@ public class CandleTest {
            deco = new Candle(tree);
     }
 
-    @Test
-    public void getLifeTime() {
-
-         assertEquals(tree.getLifeTime(),5);
-    }
-
-
 
     @Test
-    public void getParfum() {
-          assertEquals(tree.toString()," CandleParfum: Senteurs d'inspiration");
+    public void getColor() {
+          assertEquals(tree.getColor()," TreeColor: Green CandleColor: White");
     }
 
 }
