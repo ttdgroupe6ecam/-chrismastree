@@ -1,6 +1,7 @@
 import org.junit.Test;
 import static org.junit.Assert.*;
 import org.junit.BeforeClass;
+import christmastree.ChrismasTree;
 import christmastree.Balls;
 
 public class BallsTest {
