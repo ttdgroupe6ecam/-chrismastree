@@ -5,8 +5,7 @@ import christmastree.*;
 
 public class BallsTest {
 
-    private static NaturalTree tree = new NaturalTree();
-    private static Balls bal1 = new Balls(tree);
+
 
 
     @BeforeClass
@@ -16,7 +15,8 @@ public class BallsTest {
 
     @Test
    public void getSize() {
-
+         NaturalTree tree = new NaturalTree();
+         Balls bal1 = new Balls(tree);
      assertEquals(ball.getSize()," BallsSize: Small");
    }
 
