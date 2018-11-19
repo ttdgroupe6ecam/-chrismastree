@@ -57,15 +57,16 @@ public class ClientMain {
 
 
     // Decorator Options
-    System.out.println("Decorator Options: ");
-    System.out.println("a: Balls");
-    System.out.println("b: Garland");
-    if (choiceTree.equals("a")) {
-      System.out.println("c: Candle");
-    }
-    System.out.println("q: Quit");
+
     String choiceDecoration;
     do {
+      System.out.println("Decorator Options: ");
+      System.out.println("a: Balls");
+      System.out.println("b: Garland");
+      if (choiceTree.equals("a")) {
+        System.out.println("c: Candle");
+      }
+      System.out.println("q: Quit");
       System.out.println("Choose a decoration please: ");
       choiceDecoration = scan.next();
 
@@ -300,7 +301,7 @@ public class ClientMain {
 
     Scanner scan = new Scanner(System.in);
     Order order = makeOrder();
-
+    int flag =0;
     ChrismasTree tree = null;
 
     do {
@@ -315,7 +316,7 @@ public class ClientMain {
       choiceTree = scan.next();
 
       // Menu to choose type ommand (tree) personalized or standard
-      System.out.println("Command zzz: ");
+      System.out.println("Commande de choix: ");
       System.out.println("1: Standard");
       System.out.println("2: personalized");
       System.out.println("q: Finish ");
@@ -326,6 +327,7 @@ public class ClientMain {
 
       switch (commandType) {
         case "1": {
+          flag =1;
           switch (choiceTree) {
             case "a": {
               tree = new NaturalTree();
@@ -346,6 +348,7 @@ public class ClientMain {
 
         case "2":
         {
+          flag =1;
           switch (choiceTree) {
             case "a": {
               tree = new NaturalTree();
@@ -367,7 +370,7 @@ public class ClientMain {
           break;
       }
 
-    } while (!choiceTree.equals("q")); // end of loop
+    } while (!choiceTree.equals("q") AND flag=0); // end of loop
     Bill bill = new Bill(tree, order, Paths.get(".").toAbsolutePath().normalize().toString());
     bill.print();
 
