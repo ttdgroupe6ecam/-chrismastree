@@ -7,23 +7,30 @@ public class ChristmasteeTest {
 
     private static ChrismasTree tree;
 
+  @BeforeClass
+  public static void setupBeforeClass() {
 
-    @Test
-    public void testDescription() {
-        tree.setDescritpion("test");
-        assertEquals(tree.getDescritpion(),"test");
-    }
+      tree.setDescritpion("test");
+      tree.setPrice(15.3);
+      tree.setColor("rouge");
+  }
 
-    @Test
-    public void testName() {
-        tree.setPrice(15.3);
-        assertEquals(tree.getPrice(),15.3);
-    }
+        @Test
+        public void testDescription() {
 
-    @Test
-    public void testSurname() {
-        tree.setColor("rouge");
-        assertEquals(tree.getColor(),"rouge");
-    }
+            assertEquals(tree.getDescritpion(),"test");
+        }
+
+        @Test
+        public void testName() {
+
+            assertEquals(tree.getPrice(),15.3);
+        }
+
+        @Test
+        public void testSurname() {
+
+            assertEquals(tree.getColor(),"rouge");
+        }
 
 }
