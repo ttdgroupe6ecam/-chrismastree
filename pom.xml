@@ -70,20 +70,7 @@
           <!-- Default configuration for all reports -->
           ...
         </configuration>
-        <executions>
-          <execution>
-            <id>aggregate</id>
-            <goals>
-              <goal>aggregate</goal>
-            </goals>
-            <phase>package</phase>
-            <configuration>
-              <!-- Specific configuration for the aggregate report -->
-              ...
-            </configuration>
-          </execution>
-         
-        </executions>
+        
                  
               <plugin>
             <groupId>org.apache.maven.plugins</groupId>
