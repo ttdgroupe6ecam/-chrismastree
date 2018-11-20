@@ -18,7 +18,7 @@
    </properties>
 <build>
          <finalName>ttd6</finalName>
-  <sourceDirectory>src/main</sourceDirectory>
+  <sourceDirectory>src/christmastree</sourceDirectory>
          <testSourceDirectory>src/test</testSourceDirectory>
     <plugins>
         <plugin>
