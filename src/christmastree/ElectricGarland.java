@@ -8,7 +8,7 @@ package main;
 
 /**
  * a class used to extend garland.
- * @author MediaMonster
+ * @author Yassine
  *
  */
 public class ElectricGarland extends Garland {

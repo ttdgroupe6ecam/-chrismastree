@@ -1,31 +1,37 @@
+
+import main.*;
 import org.junit.Test;
 import static org.junit.Assert.*;
 import org.junit.BeforeClass;
-import main.Order;
 
 public class OrderTest {
 
     private static Order order;
-
+    private static Customer customer;
+    private static DeliveryAddress deliveryAddress;
+    
+  
     @BeforeClass
     public static void setupBeforeClass() {
-
-        order =new Order("31 rue de Keersmaeker","Arthur","Venon");
+        customer = new Customer("Arthur","Venon");
+        deliveryAddress = new DeliveryAddress("31 rue de Keersmaeker");
+        order =new Order(deliveryAddress,customer);
     }
 
     @Test
     public void getDeliveryAddress() {
-        assertEquals(order.getDeliveryAddress(),"31 rue de Keersmaeker");
+        deliveryAddress = new DeliveryAddress("31 rue de Keersmaeker");
+        assertEquals(order.getDeliveryAddress().getAddress(),deliveryAddress);
     }
 
     @Test
     public void getName() {
-        assertEquals(order.getName(),"Arthur");
+        assertEquals(order.getCustomer().getName(),"Arthur");
     }
 
     @Test
     public void getSurname() {
-        assertEquals(order.getSurname(),"Venon");
+        assertEquals(order.getCustomer().getSurname(),"Venon");
     }
 
 }

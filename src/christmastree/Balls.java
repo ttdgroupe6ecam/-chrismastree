@@ -9,7 +9,7 @@ package main;
 /**
  * This class extendes the Decorator to add the specificity of a ball.
  *
- * @author MediaMonster
+ * @author Yassine
  *
  *
  * */

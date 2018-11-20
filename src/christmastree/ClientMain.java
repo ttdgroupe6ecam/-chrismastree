@@ -13,7 +13,7 @@ import java.util.Scanner;
 
 /**
  * this is the main class.
- * @author MediaMonster
+ * @author Yassine
  *The application only allows to add two decorator if we add more we crush the last
  */
 public class ClientMain {

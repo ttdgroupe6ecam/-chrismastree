@@ -8,7 +8,7 @@ package main;
 
 /**
  * the class used to augment christmasTree.
- * @author MediaMonster
+ * @author Yassine
  *
  */
 public abstract class Decorator extends ChrismasTree {
