@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 
-package christmastree;
+package main;
 
 import java.util.ArrayList;
 

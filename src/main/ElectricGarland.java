@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 
-package christmastree;
+package main;
 
 /**
  * a class used to extend garland.

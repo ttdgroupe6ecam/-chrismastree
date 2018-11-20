@@ -1,7 +1,7 @@
 import org.junit.Test;
 import static org.junit.Assert.*;
 import org.junit.BeforeClass;
-import christmastree.NaturalTree;
+import main.NaturalTree;
 
 public class NaturalTreeTest {
 

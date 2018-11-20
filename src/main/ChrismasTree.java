@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 
-package christmastree;
+package main;
 
 /**
  * this is the class of the tree which is to be augmented with decoration.
