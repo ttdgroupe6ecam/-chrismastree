@@ -11,7 +11,7 @@ public class OrderTest {
     
   
     @BeforeClass
-    public static void setupBeforeClass() { customer = new Customer("Arthur","Venon");
+    public static void setupBeforeClass() { 
         
         order =new Order("31 rue de Keersmaeker","Arthur","Venon");
     }
