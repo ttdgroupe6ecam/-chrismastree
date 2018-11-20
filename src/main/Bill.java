@@ -74,7 +74,7 @@ public class Bill {
    */
   public void addClient() {
     addStringLine("surname : " + order.getCustomer().getSurname() + " name : " + order.getCustomer().getName());
-    addStringLine("address : " + order.getDeliveryAddress());
+    addStringLine("address : " + order.getDeliveryAddress().getAddress());
     addStringLine("date : " + order.getDate());
     addStringLine("");
   }

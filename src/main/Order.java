@@ -13,33 +13,31 @@ package main;
  */
 public class Order {
 
-  private String deliveryAddress;
-  /*private String name;
-  private String surname;*/
+  private  DeliveryAddress deliveryAddress;
   private Customer customer;
   private java.util.Date date = null;
 
   /**
    * ths constructor of the order class.
    * @param deliveryAddress the adress od delivery
-   * @param name name of the client
-   * @param surname surname of the client
+   * @param Customer contains the  name and surname of the client
    */
-  public Order(String deliveryAddress, Customer customer) {
+  public Order(DeliveryAddress deliveryAddress, Customer customer) {
 
     this.date = new java.util.Date();
-    this.deliveryAddress = deliveryAddress;
+    deliveryAddress.setAddress(deliveryAddress.getAddress());
     customer.setName(customer.getName()); 
     customer.setSurname(customer.getName()); 
   }
 
-  public void setDeliveryAdress(String address) {
-    this.deliveryAddress = address;
-  }
+    public DeliveryAddress getDeliveryAddress() {
+        return deliveryAddress;
+    }
 
-  public String getDeliveryAddress() {
-    return this.deliveryAddress;
-  }
+    public void setDeliveryAddress(DeliveryAddress deliveryAddress) {
+        this.deliveryAddress = deliveryAddress;
+    }
+
 
     public Customer getCustomer() {
         return customer;

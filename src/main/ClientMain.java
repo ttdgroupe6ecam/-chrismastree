@@ -38,9 +38,10 @@ public class ClientMain {
     System.out.println("Client's surname :");
     String surname = scan.nextLine();
     System.out.println("Client's adress :");
-    String deliveryAdress = scan.nextLine();
+    String deliveryAddress = scan.nextLine();
     Customer custemer =new Customer(name, surname);
-    Order order = new Order(deliveryAdress, custemer);
+    DeliveryAddress adress=new DeliveryAddress(deliveryAddress);
+    Order order = new Order(adress, custemer);
     return order;
   }
 

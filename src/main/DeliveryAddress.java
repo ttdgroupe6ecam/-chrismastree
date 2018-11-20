@@ -10,13 +10,17 @@ package main;
  * @author mohamad
  */
 public class DeliveryAddress {
-    String DeliveryAddress;
-    
-    public void setDeliveryAddress(String DeliveryAddress) {
-        this.DeliveryAddress = DeliveryAddress;
+    String address;
+
+    public DeliveryAddress(String deliveryAddress) {
+        this.address = deliveryAddress;
     }
-    
-        public String getDeliveryAddress() {
-        return DeliveryAddress;
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
     }
 }
