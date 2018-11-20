@@ -8,7 +8,7 @@ package main;
 
 /**
  * This class specializes the decorator with functionnalities from the candle.
- * @author MediaMonster
+ * @author Yassine
  *
  *
  * */
