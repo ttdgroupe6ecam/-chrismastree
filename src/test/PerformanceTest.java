@@ -3,7 +3,7 @@ import org.junit.Test;
 import org.junit.rules.Timeout;
 import static org.junit.Assert.*;
 import org.junit.BeforeClass;
-import main.*;
+import christmastree.*;
 
 public class PerformanceTest {
 
