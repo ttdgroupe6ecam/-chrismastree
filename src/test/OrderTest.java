@@ -7,34 +7,33 @@ import org.junit.BeforeClass;
 public class OrderTest {
 
     private static Order order;
-    private static Customer customer;
-    private static DeliveryAddress deliveryAddress;
+    
     
   
     @BeforeClass
-    public static void setupBeforeClass() {
-        customer = new Customer("Arthur","Venon");
-        deliveryAddress = new DeliveryAddress("31 rue de Keersmaeker");
-        order =new Order(deliveryAddress,customer);
+    public static void setupBeforeClass() { customer = new Customer("Arthur","Venon");
+        
+        order =new Order("31 rue de Keersmaeker","Arthur","Venon");
     }
 
     @Test
     public void getDeliveryAddress() {
-        deliveryAddress = new DeliveryAddress("31 rue de Keersmaeker");
-        assertEquals(order.getDeliveryAddress().getAddress(),deliveryAddress);
+        
+        assertEquals(order.getDeliveryAddress(),deliveryAddress);
     }
 
     @Test
     public void getName() {
-        assertEquals(order.getCustomer().getName(),"Arthur");
+        assertEquals(order.getName(),"Arthur");
     }
 
     @Test
     public void getSurname() {
-        assertEquals(order.getCustomer().getSurname(),"Venon");
+        assertEquals(order.getSurname(),"Venon");
     }
 
 }
+
 
 
 
