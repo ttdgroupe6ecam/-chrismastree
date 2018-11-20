@@ -1,5 +1,10 @@
 /build/
 /bin/
 ./src/christmasTree/Test_Unitaire.java
+./src/site
+./src/test
+./src/ArtificialTreeTest.java
+
+
 
 
