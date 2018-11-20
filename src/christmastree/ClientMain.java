@@ -14,7 +14,7 @@ import java.util.Scanner;
 /**
  * this is the main class.
  * @author Yassine
- *The application only allows to add two decorator if we add more we crush the last
+ *
  */
 public class ClientMain {
 
@@ -122,7 +122,7 @@ public class ClientMain {
                 System.out.println(decoration.toString());
               }
                 break;
-               default:
+              default:
                 break;
             } // end of switch
           } while (!garlandOption.equals("q")); // end of loop
