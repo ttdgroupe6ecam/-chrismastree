@@ -9,16 +9,6 @@ package main;
 import java.io.IOException;
 import java.nio.file.Paths;
 import java.util.Scanner;
-import main.ArtificialTree;
-import main.Balls;
-import main.Bill;
-import main.Candle;
-import main.ChrismasTree;
-import main.Decorator;
-import main.ElectricGarland;
-import main.NaturalTree;
-import main.Order;
-import main.SyntheticGarland;
 
 
 /**
@@ -49,7 +39,8 @@ public class ClientMain {
     String surname = scan.nextLine();
     System.out.println("Client's adress :");
     String deliveryAdress = scan.nextLine();
-    Order order = new Order(deliveryAdress, name, surname);
+    Customer custemer =new Customer(name, surname);
+    Order order = new Order(deliveryAdress, custemer);
     return order;
   }
 

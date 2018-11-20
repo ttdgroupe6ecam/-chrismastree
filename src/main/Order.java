@@ -14,8 +14,9 @@ package main;
 public class Order {
 
   private String deliveryAddress;
-  private String name;
-  private String surname;
+  /*private String name;
+  private String surname;*/
+  private Customer customer;
   private java.util.Date date = null;
 
   /**
@@ -24,12 +25,12 @@ public class Order {
    * @param name name of the client
    * @param surname surname of the client
    */
-  public Order(String deliveryAddress, String name, String surname) {
+  public Order(String deliveryAddress, Customer customer) {
 
     this.date = new java.util.Date();
     this.deliveryAddress = deliveryAddress;
-    this.surname = surname;
-    this.name = name;
+    customer.setName(customer.getName()); 
+    customer.setSurname(customer.getName()); 
   }
 
   public void setDeliveryAdress(String address) {
@@ -40,21 +41,14 @@ public class Order {
     return this.deliveryAddress;
   }
 
-  public void setName(String name) {
-    this.name = name;
-  }
+    public Customer getCustomer() {
+        return customer;
+    }
 
-  public String getName() {
-    return this.name;
-  }
+    public void setCustomer(Customer customer) {
+        this.customer = customer;
+    }
 
-  public void setSurname(String surname) {
-    this.surname = surname;
-  }
-
-  public String getSurname() {
-    return this.surname;
-  }
 
   public java.util.Date getDate() {
     return this.date;
