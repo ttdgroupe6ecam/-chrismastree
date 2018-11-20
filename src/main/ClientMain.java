@@ -24,12 +24,12 @@ import main.SyntheticGarland;
 /**
  * this is the main class.
  * @author MediaMonster
- *
+ *The application only allows to add two decorator if we add more we crush the last
  */
 public class ClientMain {
 
 
-  // Attention il manque comment ajouetr plusier decoration et la gestion de decoratorPossible
+
   Scanner scan = new Scanner(System.in);
 
   static String choiceTree;
@@ -63,9 +63,6 @@ public class ClientMain {
     Scanner scan = new Scanner(System.in);
     Decorator decoration;
     Decorator manyDecoration = null;
-
-
-
     // Decorator Options
 
     String choiceDecoration;
@@ -109,8 +106,6 @@ public class ClientMain {
             switch (garlandOption) {
               case "a": {
 
-                // d=new ElectricGarland(chrismasTree);
-
                 if (manyDecoration == null) {
                   decoration = new ElectricGarland(chrismasTree);
                   manyDecoration = decoration;
@@ -125,7 +120,6 @@ public class ClientMain {
 
               case "b":
               {
-                // d=new SyntheticGarland(chrismasTree);
 
                 if (manyDecoration == null) {
                   decoration = new SyntheticGarland(chrismasTree);
@@ -138,7 +132,7 @@ public class ClientMain {
                 System.out.println(decoration.toString());
               }
                 break;
-              default:
+               default:
                 break;
             } // end of switch
           } while (!garlandOption.equals("q")); // end of loop
@@ -147,7 +141,7 @@ public class ClientMain {
 
         case "c":
         {
-          // d=new Candle(chrismasTree);
+          
           if (manyDecoration == null) {
             decoration = new Candle(chrismasTree);
             manyDecoration = decoration;
@@ -388,21 +382,7 @@ public class ClientMain {
     Bill bill = new Bill(tree, order, Paths.get(".").toAbsolutePath().normalize().toString());
     bill.print();
 
-    /*//manyDecoration
-         String tab[]={"Balls","Garland","decoration"};
-         //for(int i=0;i<tab.length-1;i++)
-          String x="Balls";
-          //ChrismasTree n=(ChrismasTree)x;
-        // Balls t=(Balls) Class.forName("Balls").newInstance();
-    /*
-            Class clazz = Class.forName("christmasTree.Balls");
-            Constructor c=clazz.getConstructor(null);
-            Object t = c.newInstance();
-         //ChrismasTree decoration=new ArtificialTree();
-         ChrismasTree d= new Balls(new Balls(new Balls(new Garland(new Balls(decoration)))));
-        */
-
-    // System.out.println(" "+t.getDescription());
+ 
 
   }
 }
