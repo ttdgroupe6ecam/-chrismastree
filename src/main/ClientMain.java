@@ -14,12 +14,12 @@ import java.util.Scanner;
 /**
  * this is the main class.
  * @author MediaMonster
- *
+ *The application only allows to add two decorator if we add more we crush the last
  */
 public class ClientMain {
 
 
-  // Attention il manque comment ajouetr plusier decoration et la gestion de decoratorPossible
+
   Scanner scan = new Scanner(System.in);
 
   static String choiceTree;
@@ -39,7 +39,8 @@ public class ClientMain {
     String surname = scan.nextLine();
     System.out.println("Client's adress :");
     String deliveryAdress = scan.nextLine();
-    Order order = new Order(deliveryAdress, name, surname);
+    Customer custemer =new Customer(name, surname);
+    Order order = new Order(deliveryAdress, custemer);
     return order;
   }
 
@@ -53,9 +54,6 @@ public class ClientMain {
     Scanner scan = new Scanner(System.in);
     Decorator decoration;
     Decorator manyDecoration = null;
-
-
-
     // Decorator Options
 
     String choiceDecoration;
@@ -99,8 +97,6 @@ public class ClientMain {
             switch (garlandOption) {
               case "a": {
 
-                // d=new ElectricGarland(chrismasTree);
-
                 if (manyDecoration == null) {
                   decoration = new ElectricGarland(chrismasTree);
                   manyDecoration = decoration;
@@ -115,7 +111,6 @@ public class ClientMain {
 
               case "b":
               {
-                // d=new SyntheticGarland(chrismasTree);
 
                 if (manyDecoration == null) {
                   decoration = new SyntheticGarland(chrismasTree);
@@ -128,7 +123,7 @@ public class ClientMain {
                 System.out.println(decoration.toString());
               }
                 break;
-              default:
+               default:
                 break;
             } // end of switch
           } while (!garlandOption.equals("q")); // end of loop
@@ -137,7 +132,7 @@ public class ClientMain {
 
         case "c":
         {
-          // d=new Candle(chrismasTree);
+          
           if (manyDecoration == null) {
             decoration = new Candle(chrismasTree);
             manyDecoration = decoration;
@@ -202,7 +197,7 @@ public class ClientMain {
             decoration = new Balls(color, description, price, material, size, chrismasTree);
             manyDecoration = decoration;
           } else {
-            decoration = new Balls(color, description, price, material, size, chrismasTree);
+            decoration = new Balls(color, description, price, material, size, manyDecoration);
           }
 
           // display
@@ -235,7 +230,7 @@ public class ClientMain {
                 } else {
                   decoration =
                       new ElectricGarland(
-                          color, description, price, hasBlink, garlandLength, chrismasTree);
+                          color, description, price, hasBlink, garlandLength, manyDecoration);
                 }
 
                 // display
@@ -254,7 +249,7 @@ public class ClientMain {
                 } else {
                   decoration =
                       new SyntheticGarland(
-                          paillette, color, description, price, garlandLength, chrismasTree);
+                          paillette, color, description, price, garlandLength, manyDecoration);
                 }
 
                 // dispaly
@@ -276,10 +271,14 @@ public class ClientMain {
           String parfum = scan.next();
 
           if (manyDecoration == null) {
-            decoration = new Candle(color, description, price, lifeTime, parfum, chrismasTree);
+            decoration = 
+                    new Candle(
+                            color, description, price, lifeTime, parfum, chrismasTree);
             manyDecoration = decoration;
           } else {
-            decoration = new Candle(color, description, price, lifeTime, parfum, chrismasTree);
+            decoration = 
+                    new Candle(
+                            color, description, price, lifeTime, parfum, manyDecoration);
           }
 
           // dispaly
@@ -301,7 +300,7 @@ public class ClientMain {
 
     Scanner scan = new Scanner(System.in);
     Order order = makeOrder();
-    int flag =0;
+    int flag = 0;
     ChrismasTree tree = null;
 
     do {
@@ -327,7 +326,7 @@ public class ClientMain {
 
       switch (commandType) {
         case "1": {
-          flag =1;
+          flag = 1;
           switch (choiceTree) {
             case "a": {
               tree = new NaturalTree();
@@ -348,7 +347,7 @@ public class ClientMain {
 
         case "2":
         {
-          flag =1;
+          flag = 1;
           switch (choiceTree) {
             case "a": {
               tree = new NaturalTree();
@@ -370,25 +369,11 @@ public class ClientMain {
           break;
       }
 
-    } while (!choiceTree.equals("q")  && flag==0); // end of loop
+    } while (!choiceTree.equals("q")  && flag == 0); // end of loop
     Bill bill = new Bill(tree, order, Paths.get(".").toAbsolutePath().normalize().toString());
     bill.print();
 
-    /*//manyDecoration
-         String tab[]={"Balls","Garland","decoration"};
-         //for(int i=0;i<tab.length-1;i++)
-          String x="Balls";
-          //ChrismasTree n=(ChrismasTree)x;
-        // Balls t=(Balls) Class.forName("Balls").newInstance();
-    /*
-            Class clazz = Class.forName("christmasTree.Balls");
-            Constructor c=clazz.getConstructor(null);
-            Object t = c.newInstance();
-         //ChrismasTree decoration=new ArtificialTree();
-         ChrismasTree d= new Balls(new Balls(new Balls(new Garland(new Balls(decoration)))));
-        */
-
-    // System.out.println(" "+t.getDescription());
+ 
 
   }
 }
