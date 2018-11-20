@@ -5,6 +5,8 @@
  */
 package christmasTree;
 
+import java.lang.reflect.Constructor;
+import java.lang.reflect.InvocationTargetException;
 import java.util.Scanner;
 
 /**
@@ -17,7 +19,6 @@ public class ClientMain {
      * @param args the command line arguments
      */
     
-    //Attention il manque comment ajouetr plusier decoration et la gestion de decoratorPossible
     Scanner scan = new Scanner(System.in);
     static String choiceTree;
     
@@ -29,6 +30,7 @@ public class ClientMain {
         Decorator manyDecoration= null;
         String GarlandOption;
         String choiceDecoration;
+        int DecoratorCount=0;
         
         //Decorator Options
         System.out.println("Decorator Options: ");
@@ -43,6 +45,7 @@ public class ClientMain {
             
             switch (choiceDecoration) {
                 case "a":
+                    DecoratorCount++;
                     if (manyDecoration==null){
                         decoration=new Balls (chrismasTree);
                         manyDecoration=decoration;
@@ -53,6 +56,10 @@ public class ClientMain {
                        
                     // display
                     System.out.println(decoration.toString());
+                    System.out.println(decoration.getDescription());   
+                    System.out.println(decoration.getPrice());   
+                    System.out.println(decoration.getColor()); 
+                    System.out.println("DecoratorCount "+DecoratorCount); 
                     break;
 
                 case "b":
@@ -67,7 +74,8 @@ public class ClientMain {
 
                             switch (GarlandOption) {
                                 case "a":
-                                     //d=new ElectricGarland(chrismasTree);
+                                    DecoratorCount++;
+                                     
                                      
                                     if (manyDecoration==null){
                                         decoration=new ElectricGarland (chrismasTree);
@@ -79,11 +87,15 @@ public class ClientMain {
                                      
                                     // display
                                     System.out.println(decoration.toString());
+                                    System.out.println(decoration.getDescription());   
+                                    System.out.println(decoration.getPrice());   
+                                    System.out.println(decoration.getColor()); 
+                                    
                                     break;
 
                                 case "b":
                                     //d=new SyntheticGarland(chrismasTree);
-                                    
+                                    DecoratorCount++;
                                     if (manyDecoration==null){
                                         decoration=new SyntheticGarland (chrismasTree);
                                         manyDecoration=decoration;
@@ -93,14 +105,17 @@ public class ClientMain {
                                     }
                                     
                                     // dispaly
-                                    System.out.println(decoration.toString());       
+                                    System.out.println(decoration.toString());  
+                                  /*  System.out.println(decoration.getDescription());   
+                                    System.out.println(decoration.getPrice());   
+                                    System.out.println(decoration.getColor()); */
                                     break;
 
                             } // end of switch
                         } while (!GarlandOption.equals("q")); // end of loop
 
                 case "c":
-                    //d=new Candle(chrismasTree);
+                    DecoratorCount++;
                     if (manyDecoration==null){
                         decoration=new Candle (chrismasTree);
                         manyDecoration=decoration;
@@ -111,7 +126,10 @@ public class ClientMain {
                     
                     
                     // dispaly
-                    System.out.println(decoration.toString());       
+                    System.out.println(decoration.toString()+" "+DecoratorCount);
+                  /*  System.out.println(decoration.getDescription());   
+                    System.out.println(decoration.getPrice());   
+                    System.out.println(decoration.getColor()); */
                     break;
 
             } // end of switch
@@ -127,6 +145,7 @@ public class ClientMain {
         Decorator manyDecoration= null;
         String GarlandOption;
         String choiceDecoration;
+        int DecoratorCount=0;
         
  
         do {
@@ -152,7 +171,7 @@ public class ClientMain {
 
             switch (choiceDecoration) {
                 case "a"://Balls
-                    
+                    DecoratorCount++;
                     System.out.println("material: ");
                     String material = scan.next();
 
@@ -164,7 +183,7 @@ public class ClientMain {
                         manyDecoration=decoration;
                     }
                     else{
-                       decoration=new Balls(color,description , price,  material,  size, chrismasTree);  
+                       decoration=new Balls(color,description , price,  material,  size, manyDecoration);  
                     }
                        
                     // display
@@ -172,7 +191,7 @@ public class ClientMain {
                     break;
 
                 case "b"://Garland
-
+                    
 
                     do{
                             System.out.println("Garland Options: ");
@@ -188,7 +207,7 @@ public class ClientMain {
                             switch (GarlandOption) {
                                 
                                 case "a"://Electric Garland
-                                    
+                                    DecoratorCount++;
                                     System.out.println("hasBlink true or false : ");
                                     boolean hasBlink = scan.nextBoolean();
                                     if (manyDecoration==null){
@@ -196,14 +215,15 @@ public class ClientMain {
                                         manyDecoration=decoration;
                                     }
                                     else{
-                                        decoration=new ElectricGarland( color, description , price, hasBlink, GarlandLength,  chrismasTree) ; 
+                                        decoration=new ElectricGarland( color, description , price, hasBlink, GarlandLength,  manyDecoration) ; 
                                     }
                                      
                                     // display
-                                    System.out.println(decoration.toString());
+                                    System.out.println(decoration.toString()+" "+DecoratorCount);
                                     break;
 
                                 case "b"://Synthetic Garland
+                                    DecoratorCount++;
                                     System.out.println("paillette : ");
                                     String paillette = scan.next();
                                     
@@ -213,17 +233,18 @@ public class ClientMain {
                                         manyDecoration=decoration;
                                     }
                                     else{
-                                        decoration=new SyntheticGarland( paillette,  color,  description,  price, GarlandLength , chrismasTree); 
+                                        decoration=new SyntheticGarland( paillette,  color,  description,  price, GarlandLength , manyDecoration); 
                                     }
                                     
                                     // dispaly
-                                    System.out.println(decoration.toString());       
+                                    System.out.println(decoration.toString()+" "+DecoratorCount);       
                                     break;
 
                             } // end of switch
                         } while (!GarlandOption.equals("q")); // end of loop
 
                 case "c":
+                    DecoratorCount++;
                     System.out.println("LifeTime : ");
                     int lifeTime = scan.nextInt();
                     
@@ -235,12 +256,13 @@ public class ClientMain {
                         manyDecoration=decoration;
                     }
                     else{
-                        decoration=new Candle(color, description , price, lifeTime,  parfum,  chrismasTree); 
+                        decoration=new Candle(color, description , price, lifeTime,  parfum,  manyDecoration); 
                     }
                     
                     
                     // dispaly
-                    System.out.println(decoration.toString());       
+                    System.out.println(decoration.toString()+" "+DecoratorCount);
+                      
                     break;
 
             } // end of switch
@@ -269,7 +291,7 @@ public class ClientMain {
             choiceTree = scan.next();
             
             //Menu to choose type ommand (tree) personalized or standard
-            System.out.println("Command zzz: ");
+            System.out.println("Command types: ");
             System.out.println("1: Standard");
             System.out.println("2: personalized");
             System.out.println("q: Finish ");
@@ -310,10 +332,10 @@ public class ClientMain {
         } while (!choiceTree.equals("q")); // end of loop  
          
      
-     /*//manyDecoration
-     String tab[]={"Balls","Garland","decoration"};
+     //manyDecoration
+    // String tab[]={"Balls","Garland","Balls"};
      //for(int i=0;i<tab.length-1;i++)
-      String x="Balls";
+    //  String x="Balls";
       //ChrismasTree n=(ChrismasTree)x;
     // Balls t=(Balls) Class.forName("Balls").newInstance(); 
 /*
@@ -324,7 +346,45 @@ public class ClientMain {
      ChrismasTree d= new Balls(new Balls(new Balls(new Garland(new Balls(decoration)))));
     */
      
-     //System.out.println(" "+t.getDescription());    
+    System.out.println("------------------------ ");   
+      ChrismasTree tree1 = new NaturalTree();
+      try 
+        {
+            String tab[]={"Balls","Garland","Candle"};
+            for(int i=0;i<tab.length-1;i++){
+                Class clasz = Class.forName("christmasTree.Balls");
+                Constructor constructor = clasz.getConstructor(new Class[]{ChrismasTree.class});
+                ChrismasTree employee = (ChrismasTree)constructor.newInstance(new Balls(tree1));
+                System.out.println("Employee Id     : "+employee.getDescription());}
+        /*    System.out.println("Employee Name   : "+employee.getEmpName());
+            System.out.println("Employee Salary : "+employee.getEmpSalary());*/
+            
+        }
+        catch (NoSuchMethodException e) 
+        {
+            e.printStackTrace();
+        }
+        catch (SecurityException e) 
+        {
+            e.printStackTrace();
+        }
+        catch (ClassNotFoundException e) 
+        {
+            e.printStackTrace();
+        } catch (InstantiationException e) 
+        {
+            e.printStackTrace();
+        } catch (IllegalAccessException e) 
+        {
+            e.printStackTrace();
+        } catch (IllegalArgumentException e) 
+        {
+            e.printStackTrace();
+        } catch (InvocationTargetException e) 
+        {
+            e.printStackTrace();
+        }
+    
      
     }
     
