@@ -40,7 +40,6 @@ public class ClientMain {
     System.out.println("Client's adress :");
     String deliveryAdress = scan.nextLine();
     Order order = new Order(deliveryAdress, name, surname);
-    Order order = new Order(adress, custemer);
     return order;
   }
 
