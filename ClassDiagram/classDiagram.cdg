@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="main">
+  <ClassDiagramComponents>
+    <Class name="ArtificialTree" package="main" visibility="public" xPosition="758.0" yPosition="26.0">
+      <Fields>
+        <Field name="plasticType" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="description"/>
+          <Argument type="double" name="price"/>
+          <Argument type="String" name="color"/>
+          <Argument type="String" name="plasticType"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="decoratorPossible" returnType="ArrayList" visibility="public"/>
+        <Method name="getPlasticType" returnType="String" visibility="public"/>
+        <Method name="setPlasticType" returnType="void" visibility="public">
+          <Argument type="String" name="plasticType"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Balls" package="main" visibility="public" xPosition="137.0" yPosition="297.0">
+      <Fields>
+        <Field name="material" type="String" visibility="package"/>
+        <Field name="size" type="String" visibility="package"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="ChrismasTree" name="treeDecorator"/>
+        </Constructor>
+        <Constructor visibility="public">
+          <Argument type="String" name="color"/>
+          <Argument type="String" name="description"/>
+          <Argument type="double" name="price"/>
+          <Argument type="String" name="material"/>
+          <Argument type="String" name="size"/>
+          <Argument type="ChrismasTree" name="treeDecorator"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getMaterial" returnType="String" visibility="public"/>
+        <Method name="setMaterial" returnType="void" visibility="public">
+          <Argument type="String" name="material"/>
+        </Method>
+        <Method name="getSize" returnType="String" visibility="public"/>
+        <Method name="setSize" returnType="void" visibility="public">
+          <Argument type="String" name="size"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Bill" package="main" visibility="public" xPosition="1646.0" yPosition="264.0">
+      <Fields>
+        <Field name="wr" type="FileWriter" visibility="private"/>
+        <Field name="bf" type="BufferedWriter" visibility="private"/>
+        <Field name="pf" type="PrintWriter" visibility="private"/>
+        <Field name="toBePrinted" type="ChrismasTree" visibility="private"/>
+        <Field name="order" type="Order" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="ChrismasTree" name="toBePrinted"/>
+          <Argument type="Order" name="order"/>
+          <Argument type="String" name="path"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="close" returnType="void" visibility="public"/>
+        <Method name="addString" returnType="void" visibility="public">
+          <Argument type="String" name="newString"/>
+        </Method>
+        <Method name="addStringLine" returnType="void" visibility="public">
+          <Argument type="String" name="newString"/>
+        </Method>
+        <Method name="addClient" returnType="void" visibility="public"/>
+        <Method name="addTree" returnType="void" visibility="public">
+          <Argument type="String" name="treeType"/>
+          <Argument type="String" name="treeColor"/>
+        </Method>
+        <Method name="addDecorator" returnType="void" visibility="public">
+          <Argument type="String[]" name="description"/>
+          <Argument type="String[]" name="color"/>
+        </Method>
+        <Method name="addPrice" returnType="void" visibility="public"/>
+        <Method name="addTitle" returnType="void" visibility="public"/>
+        <Method name="parserDescription" returnType="String[]" visibility="public"/>
+        <Method name="parserColor" returnType="String[]" visibility="public"/>
+        <Method name="stringReplacer" returnType="String" visibility="public">
+          <Argument type="String" name="toBeCut"/>
+          <Argument type="String" name="change"/>
+        </Method>
+        <Method name="print" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Candle" package="main" visibility="public" xPosition="68.0" yPosition="26.0">
+      <Fields>
+        <Field name="lifeTime" type="int" visibility="private"/>
+        <Field name="parfum" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="ChrismasTree" name="treeDecorator"/>
+        </Constructor>
+        <Constructor visibility="public">
+          <Argument type="String" name="color"/>
+          <Argument type="String" name="description"/>
+          <Argument type="double" name="price"/>
+          <Argument type="int" name="lifeTime"/>
+          <Argument type="String" name="parfum"/>
+          <Argument type="ChrismasTree" name="treeDecorator"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getLifeTime" returnType="int" visibility="public"/>
+        <Method name="setLifeTime" returnType="void" visibility="public">
+          <Argument type="int" name="lifeTime"/>
+        </Method>
+        <Method name="getParfum" returnType="String" visibility="public"/>
+        <Method name="setParfum" returnType="void" visibility="public">
+          <Argument type="String" name="parfum"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="ChrismasTree" package="main" visibility="public" isAbstract="true" xPosition="1345.0" yPosition="65.0">
+      <Fields>
+        <Field name="description" type="String" visibility="private"/>
+        <Field name="price" type="double" visibility="private"/>
+        <Field name="color" type="String" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="getDescription" returnType="String" visibility="public"/>
+        <Method name="setDescription" returnType="void" visibility="public">
+          <Argument type="String" name="description"/>
+        </Method>
+        <Method name="getPrice" returnType="double" visibility="public"/>
+        <Method name="setPrice" returnType="void" visibility="public">
+          <Argument type="double" name="price"/>
+        </Method>
+        <Method name="getColor" returnType="String" visibility="public"/>
+        <Method name="setColor" returnType="void" visibility="public">
+          <Argument type="String" name="color"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="ClientMain" package="main" visibility="public" xPosition="2003.0" yPosition="26.0">
+      <Fields>
+        <Field name="scan" type="Scanner" visibility="package"/>
+        <Field name="choiceTree" type="String" visibility="package" isStatic="true"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="makeOrder" returnType="Order" visibility="public" isStatic="true"/>
+        <Method name="treeDecorationStandard" returnType="void" visibility="public" isStatic="true">
+          <Argument type="ChrismasTree" name="chrismasTree"/>
+        </Method>
+        <Method name="treeDecorationPersonalized" returnType="void" visibility="public" isStatic="true">
+          <Argument type="ChrismasTree" name="chrismasTree"/>
+        </Method>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Customer" package="main" visibility="public" xPosition="2118.0" yPosition="547.0">
+      <Fields>
+        <Field name="name" type="String" visibility="private"/>
+        <Field name="surname" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="name"/>
+          <Argument type="String" name="surname"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getName" returnType="String" visibility="public"/>
+        <Method name="setName" returnType="void" visibility="public">
+          <Argument type="String" name="name"/>
+        </Method>
+        <Method name="getSurname" returnType="String" visibility="public"/>
+        <Method name="setSurname" returnType="void" visibility="public">
+          <Argument type="String" name="surname"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Decorator" package="main" visibility="public" isAbstract="true" xPosition="842.0" yPosition="280.0">
+      <Fields>
+        <Field name="treeDecorator" type="ChrismasTree" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="ChrismasTree" name="treeDecorator"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getTreeDecorator" returnType="ChrismasTree" visibility="public"/>
+        <Method name="setTreeDecorator" returnType="void" visibility="public">
+          <Argument type="ChrismasTree" name="treeDecorator"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="DeliveryAddress" package="main" visibility="public" xPosition="2461.0" yPosition="334.0">
+      <Fields>
+        <Field name="address" type="String" visibility="package"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="deliveryAddress"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getAddress" returnType="String" visibility="public"/>
+        <Method name="setAddress" returnType="void" visibility="public">
+          <Argument type="String" name="address"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="ElectricGarland" package="main" visibility="public" xPosition="119.0" yPosition="575.0">
+      <Fields>
+        <Field name="hasBlink" type="boolean" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="ChrismasTree" name="treeDecorator"/>
+        </Constructor>
+        <Constructor visibility="public">
+          <Argument type="String" name="color"/>
+          <Argument type="String" name="description"/>
+          <Argument type="double" name="price"/>
+          <Argument type="boolean" name="hasBlink"/>
+          <Argument type="double" name="length"/>
+          <Argument type="ChrismasTree" name="treeDecorator"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="isHasBlink" returnType="boolean" visibility="public"/>
+        <Method name="setHasBlink" returnType="void" visibility="public">
+          <Argument type="boolean" name="hasBlink"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Garland" package="main" visibility="public" xPosition="895.0" yPosition="503.0">
+      <Fields>
+        <Field name="length" type="double" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="ChrismasTree" name="treeDecorator"/>
+        </Constructor>
+        <Constructor visibility="public">
+          <Argument type="String" name="color"/>
+          <Argument type="String" name="description"/>
+          <Argument type="double" name="price"/>
+          <Argument type="double" name="length"/>
+          <Argument type="ChrismasTree" name="treeDecorator"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getLength" returnType="double" visibility="public"/>
+        <Method name="setLength" returnType="void" visibility="public">
+          <Argument type="double" name="length"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="NaturalTree" package="main" visibility="public" xPosition="1435.0" yPosition="763.0">
+      <Fields>
+        <Field name="treeType" type="String" visibility="package"/>
+        <Field name="lifeTime" type="int" visibility="package"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="description"/>
+          <Argument type="double" name="price"/>
+          <Argument type="String" name="color"/>
+          <Argument type="String" name="treeType"/>
+          <Argument type="int" name="lifeTime"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getTreeType" returnType="String" visibility="public"/>
+        <Method name="setTreeType" returnType="void" visibility="public">
+          <Argument type="String" name="treeType"/>
+        </Method>
+        <Method name="getLifeTime" returnType="int" visibility="public"/>
+        <Method name="setLifeTime" returnType="void" visibility="public">
+          <Argument type="int" name="lifeTime"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Order" package="main" visibility="public" xPosition="2047.0" yPosition="249.0">
+      <Fields>
+        <Field name="deliveryAddress" type="DeliveryAddress" visibility="private"/>
+        <Field name="customer" type="Customer" visibility="private"/>
+        <Field name="date" type="java.util.Date" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="DeliveryAddress" name="deliveryAddress"/>
+          <Argument type="Customer" name="customer"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getDeliveryAddress" returnType="DeliveryAddress" visibility="public"/>
+        <Method name="setDeliveryAddress" returnType="void" visibility="public">
+          <Argument type="DeliveryAddress" name="deliveryAddress"/>
+        </Method>
+        <Method name="getCustomer" returnType="Customer" visibility="public"/>
+        <Method name="setCustomer" returnType="void" visibility="public">
+          <Argument type="Customer" name="customer"/>
+        </Method>
+        <Method name="getDate" returnType="java.util.Date" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="SyntheticGarland" package="main" visibility="public" xPosition="698.0" yPosition="792.0">
+      <Fields>
+        <Field name="paillette" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="ChrismasTree" name="treeDecorator"/>
+        </Constructor>
+        <Constructor visibility="public">
+          <Argument type="String" name="paillette"/>
+          <Argument type="String" name="color"/>
+          <Argument type="String" name="description"/>
+          <Argument type="double" name="price"/>
+          <Argument type="double" name="length"/>
+          <Argument type="ChrismasTree" name="treeDecorator"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getPaillette" returnType="String" visibility="public"/>
+        <Method name="setPaillette" returnType="void" visibility="public">
+          <Argument type="String" name="paillette"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <IsRelation name="is" source="main.SyntheticGarland" target="main.Garland"/>
+    <UseRelation source="main.Decorator" target="main.ChrismasTree" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="main.Balls" target="main.Decorator"/>
+    <IsRelation name="is" source="main.Candle" target="main.Decorator"/>
+    <HasRelation name="order" source="main.Bill" target="main.Order" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="main.ClientMain" target="main.ChrismasTree" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="main.Garland" target="main.Decorator"/>
+    <HasRelation name="deliveryAddress" source="main.Order" target="main.DeliveryAddress" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="main.Order" target="main.Customer" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="toBePrinted" source="main.Bill" target="main.ChrismasTree" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="treeDecorator" source="main.Decorator" target="main.ChrismasTree" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="main.ClientMain" target="main.Order" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="main.ElectricGarland" target="main.Garland"/>
+    <IsRelation name="is" source="main.NaturalTree" target="main.ChrismasTree"/>
+    <IsRelation name="is" source="main.Decorator" target="main.ChrismasTree"/>
+    <HasRelation name="customer" source="main.Order" target="main.Customer" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="main.Order" target="main.DeliveryAddress" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="main.ArtificialTree" target="main.ChrismasTree"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
