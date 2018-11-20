@@ -19,7 +19,7 @@ public class OrderTest {
     @Test
     public void getDeliveryAddress() {
         
-        assertEquals(order.getDeliveryAddress(),deliveryAddress);
+        assertEquals(order.getDeliveryAddress(),"31 rue de Keersmaeker");
     }
 
     @Test
