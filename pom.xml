@@ -70,7 +70,7 @@
           <!-- Default configuration for all reports -->
           ...
         </configuration>
-        
+         </plugin>
                  
               <plugin>
             <groupId>org.apache.maven.plugins</groupId>
