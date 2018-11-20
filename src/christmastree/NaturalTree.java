@@ -8,7 +8,7 @@ package main;
 
 /**
  * the class specializing the tree into a natural one.
- * @author MediaMonster
+ * @author Yassine
  *
  */
 public class NaturalTree extends ChrismasTree {

@@ -8,7 +8,7 @@ package main;
 
 /**
  * the class to specialize decorator into garland.
- * @author MediaMonster
+ * @author Yassine
  *
  */
 public class Garland extends Decorator {

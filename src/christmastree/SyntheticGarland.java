@@ -8,7 +8,7 @@ package main;
 
 /**
  * the class which extends garland into a synthetic one.
- * @author MediaMonster
+ * @author Yassine
  *
  */
 public class SyntheticGarland extends Garland {
