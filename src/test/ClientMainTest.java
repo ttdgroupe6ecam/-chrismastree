@@ -26,7 +26,7 @@ public class ClientMainTest {
 
         AskString asker = mock(AskString.class);
         when(asker.ask("Choose a decoration please: ")).thenReturn("a");
-        when(asker.ask("Choose a decoration please: ")).thenReturn("q");
+        //when(asker.ask("Choose a decoration please: ")).thenReturn("q");
         Decorator deco = client.treeDecorationStandard(new ArtificialTree("artificiel",23.8,"jaune","bisphenol A"),asker,"a");
         assertEquals(deco.toString(),"Arthur");
     }
