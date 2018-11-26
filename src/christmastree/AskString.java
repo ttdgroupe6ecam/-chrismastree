@@ -58,7 +58,7 @@ public class AskString {
    * @param message to be displayed
    * @return the input
    */
-  public boolean askDouble(String message) {
+  public boolean askInt(String message) {
     out.println(message);
     return scanner.nextInt();
   }

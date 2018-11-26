@@ -173,7 +173,7 @@ public class ClientMain {
 
       double price = asker.askDouble("price: ");
 
-      String color = scan.ask("color: ");
+      String color = asker.ask("color: ");
 
       switch (choiceDecoration) {
         case "a": /* Balls*/ {
