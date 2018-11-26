@@ -18,7 +18,7 @@ public class AskString {
     private final Scanner scanner;
     private final PrintStream out;
 
-    public IntegerAsker(InputStream in, PrintStream out) {
+    public AskString(InputStream in, PrintStream out) {
         scanner = new Scanner(in);
         this.out = out;
     }
