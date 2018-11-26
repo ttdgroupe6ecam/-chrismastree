@@ -30,15 +30,12 @@ public class ClientMain {
    *
    *
    */
-  public static Order makeOrder() {
+  public static Order makeOrder(AskString asker) {
 
     Scanner scan = new Scanner(System.in);
-    System.out.println("Client's name :");
-    String name = scan.nextLine();
-    System.out.println("Client's surname :");
-    String surname = scan.nextLine();
-    System.out.println("Client's adress :");
-    String deliveryAdress = scan.nextLine();
+    String name = asker.ask("Client's name :");
+    String surname = asker.ask("Client's surname :");
+    String deliveryAdress = asker.ask("Client's adress :");
     Order order = new Order(deliveryAdress, name, surname);
     return order;
   }
@@ -298,7 +295,7 @@ public class ClientMain {
   public static void main(String[] args) throws IOException {
 
     Scanner scan = new Scanner(System.in);
-    Order order = makeOrder();
+    Order order = makeOrder(new AskString(System.in, System.out));
     int flag = 0;
     ChrismasTree tree = null;
 
