@@ -103,13 +103,13 @@ public class ClientMainTest {
         when(asker.ask("description: ")).thenReturn("test");
         when(asker.askDouble("price: ")).thenReturn(100.0);
         when(asker.ask("color: ")).thenReturn("blouge");
-        when(asker.askDouble("Length : ")).thenReturn(7.3);
+        when(asker.askDouble("Length : ")).thenReturn(0.0);
         when(asker.ask("paillette : ")).thenReturn("Circle");
         Decorator deco = client.treeDecorationPersonalized(
                 new ArtificialTree("artificiel",23.8,"jaune","bisphenol A"),asker,"b");
         assertEquals(deco.toString(),"ChrismasTree{TreeDescriptionartificiel " +
                 "SyntheticGarlandDecorator: test, price=123.8,TreeColorjaune" +
-                " SyntheticGarlandColor: blouge} Garland{length=7.3} SyntheticGarland{" +
+                " SyntheticGarlandColor: blouge} Garland{length=0.0} SyntheticGarland{" +
                 " SyntheticGarlandPaillette: Circle}");
     }
 }
