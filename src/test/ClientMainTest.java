@@ -70,7 +70,7 @@ public class ClientMainTest {
         when(asker.ask("size: ")).thenReturn("grand");
 
 
-        Decorator deco = client.treeDecorationStandard(
+        Decorator deco = client.treeDecorationPersonalized(
                 new ArtificialTree("artificiel",23.8,"jaune","bisphenol A"),asker,"a");
         assertEquals(deco.toString(),"ChrismasTree{TreeDescriptionartificiel " +
                 "BallsDecorator: test, price=100.0,TreeColor BallsColor: " +
@@ -87,7 +87,7 @@ public class ClientMainTest {
         when(asker.ask("color: ")).thenReturn("blouge");
         when(asker.askInt("LifeTime : ")).thenReturn(15);
         when(asker.ask("Parfum : ")).thenReturn("pomme");
-        Decorator deco = client.treeDecorationStandard(
+        Decorator deco = client.treeDecorationPersonalized(
                 new ArtificialTree("artificiel",23.8,"jaune","bisphenol A"),asker,"c");
         assertEquals(deco.toString(),"ChrismasTree{TreeDescriptionartificiel " +
                 "CandleDecorator: test, price=100.0,TreeColorjaune CandleColor: " +
@@ -105,7 +105,7 @@ public class ClientMainTest {
         when(asker.askDouble("Length : ")).thenReturn(7.3);
         when(asker.ask("Parfum : ")).thenReturn("pomme");
         when(asker.ask("paillette : ")).thenReturn("Circle");
-        Decorator deco = client.treeDecorationStandard(
+        Decorator deco = client.treeDecorationPersonalized(
                 new ArtificialTree("artificiel",23.8,"jaune","bisphenol A"),asker,"b");
         assertEquals(deco.toString(),"ChrismasTree{TreeDescriptionartificiel " +
                 "SyntheticGarlandDecorator: test, price=100.0,TreeColorjaune" +
