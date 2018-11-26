@@ -4,6 +4,8 @@ package christmastree;
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.io.inputstream;
+import java.io.outputstream;
 import java.io.PrintWriter;
 import java.util.Scanner;
 
@@ -23,7 +25,7 @@ public class AskString {
         this.out = out;
     }
 
-    public int ask(String message) {
+    public String ask(String message) {
         out.println(message);
         return scanner.nextLine();
     }
