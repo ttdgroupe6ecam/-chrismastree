@@ -1,12 +1,8 @@
 
 package christmastree;
 
-import java.io.BufferedWriter;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.io.inputstream;
-import java.io.outputstream;
-import java.io.PrintWriter;
+
+import java.io.*;
 import java.util.Scanner;
 
 /**
