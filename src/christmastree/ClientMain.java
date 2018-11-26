@@ -287,6 +287,8 @@ public class ClientMain {
     Order order = makeOrder(new AskString(System.in, System.out));
     int flag = 0;
     ChrismasTree tree = null;
+    String choiceTree = null;
+
 
     do {
       // Menu of Command Options
@@ -296,7 +298,7 @@ public class ClientMain {
       System.out.println("q: Finish ");
 
       // read the choice
-      String choiceTree = asker.ask("Choose an option please: ");
+      choiceTree = asker.ask("Choose an option please: ");
 
       // Menu to choose type ommand (tree) personalized or standard
       System.out.println("Commande de choix: ");
