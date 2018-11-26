@@ -19,7 +19,7 @@ public class ElectricGarlandTest {
     }
 
     @Test
-    public void getSize() {
+    public void getBlink() {
 
         assertTrue(garland.isHasBlink());
     }
