@@ -47,7 +47,7 @@ public class ClientMain {
    *
    */
   public static Decorator treeDecorationStandard(ChrismasTree chrismasTree, AskString asker) {
-    Decorator decoration;
+    Decorator decoration = null;
     Decorator manyDecoration = null;
     // Decorator Options
 
@@ -150,8 +150,8 @@ public class ClientMain {
    * this class allows for choosing a personalized decoration.
    * @param chrismasTree the ree to be personalized
    */
-  public static void treeDecorationPersonalized(ChrismasTree chrismasTree, AskString asker) {
-    Decorator decoration ;
+  public static Decorator treeDecorationPersonalized(ChrismasTree chrismasTree, AskString asker) {
+    Decorator decoration =null;
     Decorator manyDecoration = null;
     String choiceDecoration;
 
@@ -271,6 +271,7 @@ public class ClientMain {
           break;
       } // end of switch
     } while (!choiceDecoration.equals("q")); // end of loop
+  return decoration;
   }
 
   /**
