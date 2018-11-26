@@ -25,8 +25,9 @@ public class ElectricGarlandTest {
     }
 
 
-        str1.toLowerCase().contains(str2.toLowerCase())
+
     @Test
     public void getToString() {
-        assertTrue(garland.toString().toLowerCase().contains(" electricgarland{hasblink=true}");
+        assertTrue(garland.toString().toLowerCase().contains(" electricgarland{hasblink=true}"));
     }
+}
