@@ -25,8 +25,8 @@ public class ClientMainTest {
     public void treeDecorationStandardTest() throws Exception {
 
         AskString asker = mock(AskString.class);
-        when(asker.ask("Choose a decoration please: ").thenReturn("a");
-        when(asker.ask("Choose a decoration please: ").thenReturn("q");
+        when(asker.ask("Choose a decoration please: ").thenReturn("a"));
+        when(asker.ask("Choose a decoration please: ").thenReturn("q"));
         Decorator deco = treeDecorationStandard(asker);
         //assertEquals(deco.toString(),"Arthur");
     }

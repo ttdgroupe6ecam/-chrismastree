@@ -26,6 +26,7 @@ public class ClientMain {
 
   /**
    * the order returned contains the client's info; the delivery adress and when it was done.
+   * @param asker the class that pass a user input as a variable
    * @return the order class
    *
    *
@@ -42,9 +43,10 @@ public class ClientMain {
 
   /**
    * this class is used to choose which decoration to be added on the tree.
+   * @param asker the class that pass a user input as a variable
    * @param chrismasTree the christmastree to be augmented
    *
-   *
+   *@return the decorated chrismastree
    */
   public static Decorator treeDecorationStandard(ChrismasTree chrismasTree, AskString asker) {
     Decorator decoration = null;
@@ -148,7 +150,9 @@ public class ClientMain {
 
   /**
    * this class allows for choosing a personalized decoration.
+   * @param asker the class that pass a user input as a variable
    * @param chrismasTree the ree to be personalized
+   * @return the decorated chrismastree
    */
   public static Decorator treeDecorationPersonalized(ChrismasTree chrismasTree, AskString asker) {
     Decorator decoration =null;
