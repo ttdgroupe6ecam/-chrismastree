@@ -32,7 +32,7 @@ public class ClientMain {
    */
   public static Order makeOrder(AskString asker) {
 
-    Scanner scan = new Scanner(System.in);
+
     String name = asker.ask("Client's name :");
     String surname = asker.ask("Client's surname :");
     String deliveryAdress = asker.ask("Client's adress :");
