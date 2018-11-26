@@ -21,7 +21,7 @@ public class AskString {
 
   /**
    *  this is the constructor to replace scanner and system.out.println
-   * @param the input (either simulated or from the console)
+   * @param in input (either simulated or from the console)
    * @param out the printed string to display before getting the input
    */
   public AskString(InputStream in, PrintStream out) {
