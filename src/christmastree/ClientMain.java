@@ -282,7 +282,7 @@ public class ClientMain {
    * @throws IOException if a file can't be created
    */
   public static void main(String[] args) throws IOException {
-    AskString asker = new AskString(System.in, System.out)
+    AskString asker = new AskString(System.in, System.out);
     Order order = makeOrder(new AskString(System.in, System.out));
     int flag = 0;
     ChrismasTree tree = null;
