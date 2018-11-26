@@ -65,7 +65,7 @@ public class Candle extends Decorator {
     this.lifeTime = lifeTime;
     this.parfum =
         getParfum() == null
-            ? "" + " CandleParfum: " + "Senteurs d'inspiration"
+            ? "" + " CandleParfum: " + parfum
             : getParfum() + " CandleParfum: " + parfum;
   }
 
