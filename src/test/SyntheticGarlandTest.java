@@ -18,7 +18,7 @@ public class SyntheticGarlandTest {
     }
 
     @Test
-    public void getToString() {
-        assertTrue(garland.toString().toLowerCase().contains(" syntheticgarland{square}"));
+    public void getPaillette() {
+        assertEquals(garland.getPaillette()," SyntheticGarlandPaillette::Square");
     }
 }
