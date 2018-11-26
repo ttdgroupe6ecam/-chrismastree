@@ -30,7 +30,7 @@ public class SyntheticGarland extends Garland {
     setLength(15);
     setPaillette(
         getPaillette() == null
-            ? "" + " SyntheticGarlandPaillette: " + paillette
+            ? "" + " SyntheticGarlandPaillette: " + "Square"
             : getPaillette() + " SyntheticGarlandPaillette:: " + "Square");
   }
 
