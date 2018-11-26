@@ -169,14 +169,11 @@ public class ClientMain {
       choiceDecoration = asker.ask("Choose a decoration please: ");
 
       // Decorator data(description)
-      System.out.println("description: ");
-      String description = scan.next();
+      String description = asker.ask("description: ");
 
-      System.out.println("price: ");
-      double price = scan.nextDouble();
+      double price = asker.askDouble("price: ");
 
-      System.out.println("color: ");
-      String color = scan.next();
+      String color = scan.ask("color: ");
 
       switch (choiceDecoration) {
         case "a": /* Balls*/ {
@@ -205,7 +202,7 @@ public class ClientMain {
             System.out.println("q: Finish");
             garlandOption = asker.ask("Choose a Garland decorations options : ");
 
-            double garlandLength = asker.ask("length : ");
+            double garlandLength = asker.askDouble("length : ");
 
             switch (garlandOption) {
               case "a": // Electric Garland
@@ -226,7 +223,7 @@ public class ClientMain {
                 break;
 
               case "b": // Synthetic Garland
-                String paillette = asker.Ask("paillette : ");
+                String paillette = asker.ask("paillette : ");
 
                 if (manyDecoration == null) {
                   decoration =
@@ -251,9 +248,9 @@ public class ClientMain {
             break;
 
         case "c": {
-          int lifeTime = asker.ask("LifeTime : ");
+          int lifeTime = asker.askInt("LifeTime : ");
 
-          String parfum = asker.Ask("Parfum : ");
+          String parfum = asker.ask("Parfum : ");
 
           if (manyDecoration == null) {
             decoration = 
@@ -333,13 +330,13 @@ public class ClientMain {
           switch (choiceTree) {
             case "a": {
               tree = new NaturalTree();
-              treeDecorationPersonalized(tree);
+              treeDecorationPersonalized(tree,new AskString(System.in, System.out));
             }
                 break;
 
             case "b": {
               tree = new ArtificialTree();
-              treeDecorationPersonalized(tree);
+              treeDecorationPersonalized(tree,new AskString(System.in, System.out));
             }
               break;
             default:

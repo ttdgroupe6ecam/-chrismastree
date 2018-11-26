@@ -44,5 +44,23 @@ public class AskString {
     out.println(message);
     return scanner.nextBoolean();
   }
+  /**
+   * display a message and waits for a double input.
+   * @param message to be displayed
+   * @return the input
+   */
+  public boolean askDouble(String message) {
+    out.println(message);
+    return scanner.nextDouble();
+  }
+  /**
+   * display a message and waits for an int input.
+   * @param message to be displayed
+   * @return the input
+   */
+  public boolean askDouble(String message) {
+    out.println(message);
+    return scanner.nextInt();
+  }
 
 }
