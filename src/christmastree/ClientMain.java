@@ -22,7 +22,6 @@ public class ClientMain {
 
   Scanner scan = new Scanner(System.in);
 
-  static String choiceTree;
 
   /**
    * the order returned contains the client's info; the delivery adress and when it was done.
@@ -48,7 +47,7 @@ public class ClientMain {
    *
    *@return the decorated chrismastree
    */
-  public static Decorator treeDecorationStandard(ChrismasTree chrismasTree, AskString asker) {
+  public static Decorator treeDecorationStandard(ChrismasTree chrismasTree, AskString asker, String choiceTree) {
     Decorator decoration = null;
     Decorator manyDecoration = null;
     // Decorator Options
@@ -154,7 +153,7 @@ public class ClientMain {
    * @param chrismasTree the ree to be personalized
    * @return the decorated chrismastree
    */
-  public static Decorator treeDecorationPersonalized(ChrismasTree chrismasTree, AskString asker) {
+  public static Decorator treeDecorationPersonalized(ChrismasTree chrismasTree, AskString asker, String choiceTree) {
     Decorator decoration =null;
     Decorator manyDecoration = null;
     String choiceDecoration;
@@ -314,13 +313,13 @@ public class ClientMain {
           switch (choiceTree) {
             case "a": {
               tree = new NaturalTree();
-              treeDecorationStandard(tree,new AskString(System.in, System.out));
+              treeDecorationStandard(tree,new AskString(System.in, System.out),choiceTree);
             }
               break;
 
             case "b": {
               tree = new ArtificialTree();
-              treeDecorationStandard(tree,new AskString(System.in, System.out));
+              treeDecorationStandard(tree,new AskString(System.in, System.out),choiceTree);
             }
               break;
             default:
@@ -335,13 +334,13 @@ public class ClientMain {
           switch (choiceTree) {
             case "a": {
               tree = new NaturalTree();
-              treeDecorationPersonalized(tree,new AskString(System.in, System.out));
+              treeDecorationPersonalized(tree,new AskString(System.in, System.out),choiceTree);
             }
                 break;
 
             case "b": {
               tree = new ArtificialTree();
-              treeDecorationPersonalized(tree,new AskString(System.in, System.out));
+              treeDecorationPersonalized(tree,new AskString(System.in, System.out),choiceTree);
             }
               break;
             default:
