@@ -12,7 +12,7 @@ public class ClientMainTest {
     @Test
     public void getOrder() throws Exception {
 
-        IntegerAsker asker = mock(IntegerAsker.class);
+        AskString asker = mock(AskString.class);
         when(asker.ask("Client's name :")).thenReturn("Arthur");
         when(asker.ask("Client's surname :")).thenReturn("Venon");
         when(asker.ask("Client's adress :")).thenReturn("31 rue de Keersmaeker");
