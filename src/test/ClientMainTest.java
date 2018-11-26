@@ -22,12 +22,37 @@ public class ClientMainTest {
     }
 
     @Test
-    public void treeDecorationStandardTest() throws Exception {
+    public void treeDecorationStandardBallsTest() throws Exception {
 
         AskString asker = mock(AskString.class);
         when(asker.ask("Choose a decoration please: ")).thenReturn("a","q");
         Decorator deco = client.treeDecorationStandard(
                 new ArtificialTree("artificiel",23.8,"jaune","bisphenol A"),asker,"a");
+        assertEquals(deco.toString(),"ChrismasTree{TreeDescriptionartificiel " +
+                "BallsDecorator: Balls, price=44.79,TreeColorjaune BallsColor: " +
+                "Red}Balls{ BallsMaterial: Plastic, BallsSize: Small}");
+    }
+
+    @Test
+    public void treeDecorationStandardCandleTest() throws Exception {
+
+        AskString asker = mock(AskString.class);
+        when(asker.ask("Choose a decoration please: ")).thenReturn("c","q");
+        Decorator deco = client.treeDecorationStandard(
+                new ArtificialTree("artificiel",23.8,"jaune","bisphenol A"),asker,"c");
+        assertEquals(deco.toString(),"ChrismasTree{TreeDescriptionartificiel " +
+                "BallsDecorator: Balls, price=44.79,TreeColorjaune BallsColor: " +
+                "Red}Balls{ BallsMaterial: Plastic, BallsSize: Small}");
+    }
+
+    @Test
+    public void treeDecorationStandardElectricGarlandTest() throws Exception {
+
+        AskString asker = mock(AskString.class);
+        when(asker.ask("Choose a decoration please: ")).thenReturn("b","q");
+        when(asker.ask("Choose a Garland decorations options : ")).thenReturn("b","q");
+        Decorator deco = client.treeDecorationStandard(
+                new ArtificialTree("artificiel",23.8,"jaune","bisphenol A"),asker,"b");
         assertEquals(deco.toString(),"ChrismasTree{TreeDescriptionartificiel " +
                 "BallsDecorator: Balls, price=44.79,TreeColorjaune BallsColor: " +
                 "Red}Balls{ BallsMaterial: Plastic, BallsSize: Small}");

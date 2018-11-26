@@ -47,7 +47,8 @@ public class ClientMain {
    *
    *@return the decorated chrismastree
    */
-  public static Decorator treeDecorationStandard(ChrismasTree chrismasTree, AskString asker, String choiceTree) {
+  public static Decorator treeDecorationStandard(ChrismasTree chrismasTree,
+                                                 AskString asker, String choiceTree) {
     Decorator decoration = null;
     Decorator manyDecoration = null;
     // Decorator Options
@@ -144,7 +145,7 @@ public class ClientMain {
           break;
       } // end of switch
     } while (!choiceDecoration.equals("q")); // end of loop
-  return decoration;
+    return decoration;
   }
 
   /**
@@ -153,8 +154,9 @@ public class ClientMain {
    * @param chrismasTree the ree to be personalized
    * @return the decorated chrismastree
    */
-  public static Decorator treeDecorationPersonalized(ChrismasTree chrismasTree, AskString asker, String choiceTree) {
-    Decorator decoration =null;
+  public static Decorator treeDecorationPersonalized(ChrismasTree chrismasTree,
+                                                     AskString asker, String choiceTree) {
+    Decorator decoration = null;
     Decorator manyDecoration = null;
     String choiceDecoration;
 
@@ -274,7 +276,7 @@ public class ClientMain {
           break;
       } // end of switch
     } while (!choiceDecoration.equals("q")); // end of loop
-  return decoration;
+    return decoration;
   }
 
   /**
