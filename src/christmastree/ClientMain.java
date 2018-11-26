@@ -46,8 +46,7 @@ public class ClientMain {
    *
    *
    */
-  public static void treeDecorationStandard(ChrismasTree chrismasTree) {
-    Scanner scan = new Scanner(System.in);
+  public static Decorator treeDecorationStandard(ChrismasTree chrismasTree, AskString asker) {
     Decorator decoration;
     Decorator manyDecoration = null;
     // Decorator Options
@@ -61,8 +60,7 @@ public class ClientMain {
         System.out.println("c: Candle");
       }
       System.out.println("q: Quit");
-      System.out.println("Choose a decoration please: ");
-      choiceDecoration = scan.next();
+      choiceDecoration = asker.ask("Choose a decoration please: ");
 
       switch (choiceDecoration) {
         case "a":
@@ -88,7 +86,7 @@ public class ClientMain {
           String garlandOption;
           do {
             System.out.println("Choose a Garland decorations options : ");
-            garlandOption = scan.next();
+            garlandOption = asker.ask("Choose a Garland decorations options : ");
 
             switch (garlandOption) {
               case "a": {
@@ -145,14 +143,14 @@ public class ClientMain {
           break;
       } // end of switch
     } while (!choiceDecoration.equals("q")); // end of loop
+  return decoration;
   }
 
   /**
    * this class allows for choosing a personalized decoration.
    * @param chrismasTree the ree to be personalized
    */
-  public static void treeDecorationPersonalized(ChrismasTree chrismasTree) {
-    Scanner scan = new Scanner(System.in);
+  public static void treeDecorationPersonalized(ChrismasTree chrismasTree, AskString asker) {
     Decorator decoration ;
     Decorator manyDecoration = null;
     String choiceDecoration;
@@ -168,8 +166,7 @@ public class ClientMain {
         System.out.println("c: Candle");
       }
       System.out.println("q: Quit");
-      System.out.println("Choose a decoration please: ");
-      choiceDecoration = scan.next();
+      choiceDecoration = asker.ask("Choose a decoration please: ");
 
       // Decorator data(description)
       System.out.println("description: ");
@@ -183,11 +180,9 @@ public class ClientMain {
 
       switch (choiceDecoration) {
         case "a": /* Balls*/ {
-          System.out.println("material: ");
-          String material = scan.next();
+          String material = asker.ask("material: ");
 
-          System.out.println("size: ");
-          String size = scan.next();
+          String size = asker.ask("size: ");
 
           if (manyDecoration == null) {
             decoration = new Balls(color, description, price, material, size, chrismasTree);
@@ -208,16 +203,13 @@ public class ClientMain {
             System.out.println("a: Electric Garland");
             System.out.println("b: Synthetic Garland");
             System.out.println("q: Finish");
-            System.out.println("Choose a Garland decorations options : ");
-            garlandOption = scan.next();
+            garlandOption = asker.ask("Choose a Garland decorations options : ");
 
-            System.out.println("length : ");
-            double garlandLength = scan.nextInt();
+            double garlandLength = asker.ask("length : ");
 
             switch (garlandOption) {
               case "a": // Electric Garland
-                System.out.println("hasBlink true or false : ");
-                boolean hasBlink = scan.nextBoolean();
+                boolean hasBlink = asker.askBool("hasBlink true or false : ");
                 if (manyDecoration == null) {
                   decoration =
                       new ElectricGarland(
@@ -234,8 +226,7 @@ public class ClientMain {
                 break;
 
               case "b": // Synthetic Garland
-                System.out.println("paillette : ");
-                String paillette = scan.next();
+                String paillette = asker.Ask("paillette : ");
 
                 if (manyDecoration == null) {
                   decoration =
@@ -260,11 +251,9 @@ public class ClientMain {
             break;
 
         case "c": {
-          System.out.println("LifeTime : ");
-          int lifeTime = scan.nextInt();
+          int lifeTime = asker.ask("LifeTime : ");
 
-          System.out.println("Parfum : ");
-          String parfum = scan.next();
+          String parfum = asker.Ask("Parfum : ");
 
           if (manyDecoration == null) {
             decoration = 
@@ -293,8 +282,7 @@ public class ClientMain {
    * @throws IOException if a file can't be created
    */
   public static void main(String[] args) throws IOException {
-
-    Scanner scan = new Scanner(System.in);
+    AskString asker = new AskString(System.in, System.out)
     Order order = makeOrder(new AskString(System.in, System.out));
     int flag = 0;
     ChrismasTree tree = null;
@@ -306,9 +294,8 @@ public class ClientMain {
       System.out.println("b: Artificial tree");
       System.out.println("q: Finish ");
 
-      System.out.println("Choose an option please: ");
       // read the choice
-      choiceTree = scan.next();
+      choiceTree = asker.ask("Choose an option please: ");
 
       // Menu to choose type ommand (tree) personalized or standard
       System.out.println("Commande de choix: ");
@@ -316,9 +303,8 @@ public class ClientMain {
       System.out.println("2: personalized");
       System.out.println("q: Finish ");
 
-      System.out.println("Choose type of command: ");
       // read the choice
-      String commandType = scan.next();
+      String commandType = asker.ask("Choose type of command: ");
 
       switch (commandType) {
         case "1": {
@@ -326,13 +312,13 @@ public class ClientMain {
           switch (choiceTree) {
             case "a": {
               tree = new NaturalTree();
-              treeDecorationStandard(tree);
+              treeDecorationStandard(tree,new AskString(System.in, System.out));
             }
               break;
 
             case "b": {
               tree = new ArtificialTree();
-              treeDecorationStandard(tree);
+              treeDecorationStandard(tree,new AskString(System.in, System.out));
             }
               break;
             default:

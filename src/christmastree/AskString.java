@@ -27,13 +27,22 @@ public class AskString {
   }
 
   /**
-   * display a message and waits for an input.
+   * display a message and waits for a string input.
    * @param message to be displayed
    * @return the input
    */
   public String ask(String message) {
     out.println(message);
     return scanner.nextLine();
+  }
+  /**
+   * display a message and waits for a boolean input.
+   * @param message to be displayed
+   * @return the input
+   */
+  public boolean askBool(String message) {
+    out.println(message);
+    return scanner.nextBoolean();
   }
 
 }
