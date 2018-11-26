@@ -23,7 +23,10 @@ public class ArtificialTreeTest {
         assertEquals(tree1.getPlasticType(),"plasticType: plasticTypeA");
     }
 
-
+    @Test
+    public void getPlastycType() {
+        assertEquals(tree2.getPlasticType(),"plasticType: " + "bisphenol A");
+    }
 
     @Test
     public void getToString() {
