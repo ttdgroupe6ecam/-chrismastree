@@ -1,0 +1,32 @@
+package test;
+
+import org.junit.Test;
+import static org.junit.Assert.*;
+import org.junit.BeforeClass;
+import christmastree.*;
+
+public class ElectricGarlandTest {
+
+    private static ArtificialTree tree;
+    private static ElectricGarland garland;
+
+    @BeforeClass
+    public static void setupBeforeClass() {
+
+
+        tree = new ArtificialTree("artificiel",23.8,"jaune","bisphenol A");
+        garland = new ElectricGarland(tree);
+    }
+
+    @Test
+    public void getSize() {
+
+        assertTrue(garland.isHasBlink());
+    }
+
+
+        str1.toLowerCase().contains(str2.toLowerCase())
+    @Test
+    public void getToString() {
+        assertTrue(garland.toString().toLowerCase().contains(" electricgarland{hasblink=true}");
+    }
