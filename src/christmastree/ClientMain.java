@@ -296,7 +296,7 @@ public class ClientMain {
       System.out.println("q: Finish ");
 
       // read the choice
-      choiceTree = asker.ask("Choose an option please: ");
+      String choiceTree = asker.ask("Choose an option please: ");
 
       // Menu to choose type ommand (tree) personalized or standard
       System.out.println("Commande de choix: ");
