@@ -49,7 +49,7 @@ public class AskString {
    * @param message to be displayed
    * @return the input
    */
-  public boolean askDouble(String message) {
+  public double askDouble(String message) {
     out.println(message);
     return scanner.nextDouble();
   }
@@ -58,7 +58,7 @@ public class AskString {
    * @param message to be displayed
    * @return the input
    */
-  public boolean askInt(String message) {
+  public int askInt(String message) {
     out.println(message);
     return scanner.nextInt();
   }
