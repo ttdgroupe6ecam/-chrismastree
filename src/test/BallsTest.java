@@ -7,15 +7,15 @@ import christmastree.*;
 
 public class BallsTest {
 
-    private static ArtificialTree tree1;
+    private static ArtificialTree tree;
     private static Balls ball;
 
     @BeforeClass
     public static void setupBeforeClass() {
 
 
-        tree2 = new ArtificialTree("artificiel",23.8,"jaune","bisphenol A");
-        ball = new Balls(tree2);
+        tree = new ArtificialTree("artificiel",23.8,"jaune","bisphenol A");
+        ball = new Balls(tree);
     }
 
     @Test
