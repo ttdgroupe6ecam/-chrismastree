@@ -19,6 +19,6 @@ public class SyntheticGarlandTest {
 
     @Test
     public void getPaillette() {
-        assertEquals(garland.getPaillette()," SyntheticGarlandPaillette::Square");
+        assertEquals(garland.getPaillette()," SyntheticGarlandPaillette:Square");
     }
 }
