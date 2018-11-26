@@ -41,8 +41,8 @@ public class ClientMainTest {
         Decorator deco = client.treeDecorationStandard(
                 new ArtificialTree("artificiel",23.8,"jaune","bisphenol A"),asker,"c");
         assertEquals(deco.toString(),"ChrismasTree{TreeDescriptionartificiel " +
-                "BallsDecorator: Balls, price=44.79,TreeColorjaune BallsColor: " +
-                "Red}Balls{ BallsMaterial: Plastic, BallsSize: Small}");
+                "[CandleDecorator: Candle, price=40.79,TreeColorjaune CandleColor: " +
+                "White}Candle{lifeTime=5, CandleParfum: Senteurs d'inspiration]");
     }
 
     @Test
@@ -54,7 +54,8 @@ public class ClientMainTest {
         Decorator deco = client.treeDecorationStandard(
                 new ArtificialTree("artificiel",23.8,"jaune","bisphenol A"),asker,"b");
         assertEquals(deco.toString(),"ChrismasTree{TreeDescriptionartificiel " +
-                "BallsDecorator: Balls, price=44.79,TreeColorjaune BallsColor: " +
-                "Red}Balls{ BallsMaterial: Plastic, BallsSize: Small}");
+                "[SyntheticGarlandDecorator: Garland, price=34.79,TreeColorjaune" +
+                " SyntheticGarlandColor: yellow} Garland{length=15.0} SyntheticGarland{" +
+                " SyntheticGarlandPaillette: Square]}");
     }
 }
