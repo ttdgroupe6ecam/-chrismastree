@@ -1,16 +1,13 @@
 
 package christmastree;
 
-import java.io.BufferedWriter;
-import java.io.FileWriter;
-import java.io.IOException;
 import java.io.InputStream;
-import java.io.OutputStream;
 import java.io.PrintStream;
 import java.util.Scanner;
 
 /**
- * this class replace the scanner string input and out.println  by giving a simulated input for a specific output,
+ * this class replace the scanner string input and out.println,
+ * by giving a simulated input for a specific output,
  * therefore we can simulate user inpiut in junit testing
  * @author venon arthur
  */
@@ -20,7 +17,7 @@ public class AskString {
   private final PrintStream out;
 
   /**
-   *  this is the constructor to replace scanner and system.out.println
+   *  this is the constructor to replace scanner and system.out.println.
    * @param in input (either simulated or from the console)
    * @param out the printed string to display before getting the input
    */
@@ -30,7 +27,7 @@ public class AskString {
   }
 
   /**
-   * display a message and waits for an input
+   * display a message and waits for an input.
    * @param message to be displayed
    * @return the input
    */
