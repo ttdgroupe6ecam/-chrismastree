@@ -85,7 +85,7 @@ public class ClientMainTest {
         when(asker.ask("description: ")).thenReturn("test");
         when(asker.askDouble("price: ")).thenReturn(100.0);
         when(asker.ask("color: ")).thenReturn("blouge");
-        when(asker.askInt("LifeTime : ")).thenReturn("15");
+        when(asker.askInt("LifeTime : ")).thenReturn(15);
         when(asker.ask("Parfum : ")).thenReturn("pomme");
         Decorator deco = client.treeDecorationStandard(
                 new ArtificialTree("artificiel",23.8,"jaune","bisphenol A"),asker,"c");
