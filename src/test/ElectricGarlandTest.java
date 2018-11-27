@@ -1,33 +1,98 @@
-package test;
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 
+import com.mycompany.mavenproject1.ArtificialTree;
+import com.mycompany.mavenproject1.*;
+import org.junit.After;
+import org.junit.AfterClass;
+import org.junit.Before;
+import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
-import org.junit.BeforeClass;
-import christmastree.*;
 
+/**
+ *
+ * @author MediaMonster
+ */
 public class ElectricGarlandTest {
-
-    private static ArtificialTree tree;
-    private static ElectricGarland garland;
-
-    @BeforeClass
-    public static void setupBeforeClass() {
-
-
-        tree = new ArtificialTree("artificiel",23.8,"jaune","bisphenol A");
-        garland = new ElectricGarland(tree);
-    }
-
+    
+   ArtificialTree  treeDecorator= new ArtificialTree("ArtificialTree", 120, "red", "plastic");
+    ElectricGarland electricGarland1 = new ElectricGarland("Yellow", "electricGarland",70.5,true, 40, treeDecorator);
+    ElectricGarland electricGarland2 = new ElectricGarland(treeDecorator);
+    
+    
     @Test
-    public void getBlink() {
-
-        assertTrue(garland.isHasBlink());
+    public void  testElectricGarlandWithArguments() {
+        
+        assertNotNull(electricGarland1);
     }
-
-
-
+    
     @Test
-    public void getToString() {
-        assertTrue(garland.toString().toLowerCase().contains(" electricgarland{hasblink=true}"));
+    public void  testElectricGarlandWithOneArgument() {
+        
+        assertNotNull(electricGarland2);
     }
+  
+    @Test
+    public void testGetDescription() {
+        assertEquals(electricGarland1.getDescription()," TreeDescription: ArtificialTree ElectricGarlandDecorator: electricGarland");
+    }
+  
+     @Test
+    public void testGetNotDescription() {
+        assertNotEquals(electricGarland1.getDescription()," ElectricGarlandDecorator: ElectricGarland");
+    }
+    
+    @Test
+    public void testGetDescriptionElectricGarlandWithOneArgument() {
+        assertEquals(electricGarland2.getDescription()," TreeDescription: ArtificialTree ElectricGarlandDecorator: ElectricGarland");
+    }
+   
+    @Test
+    public void testGetNotDescriptionElectricGarlandWithOneArgument() {
+        assertNotEquals(electricGarland2.getDescription(),"ElectricGarlandDecorator: ElectricGarland");
+    }
+    
+     
+    @Test
+    public void testGetPrice() {
+        assertEquals(electricGarland1.getPrice(),190.5,0.0f);
+    }
+    
+    @Test
+    public void testGetNotPrice() {
+        assertNotEquals(electricGarland2.getPrice(),70.5,0.0f);
+    }
+     
+    @Test
+    public void testGetColor() {
+        assertEquals(electricGarland1.getColor()," TreeColor: red ElectricGarlandColor: Yellow");
+    }
+    
+     @Test
+    public void testGetNotColor() {
+        assertNotEquals(electricGarland1.getColor()," TreeColor:red ElectricGarlandColor:Yellow");
+    }
+    
+    
+    @Test
+    public void testGetNotLength() {
+        assertNotEquals(electricGarland1.getLength(),25);
+    }
+   
+    @Test
+    public void testGetLength() {
+        assertEquals(electricGarland1.getLength(),40,0.0f);
+    }
+    
+     @Test
+    public void testGetHasBlink() {
+        assertEquals(electricGarland1.isHasBlink(),true);
+    }
+    
+    
+  
 }

@@ -1,34 +1,79 @@
+import com.mycompany.mavenproject1.*;
 import org.junit.Test;
 import static org.junit.Assert.*;
-import org.junit.BeforeClass;
-import christmastree.NaturalTree;
 
 public class NaturalTreeTest {
-
-    private static NaturalTree tree1;
-    private static NaturalTree tree2;
-
-    @BeforeClass
-    public static void setupBeforeClass() {
-
-
-        tree2 = new NaturalTree("naturel",23.8,"jaune","pin",6);
-    }
+ 
+    private static NaturalTree tree1=new NaturalTree("Natural", 220.2,"Green","Omorika",20);
+    private static NaturalTree tree2=new NaturalTree();
 
     @Test
-    public void constructStandard() {
-        tree1 =new NaturalTree();
-        assertEquals(tree1.getLifeTime(),50);
+    public void  testNaturalTreeWithArguments() {
+        
+        assertNotNull(tree1);
     }
-
+    
     @Test
-    public void getDescriptionPersonnalise() {
-        assertEquals(tree2.getTreeType()," TreeType: pin");
+    public void  testNaturalTreeDefault() {
+        
+        assertNotNull(tree2);
     }
-
+  
     @Test
-    public void getToString() {
-        assertEquals(tree2.toString()," NaturalTree{ TreeType: pin, lifeTime=6}");
+    public void testGetDescription() {
+        assertEquals(tree1.getDescription()," TreeDescription: Natural");
+    }
+    
+     @Test
+    public void testGetNotDescription() {
+        assertNotEquals(tree1.getDescription(),"Natural");
+    }
+    
+    @Test
+    public void testGetDescriptionDefault() {
+        assertEquals(tree2.getDescription()," TreeDescription: Natural Tree");
+    }
+    
+     @Test
+    public void testGetNotDescriptionDefault() {
+        assertNotEquals(tree2.getDescription(),"Natural Tree");
+    }
+    
+    
+    @Test
+    public void testGetPrice() {
+        assertEquals(tree1.getPrice(),220.2,0.0f);
+    }
+    
+    @Test
+    public void testGetNotPrice() {
+        assertNotEquals(tree1.getPrice(),120.2,0.0f);
+    }
+    
+    @Test
+    public void testGetColor() {
+        assertEquals(tree1.getColor()," TreeColor: Green");
+    }
+    
+    @Test
+    public void testGetNotColor() {
+        assertNotEquals(tree1.getColor(),"red");
+    }
+    
+    
+    @Test
+    public void testGetColorDefault() {
+        assertEquals(tree2.getColor()," TreeColor: Green");
+    }
+    
+    @Test
+    public void testGetNotTreeType() {
+        assertNotEquals(tree1.getTreeType(),"Omorika");
+    }
+    
+    @Test
+    public void testGetTreeType() {
+        assertEquals(tree1.getTreeType()," TreeType: Omorika");
     }
 
 }
