@@ -1,15 +1,12 @@
 
 import com.mycompany.mavenproject1.*;
-import org.junit.Rule;
-import org.junit.Test;
-import org.junit.rules.Timeout;
-import static org.junit.Assert.*;
+import java.io.File;
 import org.junit.BeforeClass;
+import org.junit.Test;
 
 public class PerformanceTest {
 
     private static Order order;
-    private static Customer customer;
     private static NaturalTree tree = new NaturalTree();
     private  static Decorator deco;
     private static Bill bill;
@@ -19,15 +16,17 @@ public class PerformanceTest {
 
     @BeforeClass
     public static void setupBeforeClass() {
-        customer=new Customer("Arthur","Venon");
-        order =new Order(customer,"31 rue de Keersmaeker");
+        Customer c= new Customer("Arthur","Venon");
+        DeliveryAddress d= new DeliveryAddress("31 rue de Keersmaeker");
+        order =new Order(c,d);
         deco = new Candle(new Balls(tree));
 
     }
 
     @Test(timeout=20)
     public void testBilling() throws Exception {
-      //  bill =new Bill(deco,order,"output");
+        File f=new File("t.txt");
+        bill =new Bill(deco,order,f,1);
     }
 
 
