@@ -44,6 +44,7 @@ public class ClientMain {
    * this class is used to choose which decoration to be added on the tree.
    * @param asker the class that pass a user input as a variable
    * @param chrismasTree the christmastree to be augmented
+   * @param choiceTree the type of tree chosen
    *
    *@return the decorated chrismastree
    */
@@ -152,6 +153,8 @@ public class ClientMain {
    * this class allows for choosing a personalized decoration.
    * @param asker the class that pass a user input as a variable
    * @param chrismasTree the ree to be personalized
+   * @param choiceTree the type of tree chosen
+   *
    * @return the decorated chrismastree
    */
   public static Decorator treeDecorationPersonalized(ChrismasTree chrismasTree,
