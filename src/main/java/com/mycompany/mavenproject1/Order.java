@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 
-package com.mycompany.mavenproject1;
+package christmastree;
 
 /**
  * the class which stores client and order info.
@@ -13,47 +13,42 @@ package com.mycompany.mavenproject1;
  */
 public class Order {
 
-  private String deliveryAddress;
-  private String name;
-  private String surname;
+  private DeliveryAddress deliveryAddress = new DeliveryAddress();
+  private Customer customer;
   private java.util.Date date = null;
 
   /**
    * ths constructor of the order class.
    * @param deliveryAddress the adress od delivery
-   * @param name name of the client
-   * @param surname surname of the client
    */
-  public Order(String deliveryAddress, String name, String surname) {
-
-   // this.date = new java.util.Date();
-    this.deliveryAddress = deliveryAddress;
-    this.surname = surname;
-    this.name = name;
+  public Order(Customer customer, String deliveryAddress) {
+    this.deliveryAddress.setDeliveryAddress(deliveryAddress);
+    this.customer = customer;
+    this.date = new java.util.Date();
   }
 
   public void setDeliveryAdress(String address) {
-    this.deliveryAddress = address;
+    deliveryAddress.setDeliveryAddress(address);
   }
 
   public String getDeliveryAddress() {
-    return this.deliveryAddress;
+    return deliveryAddress.getDeliveryAddress();
   }
 
   public void setName(String name) {
-    this.name = name;
+    this.customer.name = name;
   }
 
   public String getName() {
-    return this.name;
+    return this.customer.name;
   }
 
   public void setSurname(String surname) {
-    this.surname = surname;
+    this.customer.surname = surname;
   }
 
   public String getSurname() {
-    return this.surname;
+    return this.customer.surname;
   }
 
   public java.util.Date getDate() {

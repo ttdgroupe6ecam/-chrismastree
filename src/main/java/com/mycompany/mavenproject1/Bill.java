@@ -1,14 +1,14 @@
-
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
 
-package com.mycompany.mavenproject1;
+package christmastree;
 
 import java.io.BufferedWriter;
 import java.io.FileWriter;
+import java.io.File;
 import java.io.IOException;
 import java.io.PrintWriter;
 
@@ -25,23 +25,24 @@ public class Bill {
   private PrintWriter pf ;
   private ChrismasTree toBePrinted;
   private Order order;
+  private int i;
   // private String[] elements;
   /**
    * @param toBePrinted the class whiwch contains all info needed to make the file
    * @param order the class which contains the info about the client and the order
-   * @param path the path to the file's location
+   * @param file the path to the file's location
    * @throws IOException this is in case the file cannot be created
    *
    *     This method is the constructor which instantiates the file, buffer and print writer to,
    *     write in a file located in the specified path.
    */
-  public Bill(ChrismasTree toBePrinted, Order order, String path) throws IOException {
-
-    this.wr = new FileWriter(path, true);
+  public Bill(ChrismasTree toBePrinted, Order order, File file, int i) throws IOException {
+    this.wr = new FileWriter(file, true);
     this.bf = new BufferedWriter(wr);
     this.pf = new PrintWriter(bf);
     this.toBePrinted = toBePrinted;
     this.order = order;
+    this.i = i;
   }
   /**
    * @throws IOException this is used in case the buffer and writer are already closed
@@ -74,9 +75,10 @@ public class Bill {
    *
    */
   public void addClient() {
-     addStringLine("surname : " + order.getSurname() + " name : " + order.getName());
-    addStringLine("address : " + order.getDeliveryAddress());
-    addStringLine("date : " + order.getDate());
+    addStringLine("Last name : " + order.getSurname());
+    addStringLine("First name : " + order.getName());
+    addStringLine("Address : " + order.getDeliveryAddress());
+    addStringLine("Date : " + order.getDate());
     addStringLine("");
   }
   /**
@@ -86,7 +88,7 @@ public class Bill {
    *     this method adds the tree's info in the file.
    */
   public void addTree(String treeType, String treeColor) {
-    addStringLine("1x " + treeType + " " + treeColor);
+    addStringLine("1x " + treeType + " tree Color : " + treeColor);
   }
   /**
    * @param description the array of the types of decoration
@@ -96,24 +98,23 @@ public class Bill {
    */
   public void addDecorator(String[] description, String[] color) {
     int variable = 1;
-    System.out.println(description.length);
-    System.out.println(description.toString());
-   // while (variable < description.length) {
+    while (variable < color.length) {
       addStringLine(String.format("1x %s %s", description[variable], color[variable]));
+      addStringLine("");
       variable++;
-   // }
+    }
   }
   /** this method adds the price in the file.
    *
    */
   public void addPrice() {
-    addStringLine("      ¨Price : " + String.valueOf(this.toBePrinted.getPrice()));
+    addStringLine("                   Price : " + String.valueOf(this.toBePrinted.getPrice()));
   }
   /** this methods adds the title in the file.
    *
    */
   public void addTitle() {
-    addStringLine("A new command");
+    addStringLine("Bill n°" + String.valueOf(this.i));
     addStringLine("");
     addStringLine("");
   }
@@ -167,20 +168,14 @@ public class Bill {
    *
    */
   public void print() throws IOException {
+    
     addTitle();
     addClient();
     String[] description = parserDescription();
     String[] color = parserColor();
-    addTree(description[0], color[0]);
+    addTree(description[2], color[1]);
     addDecorator(description, color);
     addPrice();
     close();
   }
 }
-
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
