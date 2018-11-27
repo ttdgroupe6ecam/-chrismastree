@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="14" failures="0" name="BallsTest" time="0.167" errors="0" skipped="0">
+<testsuite tests="14" failures="0" name="BallsTest" time="0.196" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_161\jre\bin"/>
@@ -66,7 +66,7 @@
   <testcase classname="BallsTest" name="testGetColor" time="0"/>
   <testcase classname="BallsTest" name="testGetPrice" time="0"/>
   <testcase classname="BallsTest" name="testGetNotDescriptionBallsWithOneArgument" time="0"/>
-  <testcase classname="BallsTest" name="testGetNotColor" time="0.001"/>
+  <testcase classname="BallsTest" name="testGetNotColor" time="0"/>
   <testcase classname="BallsTest" name="testGetNotPrice" time="0"/>
   <testcase classname="BallsTest" name="testGetNotMaterial" time="0"/>
   <testcase classname="BallsTest" name="testBallsWithArguments" time="0"/>
@@ -74,6 +74,6 @@
   <testcase classname="BallsTest" name="testGetDescription" time="0"/>
   <testcase classname="BallsTest" name="testGeSize" time="0"/>
   <testcase classname="BallsTest" name="testGetDescriptionBallsWithOneArgument" time="0"/>
-  <testcase classname="BallsTest" name="testGetNotDescription" time="0"/>
+  <testcase classname="BallsTest" name="testGetNotDescription" time="0.001"/>
   <testcase classname="BallsTest" name="testGetMaterial" time="0"/>
 </testsuite>

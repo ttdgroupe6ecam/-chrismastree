@@ -11,13 +11,23 @@ package com.mycompany.mavenproject1;
  * @author mohamad
  */
 public class DeliveryAddress {
-    String deliveryAddress;
-    
-    public void setDeliveryAddress(String deliveryAddress) {
-        this.deliveryAddress = deliveryAddress;
+    String address;
+
+    public DeliveryAddress(String address) {
+        this.address = address;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
     }
     
-    public String getDeliveryAddress() {
-        return deliveryAddress;
-    }
+   
+
+    
+    
+    
 }

@@ -1,31 +1,32 @@
-
-
-
 import com.mycompany.mavenproject1.*;
-import org.junit.Assert;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 import org.junit.Test;
 
 
 public class OrderTest {
-
-    private static Customer customer=new Customer("Arthur","Venon");
-    private  static Order order =new Order(customer,"31 rue de Keersmaeker");
-  
+    
+    Customer customer=new Customer("Arthur","Venon");
+    DeliveryAddress  deliveryAddress= new DeliveryAddress("Prom. de l'Alma 50, 1200 Woluwe-Saint-Lambert");
+    private  Order order =new Order(customer,deliveryAddress);
+    
      @Test
-    public  void testor() {
+    public  void testOrder() {
        assertNotNull(order);
     }
 
     @Test
-    public  void testGetName() {
-        assertEquals(order.getName(),"Arthur");
+    public  void testGetCustomer() {
+        assertEquals(order.getCustomer().getName(),"Arthur");
+        assertEquals(order.getCustomer().getSurname(),"Venon");
     }
+    
     @Test
-    public  void testGetNa() {
-        assertEquals(order.getSurname(),"Venon");
+    public  void testDeliveryAddress() {
+        assertEquals(order.getDeliveryAddress().getAddress(),"Prom. de l'Alma 50, 1200 Woluwe-Saint-Lambert");
     }
+    
+   
    
 }
 

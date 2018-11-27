@@ -1,7 +1,8 @@
 
-import com.mycompany.mavenproject1.ArtificialTree;
-import static org.junit.Assert.*;
+import com.mycompany.mavenproject1.*;
 import org.junit.Test;
+import static org.junit.Assert.*;
+import org.junit.BeforeClass;
 
 
 
