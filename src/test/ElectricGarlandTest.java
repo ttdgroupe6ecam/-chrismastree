@@ -4,8 +4,7 @@
  * and open the template in the editor.
  */
 
-import com.mycompany.mavenproject1.ArtificialTree;
-import com.mycompany.mavenproject1.*;
+import christmastree.*;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;

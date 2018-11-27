@@ -4,9 +4,10 @@
  * and open the template in the editor.
  */
 
-import com.mycompany.mavenproject1.*;
-import org.junit.*;
+import christmastree.*;
+import org.junit.Test;
 import static org.junit.Assert.*;
+import org.junit.BeforeClass;
 
 /**
  *
