@@ -34,7 +34,7 @@ public class CandleTest {
   
     @Test
     public void testGetDescription() {
-        assertEquals(candle1.getDescription()," TreeDescription: ArtificialTree CandleDecorator: candle");
+        assertEquals(candle1.getDescription(),"TreeDescriptionArtificialTree CandleDecorator: candle");
     }
   
      @Test
@@ -44,7 +44,7 @@ public class CandleTest {
     
     @Test
     public void testGetDescriptionCandleWithOneArgument() {
-        assertEquals(candle2.getDescription()," TreeDescription: ArtificialTree CandleDecorator: Candle");
+        assertEquals(candle2.getDescription(),"TreeDescriptionArtificialTree CandleDecorator: Candle");
     }
    
     @Test
@@ -65,7 +65,7 @@ public class CandleTest {
      
     @Test
     public void testGetColor() {
-        assertEquals(candle1.getColor()," TreeColor: red CandleColor: Yellow");
+        assertEquals(candle1.getColor(),"TreeColorred CandleColor: Yellow");
     }
     
      @Test

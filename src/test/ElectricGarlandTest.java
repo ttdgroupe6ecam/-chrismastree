@@ -37,7 +37,7 @@ public class ElectricGarlandTest {
   
     @Test
     public void testGetDescription() {
-        assertEquals(electricGarland1.getDescription()," TreeDescription: ArtificialTree ElectricGarlandDecorator: electricGarland");
+        assertEquals(electricGarland1.getDescription(),"TreeDescriptionArtificialTree ElectricGarlandDecorator: electricGarland");
     }
   
      @Test
@@ -47,7 +47,7 @@ public class ElectricGarlandTest {
     
     @Test
     public void testGetDescriptionElectricGarlandWithOneArgument() {
-        assertEquals(electricGarland2.getDescription()," TreeDescription: ArtificialTree ElectricGarlandDecorator: ElectricGarland");
+        assertEquals(electricGarland2.getDescription(),"TreeDescriptionArtificialTree ElectricGarlandDecorator: ElectricGarland");
     }
    
     @Test
@@ -68,7 +68,7 @@ public class ElectricGarlandTest {
      
     @Test
     public void testGetColor() {
-        assertEquals(electricGarland1.getColor()," TreeColor: red ElectricGarlandColor: Yellow");
+        assertEquals(electricGarland1.getColor(),"TreeColorred ElectricGarlandColor: Yellow");
     }
     
      @Test

@@ -34,7 +34,7 @@ public class BallsTest {
   
     @Test
     public void testGetDescription() {
-        assertEquals(ball1.getDescription()," TreeDescription: ArtificialTree BallsDecorator: ball");
+        assertEquals(ball1.getDescription(),"TreeDescriptionArtificialTree BallsDecorator: ball");
     }
   
      @Test
@@ -44,7 +44,7 @@ public class BallsTest {
     
     @Test
     public void testGetDescriptionBallsWithOneArgument() {
-        assertEquals(ball2.getDescription()," TreeDescription: ArtificialTree BallsDecorator: Balls");
+        assertEquals(ball2.getDescription(),"TreeDescriptionArtificialTree BallsDecorator: Balls");
     }
    
     @Test
@@ -65,7 +65,7 @@ public class BallsTest {
      
     @Test
     public void testGetColor() {
-        assertEquals(ball1.getColor()," TreeColor: red BallsColor: Yellow");
+        assertEquals(ball1.getColor(),"TreeColorred BallsColor: Yellow");
     }
     
      @Test

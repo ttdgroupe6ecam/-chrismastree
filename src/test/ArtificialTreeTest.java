@@ -25,7 +25,7 @@ public class ArtificialTreeTest {
   
     @Test
     public void testGetDescription() {
-        assertEquals(tree1.getDescription()," TreeDescription: Artificial");
+        assertEquals(tree1.getDescription(),"TreeDescriptionArtificial");
     }
     
      @Test
@@ -35,7 +35,7 @@ public class ArtificialTreeTest {
     
     @Test
     public void testGetDescriptionDefault() {
-        assertEquals(tree2.getDescription()," TreeDescription: Artificial Tree");
+        assertEquals(tree2.getDescription(),"TreeDescription: Artificial Tree");
     }
     
      @Test
@@ -56,7 +56,7 @@ public class ArtificialTreeTest {
     
     @Test
     public void testGetColor() {
-        assertEquals(tree1.getColor()," TreeColor: red");
+        assertEquals(tree1.getColor(),"TreeColorred");
     }
     
     @Test
@@ -67,7 +67,7 @@ public class ArtificialTreeTest {
     
     @Test
     public void testGetColorDefault() {
-        assertEquals(tree2.getColor()," TreeColor: Green");
+        assertEquals(tree2.getColor()," TreeColor Green");
     }
     
     @Test
@@ -77,7 +77,7 @@ public class ArtificialTreeTest {
     
     @Test
     public void testGetPlastic() {
-        assertEquals(tree1.getPlasticType()," plasticType: plastic AXC");
+        assertEquals(tree1.getPlasticType(),"plasticType: plastic AXC");
     }
 
 }
