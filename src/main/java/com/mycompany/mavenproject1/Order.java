@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 
-package christmastree;
+package com.mycompany.mavenproject1;
 
 /**
  * the class which stores client and order info.

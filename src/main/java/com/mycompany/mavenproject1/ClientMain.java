@@ -8,6 +8,7 @@ package com.mycompany.mavenproject1;
 
 import java.io.IOException;
 import java.nio.file.Paths;
+import java.io.File;
 import java.util.Scanner;
 
 
@@ -33,13 +34,15 @@ public class ClientMain {
   public static Order makeOrder() {
 
     Scanner scan = new Scanner(System.in);
-    System.out.println("Client's name :");
+    System.out.println("Client's first name :");
     String name = scan.nextLine();
-    System.out.println("Client's surname :");
+    System.out.println("Client's last name :");
     String surname = scan.nextLine();
     System.out.println("Client's adress :");
     String deliveryAdress = scan.nextLine();
-    Order order = new Order(deliveryAdress, name, surname);
+
+    Customer customer = new Customer(name, surname);
+    Order order = new Order(customer, deliveryAdress);
     return order;
   }
 
@@ -369,10 +372,16 @@ public class ClientMain {
       }
 
     } while (!choiceTree.equals("q")  && flag == 0); // end of loop
-    Bill bill = new Bill(tree, order,  "./test.txt");
+
+   int i = 1;
+
+    String path = Paths.get(".").toAbsolutePath().normalize().toString() + "/bill_" + String.valueOf(i) + ".txt";
+    File file = new File(path);
+
+    Bill bill = new Bill(tree, order, file, i);
     bill.print();
 
- 
-
+    // A bill for every order, this is the bill id
+    i += 1;
   }
 }

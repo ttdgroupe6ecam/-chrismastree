@@ -1,0 +1,12 @@
+Bill n°1
+
+
+Last name : akha
+First name : ya
+Address : aga
+Date : Tue Nov 27 15:08:44 CET 2018
+
+1x Natural tree Color : Green
+1x TreeDescription: Green
+
+                   Price : 200.2

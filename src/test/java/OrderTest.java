@@ -1,19 +1,17 @@
 
 
-import com.mycompany.mavenproject1.Order;
+
+import com.mycompany.mavenproject1.*;
 import org.junit.Assert;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 import org.junit.Test;
-//import org.junit.Test;
-//import static org.junit.Assert.*;
-//import org.junit.BeforeClass;
+
 
 public class OrderTest {
 
-    private  Order order =new Order("31 rue de Keersmaeker","Arthur","Venon");
-    
-    
+    private static Customer customer=new Customer("Arthur","Venon");
+    private  static Order order =new Order(customer,"31 rue de Keersmaeker");
   
      @Test
     public  void testor() {
